@@ -1,21 +1,20 @@
-# 🗺️ RME Agente AI Alpha
+<p align="center"># 🗺️ RME Agente AI Alpha
 
 [![Versión](https://img.shields.io/badge/versión-0.1.0--alpha-blue)](https://github.com/ricker72/rme-agente-ai)
 [![Licencia](https://img.shields.io/badge/licencia-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10+-yellow)](https://www.python.org/)
 [![PySide6](https://img.shields.io/badge/PySide6-6.5+-orange)](https://doc.qt.io/qtforpython/)
 [![Estado](https://img.shields.io/badge/estado-en%20desarrollo%20activo-brightgreen)](https://github.com/ricker72/rme-agente-ai)
-
+</p>
 ---
 
 > **Un editor y asistente de mapas para OpenTibia impulsado por inteligencia artificial.**  
 > *Transforma el flujo clásico de Remere's Map Editor con herramientas modernas, planificación semántica y validación visual.*
 
 <p align="center">
-  <img src="docs/demo.gif" alt="Demo del Agente AI" width="700"/>
-</p>
+  <img width="800" height="400" alt="Rme01" src="https://github.com/user-attachments/assets/f301706d-a9fc-43c1-b30b-228c73e079d2" />
 
-*⬆️ Reemplaza `docs/demo.gif` con una grabación real de la herramienta en acción*
+</p>
 
 ---
 
@@ -29,6 +28,11 @@ Es una **versión temprana** de un editor de mapas para OpenTibia que **fusiona 
 - 🎨 **Sistema de brushes inteligentes** y auto‑bordeado.
 
 Esta *alpha* está diseñada para pruebas, retroalimentación y mejora continua. Cada actualización acerca la calidad de los mapas generados a la de un **mapper humano experto**.
+
+[![Ver video](https://ejemplo.com/miniatura.jpg)](https://www.image2url.com/r2/default/videos/1784798715343-bbcb278a-c6a2-4b6f-9879-5d6c9062000e.mp4)
+
+<img width="1919" height="1019" alt="Screenshot_1" src="https://github.com/user-attachments/assets/aa529d8c-914b-4d83-b92a-213f65fdfc56" />
+
 
 ---
 
@@ -94,6 +98,7 @@ Además, cuenta con modos de **selección automática** y **consenso entre model
 | 🗺️ **Compatibilidad** | En progreso con RME/Canary y estándares OpenTibia. |
 
 > **El proyecto es Open Source** y toda contribución es bienvenida.
+<img width="1919" height="1024" alt="Screenshot_2" src="https://github.com/user-attachments/assets/acce6923-3ab9-4996-a912-299e23db12b0" />
 
 ---
 
@@ -135,6 +140,7 @@ Apasionado por OpenTibia, la IA y el desarrollo de herramientas creativas.
 4. **Explora** el editor y prueba el Planner IA.
 
 > Esta Version incluye un Manual de Usuario favor de leerlo antes de empezar: /MANUAL_USUARIO.md
+<img width="1919" height="1022" alt="Screenshot_3" src="https://github.com/user-attachments/assets/4abe2a8c-b96f-4503-8709-76016f89cdbb" />
 
 ---
 
