@@ -1,40 +1,149 @@
-# RME Agente AI Alpha
+# 🗺️ RME Agente AI Alpha
 
-RME Agente AI Alpha es una version temprana en desarrollo de un editor y asistente de mapas para OpenTibia. El objetivo del proyecto es evolucionar el flujo clasico de Remere's Map Editor con herramientas modernas de IA, Planner semantico, validacion visual y generacion asistida de mapas.
+[![Versión](https://img.shields.io/badge/versión-0.1.0--alpha-blue)](https://github.com/ricker72/rme-agente-ai)
+[![Licencia](https://img.shields.io/badge/licencia-MIT-green)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10+-yellow)](https://www.python.org/)
+[![PySide6](https://img.shields.io/badge/PySide6-6.5+-orange)](https://doc.qt.io/qtforpython/)
+[![Estado](https://img.shields.io/badge/estado-en%20desarrollo%20activo-brightgreen)](https://github.com/ricker72/rme-agente-ai)
 
-Esta build es una version alpha para pruebas. Todavia se estan mejorando los sistemas de render, brushes, auto-border, planificacion de biomas, casas, spawns, NPCs, quests, zonas y validacion OTBM hasta lograr mapas con una calidad cada vez mas cercana al trabajo de un mapper humano.
+---
 
-## Lenguajes y tecnologia
+> **Un editor y asistente de mapas para OpenTibia impulsado por inteligencia artificial.**  
+> *Transforma el flujo clásico de Remere's Map Editor con herramientas modernas, planificación semántica y validación visual.*
 
-- Python
-- PySide6 / Qt para la interfaz de escritorio
-- SQLite para la base de conocimiento del Planner
-- XML / JSON para materiales, brushes, catalogos y configuracion
-- PyInstaller para crear la version ejecutable de Windows
+<p align="center">
+  <img src="docs/demo.gif" alt="Demo del Agente AI" width="700"/>
+</p>
 
-El proyecto trabaja con informacion oficial de OpenTibia, materiales de RME/Canary, `appearances.dat`, `catalog-content.json`, reglas OTB/OTBM y mapas de referencia analizados como conocimiento abstracto. Las referencias se usan para aprender estilo, densidad, materiales y estructura, no para copiar mapas.
+*⬆️ Reemplaza `docs/demo.gif` con una grabación real de la herramienta en acción*
 
-## IA y Planner
+---
 
-El Planner puede trabajar con proveedores de IA configurables:
+## 🚀 ¿Qué es RME Agente AI Alpha?
 
-- Ollama
-- OpenRouter
-- PaxSenix
+Es una **versión temprana** de un editor de mapas para OpenTibia que **fusiona la potencia de RME con inteligencia artificial**. El objetivo es evolucionar el flujo clásico de mapeo, añadiendo:
 
-Tambien incluye modos de seleccion automatica y consenso entre modelos para ayudar al Planner a revisar propuestas, detectar errores visuales, ajustar biomas y mejorar la logica de construccion. Los modelos no escriben IDs de items directamente: sus propuestas deben pasar por el material catalog, brush engines certificados, validacion OTBM y QA visual.
+- 🤖 **Asistente IA** para generar y validar estructuras.
+- 🧠 **Planner semántico** que entiende biomas, casas, spawns y quests.
+- ✅ **Validación automática** de mapas (OTBM) y detección de errores visuales.
+- 🎨 **Sistema de brushes inteligentes** y auto‑bordeado.
 
-## Estado del proyecto
+Esta *alpha* está diseñada para pruebas, retroalimentación y mejora continua. Cada actualización acerca la calidad de los mapas generados a la de un **mapper humano experto**.
 
-RME Agente AI Alpha es un proyecto Open Source en desarrollo activo. Esta version esta pensada para pruebas tempranas, deteccion de errores y retroalimentacion. Algunas funciones pueden cambiar, mejorar o ser reemplazadas conforme avance la compatibilidad con RME/Canary y el sistema de generacion de mapas.
+---
 
-## Assets
+## ✨ Características principales
 
-Por razones de distribucion, los assets oficiales del cliente Tibia no se incluyen dentro del paquete. Al iniciar por primera vez, la aplicacion puede solicitar la carpeta del cliente/assets para localizar los archivos requeridos, como `appearances.dat`, `catalog-content.json` y sprites oficiales.
+| Icono | Característica |
+|-------|----------------|
+| 🧩 | **Planificación semántica** de biomas, casas, spawns, NPCs y quests. |
+| 🤖 | **Planner IA** con soporte para Ollama, OpenRouter y PaxSenix. |
+| 🔍 | **Validación OTBM** y corrección automática de errores. |
+| 🖌️ | **Brushes inteligentes** y auto‑bordeado basado en materiales. |
+| 📊 | **Base de conocimiento** (SQLite) para aprendizaje y recomendaciones. |
+| 🎯 | **Consenso entre modelos** para decisiones más acertadas. |
+| 🖥️ | **Interfaz gráfica** con PySide6 (Qt), moderna y responsive. |
 
-## Creador
+---
 
-Proyecto creado y desarrollado por ricker72.
+## 🛠️ Tecnologías utilizadas
 
-- GitHub: https://github.com/ricker72
-- Portafolio y noticias del proyecto: https://ricker72.github.io/
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/XML-FF6600?style=for-the-badge&logo=xml&logoColor=white" />
+  <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyInstaller-2B5B84?style=for-the-badge&logo=pyinstaller&logoColor=white" />
+</p>
+
+- **Python 3.10+** – Lenguaje principal.
+- **PySide6 / Qt** – Interfaz gráfica de escritorio.
+- **SQLite** – Base de conocimiento interna del Planner.
+- **XML / JSON** – Catálogos de materiales, brushes y configuración.
+- **PyInstaller** – Empaquetado para Windows.
+
+---
+
+## 🤖 El Planner IA
+
+El **Planner** puede conectarse a diferentes proveedores de IA para asistir en la generación y revisión de mapas:
+
+- **Ollama** (local)
+- **OpenRouter** (multimodelo en la nube)
+- **PaxSenix** (servicio especializado)
+
+Además, cuenta con modos de **selección automática** y **consenso entre modelos** para:
+
+- Revisar propuestas de construcción.
+- Detectar errores visuales y de densidad.
+- Ajustar biomas y estructuras.
+- Mejorar la lógica de generación.
+
+> ⚠️ **Importante:** Los modelos **no escriben IDs de ítems directamente**. Todas las propuestas pasan por los catálogos de materiales, motores de brushes certificados, validación OTBM y control de calidad visual. Esto asegura que los mapas generados sean compatibles y jugables.
+
+---
+
+## 📊 Estado del proyecto
+
+| Estado | Descripción |
+|--------|-------------|
+| 🧪 **Alpha** | En desarrollo activo, estable para pruebas. |
+| 🔄 **Actualizaciones** | Semanales, con mejoras basadas en feedback. |
+| 🐛 **Errores** | Se esperan algunos, agradecemos reportes. |
+| 🗺️ **Compatibilidad** | En progreso con RME/Canary y estándares OpenTibia. |
+
+> **El proyecto es Open Source** y toda contribución es bienvenida.
+
+---
+
+## 📦 Assets y distribución
+
+Por razones legales, **los assets oficiales del cliente de Tibia** no se incluyen en el paquete distribuible.
+
+Al iniciar la aplicación por primera vez, se te solicitará la **carpeta del cliente** (`/assets`) para localizar:
+
+- `appearances.dat`
+- `catalog-content.json`
+- Sprites oficiales
+
+La aplicación usará estos archivos para funcionar correctamente.
+
+---
+
+## 👤 Creador
+
+**Desarrollado por ricker72**  
+Apasionado por OpenTibia, la IA y el desarrollo de herramientas creativas.
+
+<p align="center">
+  <a href="https://github.com/ricker72">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://ricker72.github.io">
+    <img src="https://img.shields.io/badge/Portafolio-000000?style=for-the-badge&logo=About.me&logoColor=white" />
+  </a>
+</p>
+
+---
+
+## 🧭 ¿Cómo empezar?
+
+1. **Descarga la última versión**
+2. **Ejecuta** el instalador o el ejecutable portátil.
+3. **Configura** tu carpeta de assets cuando se te solicite.
+4. **Explora** el editor y prueba el Planner IA.
+
+> Esta Version incluye un Manual de Usuario favor de leerlo antes de empezar: /MANUAL_USUARIO.md
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia **MIT**.  
+Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+**¡Gracias por tu interés!**  
+Tu apoyo y feedback son fundamentales para hacer de RME Agente AI la herramienta definitiva para la creación de mapas en OpenTibia.
