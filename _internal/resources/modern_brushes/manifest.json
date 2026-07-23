@@ -1,0 +1,10 @@
+{
+  "name": "Modernized Tibia Brush UI Pack",
+  "version": "1.0.0",
+  "preserves_filenames": true,
+  "icon_sizes": [
+    16,
+    32
+  ],
+  "files": 54
+}
