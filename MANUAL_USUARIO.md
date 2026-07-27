@@ -10,11 +10,6 @@ Cuando recibas el paquete, descomprime la carpeta completa:
 
 ```text
 RME Alpha AI
-
----
-Luego en la carpeta _internal/exports/
-descomprime el Archivo: "planner_knowledge.zip"
-es una base de datos con la que funciona la aplicacion.
 ```
 
 Dentro deben existir, como minimo:
