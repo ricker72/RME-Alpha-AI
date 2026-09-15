@@ -1,243 +1,134 @@
-# Manual de Usuario - RME Agente AI Alpha
+# RME Agente AI Alpha — Manual de usuario
 
-RME Agente AI Alpha es una version alpha del workspace/editor del proyecto Agente RME AI. Esta version sirve para pruebas tempranas de apertura, visualizacion, edicion, generacion asistida por IA y exportacion de mapas OpenTibia compatibles con Canary/RME.
+## 1. Distribución y primer arranque
 
-El programa todavia esta en desarrollo. Si encuentras errores, reportalos con la estructura incluida al final de este manual.
+Abra `RME_Agente_AI_Alpha.exe` desde la carpeta completa de distribución. No
+separe el ejecutable de `_internal`: esa carpeta contiene Qt, el motor Python,
+los catálogos oficiales, materiales, brushes y recursos necesarios.
 
-## 1. Archivos que debes descomprimir
+La aplicación es portable en Windows. No requiere instalar Python. Si aparece
+un diálogo de selección de recursos, indique una carpeta que contenga los
+materiales oficiales de RME y los archivos de apariencias solicitados.
 
-Cuando recibas el paquete, descomprime la carpeta completa:
+## 2. Flujo básico del editor
 
-```text
-RME Alpha AI
+1. Abra o importe un mapa compatible desde File/Open.
+2. Seleccione una categoría en Terrain Palette.
+3. Seleccione un tileset y después un sprite/material.
+4. Pinte con clic izquierdo en el viewport.
+5. Use clic derecho para borrar el campo con el brush activo. Al soltarlo, el
+   brush queda desarmado; seleccione otro brush antes de volver a pintar.
+6. Use Shift + clic izquierdo para iniciar una selección rectangular.
+7. Use el botón central para navegar y la rueda para zoom.
+8. Guarde/exporte el mapa desde File. Las mutaciones pasan por el pipeline
+   certificado y no se escriben directamente desde los paneles.
+
+## 3. Paneles y menú View
+
+AI Studio, Terrain Palette, Tileset Palette, Sprite Grid, RME Palette,
+Minimap, Action History, Layers, Properties, Coordinates, Map Properties,
+Towns, Houses, Spawns, NPCs, Waypoints, Zones y Diagnostics Console son
+paneles acoplables. Se pueden mostrar u ocultar desde View; AI Studio también
+se puede cerrar con el botón X de su barra de título y volver a abrir desde
+View → AI Studio.
+
+Las opciones de render View controlan el mismo `RenderContext` usado por el
+viewport: shade, luces, intensidad de luces, client box, avoidables, objetos
+sueltos, pickupables, solo modificados, grid, bordes y previews. Cambiar una
+opción no modifica el mapa.
+
+## 4. AI Studio
+
+AI Studio nunca aplica una propuesta automáticamente:
+
+1. Elija el modo del proveedor.
+2. Escriba el cambio deseado en Prompt.
+3. Pulse Generate Proposal.
+4. Revise Tile diff y, opcionalmente, use Inspect View y AI Review.
+5. Pulse Approve solo después de revisar la propuesta; Reject deja el mapa sin
+   cambios.
+
+Los modos disponibles son:
+
+- Automatic failover: intenta los proveedores configurados en el orden válido.
+- Ollama: servidor local o Ollama Cloud.
+- OpenRouter.
+- PaxSenix.
+- Triple consensus: solicita validación combinada cuando los proveedores
+  disponibles lo permiten.
+
+## 5. Configurar claves de API sin incluirlas en la distribución
+
+Nunca escriba una clave dentro del código, del manual, de un archivo JSON del
+paquete ni de un issue. El paquete público se entrega sin claves.
+
+### Opción A: AI Studio
+
+Seleccione el proveedor, escriba su clave en el campo API y pulse Save. El
+campo es de contraseña y se limpia después de guardarla. El Core certificado
+gestiona la persistencia protegida de Windows; si el almacenamiento protegido
+no está disponible, use variables de entorno.
+
+### Opción B: variables de entorno de Windows
+
+Configure las variables antes de abrir la aplicación:
+
+```powershell
+$env:OPENROUTER_API_KEY = "SU_CLAVE_LOCAL"
+$env:PAXSENIX_API_KEY = "SU_CLAVE_LOCAL"
+$env:OLLAMA_API_KEY = "SU_CLAVE_LOCAL"
 ```
 
-Dentro deben existir, como minimo:
+Para Ollama local puede configurar también:
 
-```text
-RME Alpha AI/
-  RME_Agente_AI_Alpha.exe
-  README.md
-  MANUAL_USUARIO.md
-  _internal/
+```powershell
+$env:OLLAMA_HOST = "http://127.0.0.1:11434"
+$env:OLLAMA_MODEL = "qwen3:8b"
 ```
 
-No ejecutes el `.exe` separado de `_internal`. El ejecutable necesita esa carpeta para cargar librerias, materiales, configuracion, catalogos, base del Planner y recursos del editor.
+Para cambiar modelos o un gateway compatible personalizado:
 
-No borres ni muevas estos elementos:
-
-```text
-_internal/config/
-_internal/data/
-_internal/exports/
-_internal/projects/
-_internal/resources/
-_internal/workspace_core/
-_internal/APPEARANCE_ITEM_CATALOG.json
-_internal/APPEARANCE_RENDER_CATALOG.json
+```powershell
+$env:RME_CUSTOM_AI_BASE_URL = "https://servidor-compatible.example/v1"
+$env:RME_CUSTOM_AI_MODEL = "nombre-del-modelo"
 ```
 
-Si mueves la aplicacion a otra ubicacion, mueve siempre la carpeta completa `RME Alpha AI`.
+El orden de failover se puede ajustar con una lista separada por comas:
 
-## 2. Assets oficiales requeridos
-
-La aplicacion no incluye assets privados del cliente. En el primer inicio, o desde `File > Locate Tibia Assets...`, debes seleccionar una carpeta de assets valida.
-
-La carpeta de assets debe contener:
-
-```text
-appearances-*.dat o appearances.dat
-catalog-content.json
-sprite sheets oficiales del cliente
+```powershell
+$env:RME_AI_PROVIDER_ORDER = "ollama,openrouter,paxsenix"
 ```
 
-Si aparece un error parecido a:
+Estas variables son ejemplos de nombres, no contienen credenciales reales.
+Use una sesión de PowerShell nueva para que el proceso herede los valores.
 
-```text
-Validation result: FAILED
-Error: No sprite sheets
-```
+## 6. Importación y recursos
 
-significa que seleccionaste una carpeta incompleta. Vuelve a localizar la carpeta raiz correcta del cliente/assets, no solo la carpeta donde esta el `.dat`.
+Use File → Open/Import y seleccione un formato compatible. La conversión debe
+resolver materiales, apariencias y brushes contra los catálogos oficiales
+incluidos; si falta un recurso, la aplicación debe mostrar el bloqueo y no
+inventar IDs. Con mapas grandes, espere a que termine la carga antes de editar.
 
-La configuracion de inicio se guarda en:
+Para reportar un error incluya: versión, Windows, pasos reproducibles, formato
+del mapa, mensaje visible y el contenido de Diagnostics Console. Nunca adjunte
+claves, tokens, archivos de configuración personales ni mapas privados.
 
-```text
-%APPDATA%\Agente RME\RME Workspace\startup_assets.json
-```
+## 7. Qué contiene el paquete público
 
-Si configuraste una ruta incorrecta y la app no carga bien, puedes cerrar la app, borrar ese archivo y volver a abrirla para seleccionar los assets otra vez.
+El paquete incluye únicamente el ejecutable, `_internal`, recursos oficiales,
+catálogos, materiales, datos runtime y este manual. Se excluyen roadmap,
+paridad, auditorías, reportes, screenshots, tests, cachés, logs de desarrollo,
+fuentes y secretos.
 
-## 3. Inicio rapido
+## 8. Solución rápida
 
-1. Descomprime la carpeta completa `RME Alpha AI`.
-2. Abre `RME_Agente_AI_Alpha.exe`.
-3. Localiza los assets oficiales si la app lo solicita.
-4. Usa `New` para crear un mapa nuevo o `Open Map` para abrir un `.otbm`.
-5. Selecciona una paleta y un brush.
-6. Pinta en el viewport con clic izquierdo.
-7. Usa clic derecho sobre el mapa para abrir el menu contextual.
-8. Usa `Save` para guardar o exportar el mapa.
-
-Atajos basicos esperados:
-
-```text
-Ctrl+N       Nuevo mapa
-Ctrl+O       Abrir mapa
-Ctrl+S       Guardar
-Ctrl+Z       Undo
-Ctrl+Y       Redo
-Delete       Borrar seleccion
-+ / -        Subir o bajar piso
-Ctrl+G       Ir a posicion
-```
-
-Algunas funciones siguen en alpha. Si un menu aparece pero no ejecuta nada, reportalo.
-
-## 4. Como pedir un mapa a la IA
-
-Los mejores resultados salen cuando el prompt contiene datos concretos y usa referencias reales sin pedir copiar geometria. Las referencias sirven para estilo, densidad, materiales y ritmo de mapeo, no para duplicar zonas existentes.
-
-Usa esta estructura:
-
-```text
-Nombre del mapa:
-Town:
-Coordenadas del town:
-Nivel recomendado:
-Tipo de mapa:
-Referencias de ciudad maximo 2:
-Referencias de bioma/hunt maximo 2:
-Zonas obligatorias:
-Gameplay:
-Conectividad:
-Materiales/estilo:
-Restricciones:
-Exportacion:
-```
-
-Ejemplo:
-
-```text
-Nombre del mapa: Ikaro
-Town: Ika
-Coordenadas del town: x=998, y=1000, z=7
-Nivel recomendado: 300
-Tipo de mapa: isla hunt pequena estilo Krailos
-Referencias de ciudad maximo 2: ninguna
-Referencias de bioma/hunt maximo 2: Krailos, roshamuul_map
-Zonas obligatorias: templo pequeno con Protection Zone, costa, montanas, arena, roca seca, vegetacion de Krailos, spawns de dragon y dragon lord
-Gameplay: rutas de kite, zonas seguras cerca del templo, zonas peligrosas hacia la montana
-Conectividad: sin teleports, usar caminos, rampas, escaleras y pasos naturales
-Materiales/estilo: usar solo materiales oficiales de RME/Canary, ground brushes reales, autoborders reales y sprites oficiales
-Restricciones: no copiar geometria de mapas de referencia, no inventar IDs, no usar placeholders, no colocar puertas en el templo
-Exportacion: generar OTBM compatible con RME/Canary y reporte de validacion
-```
-
-Evita prompts ambiguos como:
-
-```text
-Hazme un mapa bonito
-```
-
-Evita pedir IDs manuales si no sabes que existen. Es mejor pedir familias oficiales:
-
-```text
-usa arena, roca seca, vegetacion de Krailos, borders oficiales y montanas con escaleras reales
-```
-
-## 5. Como reportar errores
-
-Cada reporte debe incluir:
-
-```text
-Version de la app:
-Fecha y hora:
-Windows:
-Mapa abierto:
-Assets usados:
-Prompt usado:
-Pasos para reproducir:
-Resultado esperado:
-Resultado obtenido:
-Mensaje de error completo:
-Screenshot o video:
-Archivo .otbm si aplica:
-```
-
-Ejemplo:
-
-```text
-Version de la app: RME Agente AI Alpha
-Fecha y hora: 2026-07-23 18:30
-Windows: Windows 11
-Mapa abierto: Ikaro.otbm
-Assets usados: cliente 15.24
-Prompt usado: crear isla estilo Krailos...
-Pasos para reproducir:
-1. Abrir la app.
-2. Crear mapa nuevo.
-3. Escribir prompt.
-4. Click en Generate Proposal.
-Resultado esperado: genera isla con costa y templo PZ.
-Resultado obtenido: aparece tile negro y no exporta.
-Mensaje de error completo: Certified AI preview failed...
-Screenshot o video: adjunto.
-Archivo .otbm: adjunto si no contiene contenido privado.
-```
-
-Los logs de la aplicacion se guardan en:
-
-```text
-%LOCALAPPDATA%\Agente RME\RME Workspace\logs
-```
-
-Adjunta el log mas reciente cuando reportes un crash o un error de carga.
-
-No compartas claves API, tokens, archivos privados del cliente, datos personales ni configuraciones con secretos. Si un log contiene claves, borralas antes de enviarlo.
-
-## 6. Recomendaciones para pruebas
-
-Prueba primero mapas pequenos:
-
-```text
-64x64
-128x128
-zonas de un solo bioma
-una ciudad pequena
-una hunt corta
-```
-
-Despues prueba mapas mas complejos:
-
-```text
-varios pisos
-montanas con escaleras
-casas
-depot
-templo
-spawns
-NPCs
-zonas PZ
-```
-
-Para comparar resultados, abre el `.otbm` exportado en Canary/RME y revisa:
-
-```text
-tiles negros
-items sin sprite
-grounds equivocados
-autoborders faltantes
-paredes mal orientadas
-puertas donde no deben existir
-spawns fuera de zona jugable
-zonas PZ faltantes
-lag al desplazarse
-crash al guardar o abrir
-```
-
-## 7. Estado alpha
-
-Esta version busca acercar el workspace al comportamiento de RME/Canary y preparar pruebas reales con usuarios. El objetivo es que el Planner y las IA aprendan de materiales oficiales, mapas de referencia y validacion humana para disenar mapas cada vez mas cercanos al trabajo de un mapper humano.
-
-Si algo falla, no lo ignores: reportalo con pasos claros. Cada reporte ayuda a mejorar el editor, el Planner, el render, el brush engine y la generacion de mapas.
+- **QtCore DLL:** ejecute el EXE desde su carpeta completa; no copie solo el
+  ejecutable.
+- **No hay sprites/materiales:** revise la carpeta de recursos seleccionada y
+  que contenga los manifiestos oficiales.
+- **AI sin respuesta:** compruebe el proveedor seleccionado, su endpoint, el
+  modelo y la clave; pruebe primero Ollama local.
+- **El botón Approve está deshabilitado:** la propuesta no pasó la vista previa
+  certificada o no existe una propuesta activa.
+- **Brush inesperado:** haga clic derecho para borrar y seleccione nuevamente
+  el brush deseado antes de pintar.
