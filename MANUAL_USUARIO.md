@@ -1,8 +1,8 @@
-# RME Agente AI Alpha — Manual de usuario
+# RME Alpha AI — Manual de usuario
 
 ## 1. Distribución y primer arranque
 
-Abra `RME_Agente_AI_Alpha.exe` desde la carpeta completa de distribución. No
+Abra `RME_Alpha_AI.exe` desde la carpeta completa de distribución. No
 separe el ejecutable de `_internal`: esa carpeta contiene Qt, el motor Python,
 los catálogos oficiales, materiales, brushes y recursos necesarios.
 

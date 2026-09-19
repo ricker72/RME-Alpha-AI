@@ -1,0 +1,1454 @@
+[
+  {
+    "type": 0,
+    "lookType": 136,
+    "name": "Citizen",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 137,
+    "name": "Hunter",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 138,
+    "name": "Mage",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 139,
+    "name": "Knight",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 140,
+    "name": "Noblewoman",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 141,
+    "name": "Summoner",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 142,
+    "name": "Warrior",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 147,
+    "name": "Barbarian",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 148,
+    "name": "Druid",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 149,
+    "name": "Wizard",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 150,
+    "name": "Oriental",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 155,
+    "name": "Pirate",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 156,
+    "name": "Assassin",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 157,
+    "name": "Beggar",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 158,
+    "name": "Shaman",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 252,
+    "name": "Norsewoman",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 269,
+    "name": "Nightmare",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 270,
+    "name": "Jester",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 279,
+    "name": "Brotherhood",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 288,
+    "name": "Demon Hunter",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 324,
+    "name": "Yalaharian",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 329,
+    "name": "Newly Wed",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 336,
+    "name": "Warmaster",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 366,
+    "name": "Wayfarer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 431,
+    "name": "Afflicted",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 433,
+    "name": "Elementalist",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 464,
+    "name": "Deepling",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 466,
+    "name": "Insectoid",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 471,
+    "name": "Entrepreneur",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 513,
+    "name": "Crystal Warlord",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 514,
+    "name": "Soil Guardian",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 542,
+    "name": "Demon",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 575,
+    "name": "Cave Explorer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 578,
+    "name": "Dream Warden",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 618,
+    "name": "Glooth Engineer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 620,
+    "name": "Jersey",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 632,
+    "name": "Champion",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 635,
+    "name": "Conjurer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 636,
+    "name": "Beastmaster",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 664,
+    "name": "Chaos Acolyte",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 666,
+    "name": "Death Herald",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 683,
+    "name": "Ranger",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 694,
+    "name": "Ceremonial Garb",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 696,
+    "name": "Puppeteer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 698,
+    "name": "Spirit Caller",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 724,
+    "name": "Evoker",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 732,
+    "name": "Seaweaver",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 745,
+    "name": "Recruiter",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 749,
+    "name": "Sea Dog",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 759,
+    "name": "Royal Pumpkin",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 845,
+    "name": "Rift Warrior",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 852,
+    "name": "Winter Warden",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 874,
+    "name": "Philosopher",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 885,
+    "name": "Arena Champion",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 900,
+    "name": "Lupine Warden",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 909,
+    "name": "Grove Keeper",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 929,
+    "name": "Festive",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 956,
+    "name": "Pharaoh",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 958,
+    "name": "Trophy Hunter",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 963,
+    "name": "Retro Warrior",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 965,
+    "name": "Retro Summoner",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 967,
+    "name": "Retro Noblewoman",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 969,
+    "name": "Retro Mage",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 971,
+    "name": "Retro Knight",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 973,
+    "name": "Retro Hunter",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 975,
+    "name": "Retro Citizen",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1020,
+    "name": "Herbalist",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1024,
+    "name": "Sun Priest",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1043,
+    "name": "Makeshift Warrior",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1050,
+    "name": "Siege Master",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1057,
+    "name": "Mercenary",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1070,
+    "name": "Battle Mage",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1095,
+    "name": "Discoverer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1103,
+    "name": "Sinister Archer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1128,
+    "name": "Pumpkin Mummy",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1147,
+    "name": "Dream Warrior",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1162,
+    "name": "Percht Raider",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1174,
+    "name": "Owl Keeper",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1187,
+    "name": "Guidon Bearer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1203,
+    "name": "Void Master",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1205,
+    "name": "Veteran Paladin",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1207,
+    "name": "Lion of War",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1211,
+    "name": "Golden",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1244,
+    "name": "Hand of the Inquisition",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1246,
+    "name": "Breezy Garb",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1252,
+    "name": "Orcsoberfest Garb",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1271,
+    "name": "Poltergeist",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1280,
+    "name": "Herder",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1283,
+    "name": "Falconer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1289,
+    "name": "Dragon Slayer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1293,
+    "name": "Trailblazer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1323,
+    "name": "Revenant",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1332,
+    "name": "Jouster",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1339,
+    "name": "Moth Cape",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1372,
+    "name": "Rascoohan",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1383,
+    "name": "Merry Garb",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1385,
+    "name": "Rune Master",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1387,
+    "name": "Citizen of Issavi",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1416,
+    "name": "Forest Warden",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1437,
+    "name": "Royal Bounacean Advisor",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1445,
+    "name": "Dragon Knight",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1450,
+    "name": "Arbalester",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1456,
+    "name": "Royal Costume",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1461,
+    "name": "Formal Dress",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1490,
+    "name": "Ghost Blade",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1501,
+    "name": "Nordic Chieftain",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1569,
+    "name": "Fire-Fighter",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1576,
+    "name": "Fencer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1582,
+    "name": "Shadowlotus Disciple",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1598,
+    "name": "Ancient Aucar",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1613,
+    "name": "Frost Tracer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1619,
+    "name": "Armoured Archer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1663,
+    "name": "Decaying Defender",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1676,
+    "name": "Darklight Evoker",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1681,
+    "name": "Flamefury Mage",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1714,
+    "name": "Doom Knight",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1723,
+    "name": "Draccoon Herald",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1726,
+    "name": "Celestial Avenger",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1746,
+    "name": "Blade Dancer",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1775,
+    "name": "Rootwalker",
+    "gender": "female"
+  },
+  {
+    "type": 0,
+    "lookType": 1777,
+    "name": "Beekeeper",
+    "gender": "female"
+  },
+  {
+    "type": 1,
+    "lookType": 128,
+    "name": "Citizen",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 129,
+    "name": "Hunter",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 130,
+    "name": "Mage",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 131,
+    "name": "Knight",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 132,
+    "name": "Nobleman",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 133,
+    "name": "Summoner",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 134,
+    "name": "Warrior",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 143,
+    "name": "Barbarian",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 144,
+    "name": "Druid",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 145,
+    "name": "Wizard",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 146,
+    "name": "Oriental",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 151,
+    "name": "Pirate",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 152,
+    "name": "Assassin",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 153,
+    "name": "Beggar",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 154,
+    "name": "Shaman",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 251,
+    "name": "Norseman",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 268,
+    "name": "Nightmare",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 273,
+    "name": "Jester",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 278,
+    "name": "Brotherhood",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 289,
+    "name": "Demon Hunter",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 325,
+    "name": "Yalaharian",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 328,
+    "name": "Newly Wed",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 335,
+    "name": "Warmaster",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 367,
+    "name": "Wayfarer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 430,
+    "name": "Afflicted",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 432,
+    "name": "Elementalist",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 463,
+    "name": "Deepling",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 465,
+    "name": "Insectoid",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 472,
+    "name": "Entrepreneur",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 512,
+    "name": "Crystal Warlord",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 516,
+    "name": "Soil Guardian",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 541,
+    "name": "Demon",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 574,
+    "name": "Cave Explorer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 577,
+    "name": "Dream Warden",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 610,
+    "name": "Glooth Engineer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 619,
+    "name": "Jersey",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 633,
+    "name": "Champion",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 634,
+    "name": "Conjurer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 637,
+    "name": "Beastmaster",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 665,
+    "name": "Chaos Acolyte",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 667,
+    "name": "Death Herald",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 684,
+    "name": "Ranger",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 695,
+    "name": "Ceremonial Garb",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 697,
+    "name": "Puppeteer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 699,
+    "name": "Spirit Caller",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 725,
+    "name": "Evoker",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 733,
+    "name": "Seaweaver",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 746,
+    "name": "Recruiter",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 750,
+    "name": "Sea Dog",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 760,
+    "name": "Royal Pumpkin",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 846,
+    "name": "Rift Warrior",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 853,
+    "name": "Winter Warden",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 873,
+    "name": "Philosopher",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 884,
+    "name": "Arena Champion",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 899,
+    "name": "Lupine Warden",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 908,
+    "name": "Grove Keeper",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 931,
+    "name": "Festive",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 955,
+    "name": "Pharaoh",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 957,
+    "name": "Trophy Hunter",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 962,
+    "name": "Retro Warrior",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 964,
+    "name": "Retro Summoner",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 966,
+    "name": "Retro Nobleman",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 968,
+    "name": "Retro Mage",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 970,
+    "name": "Retro Knight",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 972,
+    "name": "Retro Hunter",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 974,
+    "name": "Retro Citizen",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1021,
+    "name": "Herbalist",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1023,
+    "name": "Sun Priest",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1042,
+    "name": "Makeshift Warrior",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1051,
+    "name": "Siege Master",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1056,
+    "name": "Mercenary",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1069,
+    "name": "Battle Mage",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1094,
+    "name": "Discoverer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1102,
+    "name": "Sinister Archer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1127,
+    "name": "Pumpkin Mummy",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1146,
+    "name": "Dream Warrior",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1161,
+    "name": "Percht Raider",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1173,
+    "name": "Owl Keeper",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1186,
+    "name": "Guidon Bearer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1202,
+    "name": "Void Master",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1204,
+    "name": "Veteran Paladin",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1206,
+    "name": "Lion of War",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1210,
+    "name": "Golden",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1243,
+    "name": "Hand of the Inquisition",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1245,
+    "name": "Breezy Garb",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1251,
+    "name": "Orcsoberfest Garb",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1270,
+    "name": "Poltergeist",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1279,
+    "name": "Herder",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1282,
+    "name": "Falconer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1288,
+    "name": "Dragon Slayer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1292,
+    "name": "Trailblazer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1322,
+    "name": "Revenant",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1331,
+    "name": "Jouster",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1338,
+    "name": "Moth Cape",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1371,
+    "name": "Rascoohan",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1382,
+    "name": "Merry Garb",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1384,
+    "name": "Rune Master",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1386,
+    "name": "Citizen of Issavi",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1415,
+    "name": "Forest Warden",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1436,
+    "name": "Royal Bounacean Advisor",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1444,
+    "name": "Dragon Knight",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1449,
+    "name": "Arbalester",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1457,
+    "name": "Royal Costume",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1460,
+    "name": "Formal Dress",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1489,
+    "name": "Ghost Blade",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1500,
+    "name": "Nordic Chieftain",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1568,
+    "name": "Fire-Fighter",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1575,
+    "name": "Fencer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1581,
+    "name": "Shadowlotus Disciple",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1597,
+    "name": "Ancient Aucar",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1612,
+    "name": "Frost Tracer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1618,
+    "name": "Armoured Archer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1662,
+    "name": "Decaying Defender",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1675,
+    "name": "Darklight Evoker",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1680,
+    "name": "Flamefury Mage",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1713,
+    "name": "Doom Knight",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1722,
+    "name": "Draccoon Herald",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1725,
+    "name": "Celestial Avenger",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1745,
+    "name": "Blade Dancer",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1774,
+    "name": "Rootwalker",
+    "gender": "male"
+  },
+  {
+    "type": 1,
+    "lookType": 1776,
+    "name": "Beekeeper",
+    "gender": "male"
+  }
+]
