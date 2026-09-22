@@ -95859,4 +95859,6 @@ Granted by TibiaGoals.com"/>
 	<item id="54753"/> <!-- unmove,unpass -->
 	<item id="54754"/>
 	<item id="54755" name="noble bath tub kit"/> <!-- avoid,take -->
+	<item id="55095"/> <!-- unmove -->
+	<item id="55117"/> <!-- unmove -->
 </items>
