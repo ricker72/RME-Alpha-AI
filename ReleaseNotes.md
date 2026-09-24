@@ -2,7 +2,7 @@
 
 **Product:** RME Alpha AI (`RME_Alpha_AI.exe`)
 **Version:** 1.0.0 Alpha
-**Date:** 2026-09-24
+**Date:** 2026-09-24 (rev. 4 — 15.33.8f27df live pack, Captain's/Moon Guardian outfits)
 **Build source:** clean `python build_release.py` → `dist_current/RME_Alpha_AI/`
 **User install path:** `RME Alpha AI/RME_Alpha_AI.exe`
 
@@ -147,6 +147,46 @@ RME-parity lighting (`workspace_core/rendering/tile_renderer.py`,
   `show_lights=True/False` keeps geometry identical while the scene glow
   differs (`test_light_not_baked_per_tile_anymore`).
 
+### 5.1 Light Control HUD (new)
+
+- Floating `Light Control` dialog (`panels/light_control_dialog.py`) under
+  `View > Lights > Light Control...` (`Shift+Alt+L`).
+- `Light 0–100%`: scales every dynamic light (100% = RME parity,
+  0% = no dynamic lights).
+- `Shadow 0–100%`: ambient depth outside light reach (100% = dark RME
+  ambient, 0% = no shadow / always bright).
+- `Respect collisions` (default ON): lights no longer pass through walls /
+  tall objects. Occlusion reuses the certified client `unsight` flag
+  (appearances proto field 15, `TileRenderer._tile_blocks_sight()`), the same
+  flag the real client uses for spells/creature vision — no invented wall
+  category. `Valores RME` resets to 100/100/no-occlusion (pure radial RME).
+- Performance: sliders are debounced and setters
+  (`set_light_percent()` / `set_shadow_percent()` /
+  `set_light_respect_collisions()`) only rebuild the bounded light-overlay
+  quad, never the full tile cache. Tests: 12 passed in
+  `tests/test_light_field.py` (parity + percent + occlusion).
+
+### 5.2 NPC / monster spawn visibility fix (rev. 2)
+
+- **File spawns now load:** `<map>-monster.xml` / `<map>-npc.xml` sidecars
+  next to the `.otbm` are parsed at open with upstream RME discard rules
+  (`IOMapOTBM::loadSpawnsMonster/loadSpawnsNpc`: bad position, `radius < 1`,
+  nameless entries, duplicates keep the first) and attached to their center
+  tiles (`workspace_core/editor/spawn_sidecar_loader.py`). File data only
+  fills empty slots — brush placements always win.
+- **Indexed chunks no longer drop creatures/spawns** (`adapter.get_map_chunk`
+  now propagates both into `TileStack`/`TileState`, mirroring the
+  non-indexed path).
+- **Spawns layer gates the spawn-center ring:** `Show monster spawns` (S) /
+  `Show NPC spawns` (U) toggle the `Spawns` layer, which now flows through
+  `RenderContext.show_spawns` into the renderer (cache keys included).
+- **Unknown looks fall back to outfit 197** instead of vanishing silently
+  (upstream `MapDrawer::BlitCreature` Carl-bot tribute parity).
+- Tests: 7 passed in `tests/test_creature_spawn_visibility.py`.
+- Requirement: keep the `-monster.xml` / `-npc.xml` files next to the `.otbm`
+  (as RME saves them). Embedded `SPAWN_AREA` nodes inside the OTBM itself are
+  still counted only, not mapped to tiles.
+
 ## 6. Animations
 
 Canary-faithful animation playback
@@ -198,6 +238,53 @@ Canary-faithful animation playback
   bundled from the certified agent core.
 - Full i18n coverage for the new HUDs (`i18n.py`: `en` / `es` / `pt`),
   including all `material_sync_*` strings.
+
+## 7.1 Rev. 3 — NPC Maker, View splits, tools parity, Live, shields, AI inventory
+
+- **NPC Maker Outfit tab** (`panels/npc_maker_hud.py`): reorganized into 3
+  sub-panels mirroring upstream `OutfitSelector.jsx` (Looktype y Colores /
+  Outfits y Monturas / Addons) with the NPC preview always visible; 18-column
+  color grid parity; mount search/list hidden until Mount is checked; color
+  swatches on Head/Body/Legs/Feet. Layout-only, export/import untouched.
+- **View splits (RME parity):** `Show monsters` / `Show NPCs` and
+  `Show monster spawns` / `Show NPC spawns` are now four independent toggles
+  (own layers `Monsters`, `NPCs`, `Monster Spawns`, `NPC Spawns`).
+- **Show houses / Show special now work:** house tint for `house_id` tiles
+  (id propagated on chunk load) and protection-zone tint from `flags & 1`.
+- **Eraser parity:** monster/npc/spawn/zone/house erasers remove what the
+  active brush owns (kind-checked); wall/ground/border erases refresh
+  neighbor borders in the same atomic transaction; PZ/NoPvP/Logout/PvP tools
+  require a ground tile (upstream `FlagBrush::canDraw`).
+- **Live menu + floating HUD:** top-level `Live` menu (`Ctrl+Shift+L`) with
+  connect/disconnect/cursor-share/status; floating panel with local session
+  handshake, peers, cursor sharing and chat — packet types verbatim from
+  `live_packets.h`, no network yet (honestly labeled).
+- **OTBM gate + anti-abuse:** magic-over-extension validation, 512 MiB cap,
+  non-regular-file refusal and open rate-limiting (`CORE-OTBM-GATE`,
+  `CORE-OTBM-RATELIMIT`) at the single `open_otbm` choke point; guarded XML
+  parsing (no DTD/entities, bounded size) for sidecars, catalogs, zone
+  imports and mock maps; zone record ranges; 1000-packet Live outbox cap.
+- **AI Studio version inventory:** planner `material_root` rebinds on
+  profile switch (caches cleared) and proposals carry the active tree's new
+  palettes (15.30: 1415 ids; 15.33: 55095, 55117) so models cite versioned
+  brushes/items.
+
+## 7.2 Rev. 4 — 15.33.8f27df live pack + outfit corrections
+
+- **New supported client build:** `15.33.8f27df` ("15.33 live client",
+  SHA-256 `2dfa94…`, version read from the client's own `package.json`).
+  Inherits the full `data-15.33` tree (materials, items.xml, palettes, AI
+  context, Material Sync). Delta vs 15.30: +2 objects (43516), outfits and
+  effects unchanged.
+- **NPC Maker outfit corrections** (`resources/npc_maker/outfits.json`,
+  now 275 outfits): Captain 1940 (M) / 1941 (F) added (Captain's Outfits,
+  15.32 Great Expedition event; sprites already in the 15.30 pack);
+  1973/1974 corrected to Illuminated Warrior (M/F) and 1976/1977 to Moon
+  Guardian (M/F) per the TibiaWiki Outfit IDs table (Name/male/female
+  columns, cross-validated) — replacing the OTServ file's uncertain names,
+  per its own warning. 1944 (full outfit structure) and the remaining
+  unnamed 15.30 lookTypes stay out: no invented names (1942 does not exist
+  in any pack).
 
 ## 8. How to run
 

@@ -1,0 +1,77 @@
+"""Campo de luz por-tile con paridad RME (source/light_drawer.cpp/h).
+
+Modelo certificado de Remere's Map Editor:
+- El viewport se cubre con UN buffer a 1px por tile (sin cuadrados: es un
+  solo quad filtrado bilineal, no un glow recortado por tile).
+- Cada tile parte del color ambiente global (50, 50, 50) y cada luz suma
+  ``color_8bit * intensidad`` con mezcla MAX por componente.
+- ``intensidad = min((-distancia + brillo) * 0.2, 1.0)``, nula más allá de
+  MaxLightIntensity (8) o por debajo de 0.01.
+- El buffer se multiplica sobre el mapa (blend DST_COLOR con alfa 1 =
+  multiply): lo no iluminado se oscurece, lo iluminado conserva su color.
+- RME no ocluye por muros: el falloff es radial puro por distancia en
+  tiles. El desplazamiento por piso (addLight: x/y -= 7 - z si z <= 7) lo
+  aplica quien recolecta las luces.
+"""
+from __future__ import annotations
+
+import math
+
+# source/const.h
+MAX_LIGHT_INTENSITY = 8
+MAP_GROUND_LAYER = 7
+# LightDrawer::LightDrawer: color ambiente global.
+AMBIENT_LIGHT: tuple[int, int, int] = (50, 50, 50)
+
+
+def eight_bit_to_rgb(color: int) -> tuple[int, int, int]:
+    """Paleta 6x6x6 del cliente (mismo mapeo que el renderer de tiles)."""
+    color = max(0, min(255, int(color)))
+    return ((color // 36) % 6 * 51, (color // 6) % 6 * 51, color % 6 * 51)
+
+
+def light_intensity(dx: int, dy: int, intensity: int) -> float:
+    """Falloff RME (LightDrawer::calculateIntensity)."""
+    distance = math.hypot(dx, dy)
+    if distance > MAX_LIGHT_INTENSITY:
+        return 0.0
+    value = (-distance + min(int(intensity), MAX_LIGHT_INTENSITY)) * 0.2
+    if value < 0.01:
+        return 0.0
+    return min(value, 1.0)
+
+
+def compute_light_field(
+    width: int,
+    height: int,
+    lights: object,
+    ambient: tuple[int, int, int] = AMBIENT_LIGHT,
+) -> list[list[tuple[int, int, int]]]:
+    """Buffer w*h de (r, g, b) con mezcla MAX sobre el ambiente.
+
+    `lights` es un iterable de (x, y, color_8bit, brillo) en coords de tile
+    relativas al origen del campo.
+    """
+    field = [[ambient for _ in range(width)] for _ in range(height)]
+    for light_x, light_y, color_8bit, brightness in lights:
+        try:
+            lx, ly = int(light_x), int(light_y)
+            strength = min(int(brightness), MAX_LIGHT_INTENSITY)
+        except (TypeError, ValueError):
+            continue
+        if strength <= 0:
+            continue
+        red_base, green_base, blue_base = eight_bit_to_rgb(color_8bit)
+        reach = MAX_LIGHT_INTENSITY
+        for y in range(max(0, ly - reach), min(height, ly + reach + 1)):
+            for x in range(max(0, lx - reach), min(width, lx + reach + 1)):
+                factor = light_intensity(x - lx, y - ly, strength)
+                if factor <= 0.0:
+                    continue
+                old_red, old_green, old_blue = field[y][x]
+                field[y][x] = (
+                    max(old_red, int(red_base * factor)),
+                    max(old_green, int(green_base * factor)),
+                    max(old_blue, int(blue_base * factor)),
+                )
+    return field

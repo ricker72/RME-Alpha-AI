@@ -1,0 +1,997 @@
+from __future__ import annotations
+
+import time
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+from PySide6.QtCore import Qt, QRectF
+from PySide6.QtGui import QColor, QPainter, QPen, QPixmap
+
+from workspace_core.asset_constants import PMX07_ASSET_BLOCKER
+from workspace_core.client_assets import resolve_appearances_file, resolve_asset_root
+from workspace_core.interfaces import TileCoord, TileState, TileStack
+
+from .animation_resolver import AnimationResolver
+from .appearance_provider import AppearanceProvider
+from .appearance_resolver import AppearanceResolver
+from .creature_look import CreatureLookResolver
+from .pixmap_cache import CachedPixmap, PixmapCache
+from .render_context import RenderContext
+from .sprite_decoder import SpriteDecoder
+from .sprite_resolver import SpriteResolver
+from .sprite_sheet_resolver import SpriteSheetResolver
+from .texture_cache import TextureCache
+
+
+DRAW_ORDER = (
+    "Ground",
+    "Border",
+    "Bottom Item",
+    "Stack Item",
+    "Decoration",
+    "Top Item",
+    "Creature",
+    "Effects",
+    "Selection",
+    "Overlay",
+)
+
+# OTBM liquid ids to sprite subtypes, verbatim from
+# Item::liquidSubTypeToSpriteSubType (remeres-map-editor/source/item.cpp).
+_LIQUID_SPRITE_SUBTYPE = {
+    0: 0,
+    1: 1,
+    5: 2,
+    11: 2,
+    3: 3,
+    4: 3,
+    7: 3,
+    13: 3,
+    16: 3,
+    17: 3,
+    6: 4,
+    8: 5,
+    12: 5,
+    14: 5,
+    9: 6,
+    15: 6,
+    10: 7,
+    2: 7,
+    18: 8,
+    20: 9,
+    19: 10,
+}
+
+def _default_asset_root() -> Path:
+    return resolve_asset_root() or Path("assets")
+
+
+DEFAULT_ASSET_ROOT = _default_asset_root()
+
+
+@dataclass(frozen=True)
+class DrawCommand:
+    layer: str
+    appearance_id: int
+    sprite_ids: tuple[int, ...]
+    draw_offset_x: int = 0
+    draw_offset_y: int = 0
+    elevation: int = 0
+    animated: bool = False
+    frame: int = 0
+
+
+@dataclass(frozen=True)
+class TileRenderResult:
+    pixmap: QPixmap | None
+    offset_x: int = 0
+    offset_y: int = 0
+    stack_height: int = 0
+    tile_rect: QRectF | None = None
+    debug_info: dict[str, Any] | None = None
+    render_time_ms: float = 0.0
+    diagnostics: tuple[str, ...] = ()
+
+
+class TileRenderer:
+    def __init__(self, asset_root: str | Path, tile_size: int = 32) -> None:
+        self.asset_root = Path(asset_root)
+        self.tile_size = tile_size
+        # Preferences-owned location (client_assets): persisted StartupConfig,
+        # else process override, else the single appearances-*.dat discovery.
+        official_path = resolve_appearances_file(self.asset_root)
+        if official_path is None or not official_path.exists():
+            raise RuntimeError(PMX07_ASSET_BLOCKER)
+        self.appearance_provider = AppearanceProvider(official_path)
+        self.appearance_resolver = AppearanceResolver(self.appearance_provider)
+        self.sheet_resolver = SpriteSheetResolver(self.asset_root)
+        self.texture_cache = TextureCache()
+        self.sprite_decoder = SpriteDecoder(self.texture_cache, tile_size)
+        self.sprite_resolver = SpriteResolver(self.sheet_resolver, self.sprite_decoder)
+        self.pixmap_cache = PixmapCache()
+        # Time-free tile composites keyed by content + frames + baked visual
+        # flags (see _frame_key). The per-50ms time bucket in _cache_key never
+        # hits for animated tiles, so every animation tick paid a full
+        # QPainter composite (~0.6ms/tile). Frame entries turn refreshes and
+        # repeated patterns (open water) into cache-hit blits (~0.03ms).
+        # Coord-free on purpose: identical content shares one entry map-wide.
+        # Self-validating by construction (every composite input rides the
+        # key), so tile mutations need no invalidation — new content is a new
+        # key, and restoring old content correctly reuses its pixmap.
+        self._frame_cache: PixmapCache = PixmapCache(max_entries=4096)
+        self.animation_resolver = AnimationResolver()
+        self.creature_looks = CreatureLookResolver()
+        # Recolored outfit pixmaps for the in-flight render() call, keyed by
+        # base sprite id. Rebuilt by every draw_commands(); never cached across
+        # renders because look colors ride the tile being drawn.
+        self._outfit_overrides: dict[int, QPixmap] = {}
+        self._diagnostics: list[str] = []
+        self._missing_render_cache: set[int] = set()
+        self._missing_sprite_cache: set[tuple[int, int]] = set()
+        self._missing_creature_cache: set[tuple[int, int, int]] = set()
+        self.render_count = 0
+        self.render_time_ms = 0.0
+
+    def render(self, tile: TileState | TileStack | dict[str, Any], context: RenderContext | None = None) -> TileRenderResult:
+        context = context or RenderContext()
+        if isinstance(tile, dict):
+            tile = TileStack(
+                coord=TileCoord(int(tile.get("x", 0)), int(tile.get("y", 0)), int(tile.get("z", 0))),
+                ground_id=int(tile.get("item_id", 0) or 0),
+                flags=int(tile.get("flags", 0) or 0),
+            )
+        coord = tile.coord
+        if context is not None and context.show_only_modified and not bool(getattr(tile, "modified", False)):
+            return TileRenderResult(pixmap=None, debug_info={"filtered": "unmodified", "coord": (coord.x, coord.y, coord.z)})
+        cache_key = self._cache_key(tile, context)
+        cached = self.pixmap_cache.get(cache_key)
+        if cached is not None:
+            return TileRenderResult(
+                pixmap=cached.pixmap,
+                offset_x=cached.offset_x,
+                offset_y=cached.offset_y,
+                stack_height=len(getattr(tile, "items", ()) or ()),
+                tile_rect=cached.tile_rect,
+                debug_info={"cache_hit": True, "coord": (coord.x, coord.y, coord.z)},
+            )
+
+        started = time.perf_counter()
+        commands = self.draw_commands(tile, context)
+        if not commands:
+            message = f"missing render commands for tile {coord}"
+            marker = getattr(tile, "ground_id", None)
+            if marker not in self._missing_render_cache:
+                self._missing_render_cache.add(marker)
+                self._diagnostics.append(message)
+            return TileRenderResult(
+                pixmap=None,
+                stack_height=len(getattr(tile, "items", ()) or ()),
+                tile_rect=QRectF(0, 0, self.tile_size, self.tile_size),
+                debug_info={"cache_hit": False, "coord": (coord.x, coord.y, coord.z), "draw_commands": 0},
+                diagnostics=(message,),
+            )
+
+        # Frame-cache blit: identical content + frames + baked flags always
+        # composite to identical pixels (see _frame_key), so this turns
+        # animation refreshes and repeated patterns into dict lookups.
+        frame_key = self._frame_key(tile, tuple(commands), context)
+        frame_cached = self._frame_cache.get(frame_key)
+        if frame_cached is not None:
+            return TileRenderResult(
+                pixmap=frame_cached.pixmap,
+                offset_x=frame_cached.offset_x,
+                offset_y=frame_cached.offset_y,
+                stack_height=len(getattr(tile, "items", ()) or ()),
+                tile_rect=frame_cached.tile_rect,
+                debug_info={"cache_hit": True, "frame_hit": True, "coord": (coord.x, coord.y, coord.z)},
+            )
+
+        diagnostics: list[str] = []
+        resolved: list[tuple[DrawCommand, QPixmap, int, int]] = []
+        cursor_x = 0
+        cursor_y = 0
+        min_x = 0
+        min_y = 0
+        max_x = self.tile_size
+        max_y = self.tile_size
+        for command in commands:
+            command_sprites: list[QPixmap] = []
+            for sprite_id in command.sprite_ids:
+                sprite = None
+                if command.layer == "Creature" and self._outfit_overrides:
+                    sprite = self._outfit_overrides.get(sprite_id)
+                if sprite is None:
+                    sprite = self.sprite_resolver.resolve_pixmap(sprite_id)
+                if sprite is None:
+                    message = f"missing sprite {sprite_id} for appearance {command.appearance_id}"
+                    marker = (command.appearance_id, sprite_id)
+                    if marker not in self._missing_sprite_cache:
+                        self._missing_sprite_cache.add(marker)
+                        self._diagnostics.append(message)
+                    diagnostics.append(message)
+                    continue
+                command_sprites.append(sprite)
+
+            # RME computes screenx/screeny before applying draw height. Every
+            # layer of one appearance shares that anchor; elevation only moves
+            # the following item in the tile stack. A command whose sprites
+            # all failed to resolve contributes nothing visible, so it must
+            # not displace the items above it either.
+            for sprite in command_sprites:
+                draw_x = cursor_x - max(0, sprite.width() - self.tile_size) - command.draw_offset_x
+                draw_y = cursor_y - max(0, sprite.height() - self.tile_size) - command.draw_offset_y
+                resolved.append((command, sprite, draw_x, draw_y))
+                min_x = min(min_x, draw_x)
+                min_y = min(min_y, draw_y)
+                max_x = max(max_x, draw_x + sprite.width())
+                max_y = max(max_y, draw_y + sprite.height())
+            if command_sprites:
+                cursor_x -= command.elevation
+                cursor_y -= command.elevation
+
+        canvas_width = max(1, max_x - min_x)
+        canvas_height = max(1, max_y - min_y)
+
+        static_entries = [entry for entry in resolved if not entry[0].animated]
+        animated_entries = [entry for entry in resolved if entry[0].animated]
+        # The static-base + animated-overlay fast path is only valid when
+        # every animated layer sits above every static layer in stack order
+        # (e.g. an animated top item over static ground). When an animated
+        # layer sits BELOW a static one (animated water under a boat), the
+        # overlay would cover the static layers, so fall back to the
+        # order-preserving full composite (RME stack-order parity).
+        animated_positions = [index for index, entry in enumerate(resolved) if entry[0].animated]
+        static_positions = [index for index, entry in enumerate(resolved) if not entry[0].animated]
+        overlay_preserves_order = (
+            bool(animated_entries)
+            and bool(static_entries)
+            and min(animated_positions) > max(static_positions)
+        )
+        pixmap = QPixmap(canvas_width, canvas_height)
+        pixmap.fill(Qt.transparent)
+        painter = QPainter(pixmap)
+        try:
+            if overlay_preserves_order:
+                # RME keeps the static scene in a cached FBO and only re-blits
+                # animated layers per frame (map_drawer.cpp isSceneDirty/blitFBO).
+                # The static base is composited once under a time-free key; each
+                # tick then draws base + animated sprites only. Positions come
+                # from the single full-order walk above, so pixels are identical.
+                base_key = cache_key[:-1] + (-1,)
+                base = self.pixmap_cache.get(base_key)
+                if base is None:
+                    base = self._paint_entries(static_entries, context)
+                    self.pixmap_cache.set(base_key, base)
+                painter.drawPixmap(base.offset_x - min_x, base.offset_y - min_y, base.pixmap)
+                for command, sprite, draw_x, draw_y in animated_entries:
+                    painter.save()
+                    if context.transparent_items and command.layer != "Ground":
+                        painter.setOpacity(0.45)
+                    painter.drawPixmap(draw_x - min_x, draw_y - min_y, sprite)
+                    painter.restore()
+            else:
+                for command, sprite, draw_x, draw_y in resolved:
+                    painter.save()
+                    if context.transparent_items and command.layer != "Ground":
+                        painter.setOpacity(0.45)
+                    painter.drawPixmap(draw_x - min_x, draw_y - min_y, sprite)
+                    painter.restore()
+            if context.highlight_items and len(getattr(tile, "items", ()) or ()) > 0:
+                painter.setPen(QPen(QColor(255, 210, 60, 220), 2))
+                painter.drawRect(-min_x + 1, -min_y + 1, self.tile_size - 3, self.tile_size - 3)
+            if context.show_grid:
+                painter.setPen(QPen(QColor(60, 65, 55), 1))
+                painter.drawRect(-min_x, -min_y, self.tile_size - 1, self.tile_size - 1)
+            if context.show_selection:
+                painter.setPen(QPen(QColor(255, 204, 0), 2))
+                painter.drawRect(-min_x + 1, -min_y + 1, self.tile_size - 3, self.tile_size - 3)
+            if getattr(tile, "spawn", None) is not None:
+                # Editor-only spawn-center ring (RME draws EDITOR_SPRITE
+                # monster/npc indicators here). Code-drawn so no asset is needed.
+                painter.setPen(QPen(QColor(255, 255, 255, 220), 2))
+                painter.setBrush(QColor(255, 255, 255, 60))
+                painter.drawEllipse(QRectF(-min_x + 11, -min_y + 11, 10, 10))
+            if context.show_validation_overlay:
+                painter.setPen(QPen(QColor(255, 60, 60), 2))
+                painter.drawLine(0, 0, self.tile_size, self.tile_size)
+            if context.show_walkability_overlay and not getattr(tile, "walkable", True):
+                painter.fillRect(0, 0, self.tile_size, self.tile_size, QColor(255, 0, 0, 80))
+        finally:
+            painter.end()
+
+        tile_rect = QRectF(min_x, min_y, canvas_width, canvas_height)
+        finished = CachedPixmap(pixmap, min_x, min_y, tile_rect)
+        self._frame_cache.set(frame_key, finished)
+        # Time keys for animated tiles are 50ms garbage that churns the FIFO
+        # and evicts useful entries (static tiles keep theirs: their key has
+        # no time bucket and hits across redraws/pans).
+        if not any(command.animated for command in commands):
+            self.pixmap_cache.set(cache_key, finished)
+        self.render_count += 1
+        elapsed_ms = (time.perf_counter() - started) * 1000
+        self.render_time_ms += elapsed_ms
+        return TileRenderResult(
+            pixmap=pixmap,
+            offset_x=min_x,
+            offset_y=min_y,
+            stack_height=len(getattr(tile, "items", ()) or ()),
+            tile_rect=tile_rect,
+            debug_info={
+                "cache_hit": False,
+                "coord": (coord.x, coord.y, coord.z),
+                "draw_commands": len(commands),
+                "layers": tuple(command.layer for command in commands),
+                "frames": tuple((command.appearance_id, command.frame) for command in commands),
+            },
+            render_time_ms=round(elapsed_ms, 3),
+            diagnostics=tuple(diagnostics),
+        )
+
+    def _paint_entries(
+        self,
+        entries: list[tuple[DrawCommand, QPixmap, int, int]],
+        context: RenderContext,
+    ) -> CachedPixmap:
+        """Composite one layer group into a tight cached pixmap.
+
+        Uses the same per-entry placement and transparent_items opacity as the
+        full-tile path, so a cached static base combines pixel-identically
+        with the per-tick animated overlay.
+        """
+        min_x = min(entry[2] for entry in entries)
+        min_y = min(entry[3] for entry in entries)
+        max_x = max(entry[2] + entry[1].width() for entry in entries)
+        max_y = max(entry[3] + entry[1].height() for entry in entries)
+        pixmap = QPixmap(max(1, max_x - min_x), max(1, max_y - min_y))
+        pixmap.fill(Qt.transparent)
+        painter = QPainter(pixmap)
+        try:
+            for command, sprite, draw_x, draw_y in entries:
+                painter.save()
+                if context.transparent_items and command.layer != "Ground":
+                    painter.setOpacity(0.45)
+                painter.drawPixmap(draw_x - min_x, draw_y - min_y, sprite)
+                painter.restore()
+        finally:
+            painter.end()
+        return CachedPixmap(pixmap, min_x, min_y, QRectF(min_x, min_y, pixmap.width(), pixmap.height()))
+
+    def render_tile(self, tile: TileState | TileStack | dict[str, Any], context: RenderContext | None = None) -> QPixmap | None:
+        return self.render(tile, context).pixmap
+
+    def draw_commands(self, tile: TileState | TileStack, context: RenderContext) -> tuple[DrawCommand, ...]:
+        commands: list[DrawCommand] = []
+        self._outfit_overrides = {}
+        coord = tile.coord
+        ground_id = getattr(tile, "ground_id", None)
+        if ground_id is None:
+            sprite = getattr(tile, "ground_sprite", None)
+            if hasattr(sprite, "id") and str(sprite.id).isdigit():
+                ground_id = int(sprite.id)
+        hook_south, hook_east = self._tile_hooks(tile)
+        if context.show_ground:
+            self._append_command(commands, "Ground", ground_id, None, context, coord)
+
+        if context.show_items:
+            for item in getattr(tile, "items", ()) or ():
+                item_id = self._item_id(item)
+                self._append_command(
+                    commands, self._item_draw_layer(item_id), item_id, item,
+                    context, coord, hook_south, hook_east,
+                )
+
+        if context.show_creatures and getattr(tile, "creature", None) is not None:
+            self._append_creature_commands(commands, getattr(tile, "creature"), context, coord)
+        # Spawn centers are editor indicators painted by render(); they own no
+        # sprite commands (RME draws EDITOR_SPRITE_MONSTERS/NPCS the same way).
+
+        # Canary draws the ground and then walks tile->items in the exact OTBM
+        # stack order. Type flags decide insertion order while editing; sorting
+        # the loaded stack again changes overlaps for walls, borders and tall
+        # decorations.
+        return tuple(commands)
+
+    def _item_draw_layer(self, item_id: int | None) -> str:
+        appearance = self.appearance_resolver.resolve(item_id)
+        if appearance is None:
+            return "Stack Item"
+        if appearance.flags.get("bottom"):
+            return "Bottom Item"
+        if appearance.flags.get("top") or appearance.flags.get("top_effect"):
+            return "Top Item"
+        return "Stack Item"
+
+    def _tile_lights(self, tile: TileState | TileStack) -> tuple[tuple[int, int], ...]:
+        values = []
+        appearance_ids = []
+        ground_id = getattr(tile, "ground_id", None)
+        if ground_id is not None:
+            appearance_ids.append(ground_id)
+        appearance_ids.extend(
+            item_id for item_id in (self._item_id(item) for item in (getattr(tile, "items", ()) or ()))
+            if item_id is not None
+        )
+        for appearance_id in appearance_ids:
+            appearance = self.appearance_resolver.resolve(appearance_id)
+            if appearance is None:
+                continue
+            flags = appearance.flags
+            brightness = int(flags.get("light_brightness", 0) or 0)
+            color = int(flags.get("light_color", 0) or 0)
+            if brightness > 0:
+                values.append((brightness, color))
+        return tuple(values)
+
+    @staticmethod
+    def _rme_color_to_rgb(color: int) -> tuple[int, int, int]:
+        color = max(0, min(255, int(color)))
+        return ((color // 36) % 6 * 51, (color // 6) % 6 * 51, color % 6 * 51)
+
+    def invalidate_tile(self, x: int, y: int, z: int) -> None:
+        self.pixmap_cache.invalidate((x, y, z))
+
+    def _tile_is_animated(self, tile: TileState | TileStack) -> bool:
+        """True only if some layer on this tile actually has >1 animation
+        frame. Used to keep the pixmap cache key stable for static tiles."""
+        ground_id = getattr(tile, "ground_id", None)
+        ids = [ground_id] if ground_id is not None else []
+        for item in (getattr(tile, "items", ()) or ()):
+            ids.append(self._item_id(item))
+        for item_id in ids:
+            if item_id is None:
+                continue
+            appearance = self.appearance_resolver.resolve(item_id)
+            if appearance is not None and int(getattr(appearance, "animation_frames", 1)) > 1:
+                return True
+        return self.creature_is_animated(getattr(tile, "creature", None))
+
+    def animated_frames(
+        self, tile: TileState | TileStack, elapsed_ms: int = 0
+    ) -> tuple[tuple[Any, int], ...] | None:
+        """(appearance_id, frame) for the animated layers of one tile.
+
+        Hot-path check for the animation loop: the same frames
+        draw_commands() would produce, without sprite-id resolution or
+        QPainter work (~0.015ms vs ~0.12ms per tile). Returns None when
+        nothing on the tile animates. Creature outfits ride a 100ms sentinel
+        bucket (their frames also advance on the wall clock).
+        """
+        coord = tile.coord
+        frames: list[tuple[Any, int]] = []
+        ids = [getattr(tile, "ground_id", None)]
+        for item in (getattr(tile, "items", ()) or ()):
+            ids.append(self._item_id(item))
+        for item_id in ids:
+            if item_id is None:
+                continue
+            appearance = self.appearance_resolver.resolve(item_id)
+            if appearance is None:
+                continue
+            if int(getattr(appearance, "animation_frames", 1) or 1) <= 1:
+                continue
+            # Same per-tile seed as _append_command: identical frames.
+            seed = coord.x * 31 + coord.y * 57 + coord.z * 131 + appearance.appearance_id * 17
+            frames.append(
+                (
+                    appearance.appearance_id,
+                    int(self.animation_resolver.frame_at(appearance, elapsed_ms, seed=seed)),
+                )
+            )
+        creature = getattr(tile, "creature", None)
+        if creature is not None and self.creature_is_animated(creature):
+            frames.append(("creature", int(elapsed_ms or 0) // 100))
+        return tuple(frames) or None
+
+    def _frame_key(
+        self, tile: TileState | TileStack, commands: tuple[DrawCommand, ...], context: RenderContext
+    ) -> tuple[Any, ...]:
+        """Time-free composite key (see _frame_cache).
+
+        Only flags baked into the composite ride the key; scene-level
+        opacity/indicators (transparent_floors, floor_fade, show_shade,
+        show_ingame_box, hooks/moveables/pickupables/avoidables/tooltips)
+        never change tile pixels and are excluded so toggling them shares
+        entries. Creature look colors ride the key because recolored outfits
+        change pixels for equal ids.
+        """
+        frame_sig = tuple(
+            (
+                command.layer,
+                command.appearance_id,
+                command.frame,
+                command.sprite_ids,
+                command.draw_offset_x,
+                command.draw_offset_y,
+                command.elevation,
+            )
+            for command in commands
+        )
+        look_sig: tuple[Any, ...] = ()
+        creature = getattr(tile, "creature", None)
+        if creature is not None:
+            look = self.creature_looks.resolve(creature)
+            if look is not None:
+                look_sig = (
+                    int(getattr(look, "look_type", 0) or 0),
+                    int(getattr(look, "look_item", 0) or 0),
+                    int(getattr(look, "head", 0) or 0),
+                    int(getattr(look, "body", 0) or 0),
+                    int(getattr(look, "legs", 0) or 0),
+                    int(getattr(look, "feet", 0) or 0),
+                    int(getattr(look, "addon", 0) or 0),
+                    int(getattr(look, "direction", 0) or 0),
+                )
+        items = tuple(self._cache_item_signature(item) for item in (getattr(tile, "items", ()) or ()))
+        return (
+            "tileframe-v1",
+            getattr(tile, "ground_id", None),
+            items,
+            int(getattr(tile, "flags", 0) or 0),
+            bool(getattr(tile, "walkable", True)),
+            self._cache_item_signature(creature),
+            self._cache_item_signature(getattr(tile, "spawn", None)),
+            look_sig,
+            frame_sig,
+            bool(context.show_grid),
+            bool(context.show_selection),
+            bool(context.show_validation_overlay),
+            bool(context.show_walkability_overlay),
+            bool(context.transparent_items),
+            bool(context.show_lights),
+            bool(context.show_light_strength),
+            bool(context.show_items),
+            bool(context.show_ground),
+            bool(context.show_creatures),
+            bool(context.highlight_items),
+            bool(context.show_only_colors),
+        )
+
+    def _cache_key(self, tile: TileState | TileStack, context: RenderContext) -> tuple[Any, ...]:
+        coord = tile.coord
+        items = tuple(self._cache_item_signature(item) for item in (getattr(tile, "items", ()) or ()))
+        # Only bucket the key by time when the tile is actually animated.
+        # Before this guard, every tile (animated or not) got a brand new
+        # cache key every 50ms, so the pixmap cache never hit for ordinary
+        # static ground/wall tiles and every redraw pass (panning, floor
+        # overlays, resize, chunk reload) forced a full re-composite of the
+        # entire visible map instead of reusing what was already drawn.
+        animated = self._tile_is_animated(tile)
+        return (
+            coord.x,
+            coord.y,
+            coord.z,
+            getattr(tile, "ground_id", None),
+            items,
+            int(getattr(tile, "flags", 0) or 0),
+            bool(getattr(tile, "walkable", True)),
+            bool(getattr(tile, "creature", None)),
+            context.show_grid,
+            context.show_selection,
+            context.show_validation_overlay,
+            context.show_walkability_overlay,
+            context.transparent_floors,
+            round(float(context.floor_fade), 3),
+            context.transparent_items,
+            context.show_shade,
+            context.show_ingame_box,
+            context.show_lights,
+            context.show_light_strength,
+            context.show_items,
+            context.show_ground,
+            context.show_creatures,
+            context.highlight_items,
+            context.show_only_colors,
+            context.show_only_modified,
+            context.show_tooltips,
+            context.show_hooks,
+            context.show_pickupables,
+            context.show_moveables,
+            context.show_avoidables,
+            self._cache_item_signature(getattr(tile, "creature", None)),
+            self._cache_item_signature(getattr(tile, "spawn", None)),
+            (int(context.elapsed_ms) // 50) if animated else -1,
+        )
+
+    @staticmethod
+    def _cache_item_signature(item: Any) -> tuple[Any, ...]:
+        if isinstance(item, dict):
+            return tuple(sorted((str(key), repr(value)) for key, value in item.items()))
+        values = []
+        for name in ("id", "subtype", "count", "action_id", "unique_id", "text"):
+            if hasattr(item, name):
+                values.append((name, repr(getattr(item, name))))
+        return tuple(values) if values else (("value", repr(item)),)
+
+    def icon_frames_for_item(self, item_id: int | None, cap: int = 16) -> tuple:
+        """Frame pixmaps (primer sprite de cada frame) para previews de paleta.
+
+        Paridad RME: los iconos de la paleta animan como en el mapa. Vacío
+        cuando el id no resuelve o no hay pixmaps; el llamador conserva el
+        icono estático. Capado porque las animaciones reales no pasan de 16.
+        """
+        try:
+            item_int = int(item_id) if item_id is not None else None
+        except (TypeError, ValueError):
+            return ()
+        if item_int is None:
+            return ()
+        try:
+            appearance = self.appearance_resolver.resolve(item_int)
+        except Exception:
+            return ()
+        if appearance is None:
+            return ()
+        try:
+            total = max(1, min(int(getattr(appearance, "animation_frames", 1) or 1), max(1, int(cap))))
+        except (TypeError, ValueError):
+            return ()
+        frames: list = []
+        for frame in range(total):
+            try:
+                sprite_ids = self.sprite_resolver.sprite_ids_for_appearance(
+                    appearance, frame, 0, 0, 0, 0
+                )
+            except Exception:
+                continue
+            if not sprite_ids:
+                continue
+            try:
+                pixmap = self.sprite_resolver.resolve_pixmap(sprite_ids[0])
+            except Exception:
+                continue
+            if pixmap is not None and not pixmap.isNull():
+                frames.append(pixmap)
+        return tuple(frames)
+
+    def diagnostics(self) -> tuple[str, ...]:
+        return (
+            tuple(self._diagnostics)
+            + self.appearance_resolver.diagnostics()
+            + self.sprite_resolver.diagnostics()
+            + self.creature_looks.diagnostics()
+        )
+
+    def stats(self) -> dict[str, Any]:
+        return {
+            "appearance": self.appearance_provider.stats(load=False),
+            "sprite": self.sprite_resolver.stats(),
+            "pixmap": self.pixmap_cache.stats(),
+            "render_count": self.render_count,
+            "render_time_ms": round(self.render_time_ms, 3),
+            "draw_order": DRAW_ORDER,
+            "missing_render_cache": len(self._missing_render_cache),
+            "missing_sprite_cache": len(self._missing_sprite_cache),
+        }
+
+    def refresh_creature_roots(self) -> None:
+        """Pick up new monster/npc directories after a Preferences Apply
+        without rebuilding the renderer (RME Apply parity)."""
+        self.creature_looks.refresh_from_environment()
+        self._missing_creature_cache.clear()
+
+    def clear_caches(self) -> None:
+        self.pixmap_cache.clear()
+        self._frame_cache.clear()
+        self.texture_cache.clear()
+        self.sprite_decoder.clear()
+        self._diagnostics.clear()
+        self._missing_render_cache.clear()
+        self._missing_sprite_cache.clear()
+        self._missing_creature_cache.clear()
+
+    @staticmethod
+    def _item_count(item: Any) -> int:
+        """OTBM subtype/count for one tile item (RME Item::getSubtype).
+
+        The local model may carry it as subtype, count or charges; the first
+        present wins. Non-numeric or missing values behave as count 1.
+        """
+        raw = None
+        if isinstance(item, dict):
+            for key in ("subtype", "count", "charges"):
+                if item.get(key) is not None:
+                    raw = item.get(key)
+                    break
+        else:
+            for name in ("subtype", "count", "charges"):
+                value = getattr(item, name, None)
+                if value is not None:
+                    raw = value
+                    break
+        try:
+            return max(0, int(raw)) if raw is not None else 1
+        except (TypeError, ValueError):
+            return 1
+
+    def _tile_hooks(self, tile: TileState | TileStack) -> tuple[bool, bool]:
+        """Hook rows available on one tile (RME Tile::hasProperty).
+
+        Scans ground plus items for hookSouth/hookEast appearances; south wins,
+        exactly like BlitItem's HOOK_SOUTH-first check.
+        """
+        south = False
+        east = False
+        ids = [getattr(tile, "ground_id", None)]
+        for item in getattr(tile, "items", ()) or ():
+            ids.append(self._item_id(item))
+        for item_id in ids:
+            if item_id is None:
+                continue
+            appearance = self.appearance_resolver.resolve(item_id)
+            if appearance is None:
+                continue
+            flags = appearance.flags
+            south = south or bool(flags.get("hook_south"))
+            east = east or bool(flags.get("hook_east"))
+            if south and east:
+                break
+        return south, east
+
+    def _append_command(
+        self,
+        commands: list[DrawCommand],
+        layer: str,
+        appearance_id: int | None,
+        item: Any,
+        context: RenderContext,
+        coord: TileCoord,
+        hook_south: bool = False,
+        hook_east: bool = False,
+    ) -> None:
+        appearance = self.appearance_resolver.resolve(appearance_id)
+        if appearance is None:
+            return
+        # Deterministic per-tile seed for random_start_phase / async
+        # appearances (RME picks a uniform_random start frame; the editor
+        # uses the coord so identical items don't pulse in lockstep while
+        # synchronized ones share the global clock). Ignored otherwise.
+        seed = coord.x * 31 + coord.y * 57 + coord.z * 131 + appearance.appearance_id * 17
+        frame = self.animation_resolver.frame_at(appearance, context.elapsed_ms, seed=seed)
+        # Subtype visuals mirror RME BlitItem exactly: splash/fluid resolves a
+        # liquid subtype, else hangable selects the hook pattern row, else a
+        # stackable count selects the 0-7 count bucket. Otherwise -1 keeps the
+        # plain pattern math.
+        flags = appearance.flags
+        pattern_x = coord.x
+        count_pattern: int | None = None
+        if flags.get("splash") or flags.get("fluid_container"):
+            count_pattern = _LIQUID_SPRITE_SUBTYPE.get(self._item_count(item), 0)
+        elif flags.get("hangable"):
+            if hook_south:
+                pattern_x = 1
+            elif hook_east:
+                pattern_x = 2
+            else:
+                pattern_x = 0
+        elif flags.get("stackable"):
+            count = self._item_count(item)
+            if count <= 1:
+                count_pattern = 0
+            elif count <= 2:
+                count_pattern = 1
+            elif count <= 3:
+                count_pattern = 2
+            elif count <= 4:
+                count_pattern = 3
+            elif count < 10:
+                count_pattern = 4
+            elif count < 25:
+                count_pattern = 5
+            elif count < 50:
+                count_pattern = 6
+            else:
+                count_pattern = 7
+        sprite_ids = self.sprite_resolver.all_layer_sprite_ids(
+            appearance,
+            frame,
+            pattern_x,
+            coord.y,
+            coord.z,
+            count_pattern=count_pattern,
+        )
+        flags = appearance.flags
+        commands.append(
+            DrawCommand(
+                layer,
+                appearance.appearance_id,
+                sprite_ids,
+                int(flags.get("draw_offset_x", 0) or 0),
+                int(flags.get("draw_offset_y", 0) or 0),
+                int(flags.get("elevation", 0) or 0),
+                int(getattr(appearance, "animation_frames", 1) or 1) > 1,
+                int(frame),
+            )
+        )
+
+    def creature_is_animated(self, creature: Any) -> bool:
+        """True when the creature's outfit actually has >1 animation frame."""
+        look = self.creature_looks.resolve(creature)
+        if look is None:
+            return False
+        appearance = None
+        if look.look_item:
+            appearance = self.appearance_resolver.resolve_category(look.look_item, 1)
+        elif look.look_type > 0:
+            appearance = self.appearance_resolver.resolve_category(look.look_type, 2)
+        return appearance is not None and int(getattr(appearance, "animation_frames", 1) or 1) > 1
+
+    def _append_creature_commands(
+        self,
+        commands: list[DrawCommand],
+        creature: Any,
+        context: RenderContext,
+        coord: TileCoord,
+    ) -> None:
+        """Draw one placed creature like RME's BlitCreature (map_drawer.cpp).
+
+        lookItem renders as an object sprite; otherwise the outfit appearance
+        (category 2) is drawn facing the look direction with addon rows gated
+        by the lookAddon bits. pattern_z is the mount variant (0 standing;
+        RME passes min(1, depth-1) only when mounted), never the map floor:
+        CreatureLook carries no mount, so unmounted creatures always use 0.
+        Template combine follows OutfitImage::getRGBAData exactly (pairing,
+        nonzero-channel mask tests, table multiply); the mask layer is never
+        drawn standalone, not even with default (white) colors.
+        """
+        look = self.creature_looks.resolve(creature)
+        if look is None:
+            marker = (coord.x, coord.y, coord.z)
+            if marker not in self._missing_creature_cache:
+                self._missing_creature_cache.add(marker)
+                self._diagnostics.append(f"creature look unavailable at {coord}")
+            return
+        seed = coord.x * 31 + coord.y * 57 + coord.z * 131
+        if look.look_item:
+            appearance = self.appearance_resolver.resolve_category(look.look_item, 1)
+            if appearance is None:
+                return
+            frame = self.animation_resolver.frame_at(appearance, context.elapsed_ms, seed=seed)
+            sprite_ids = self.sprite_resolver.all_layer_sprite_ids(
+                appearance, frame, coord.x, coord.y, coord.z
+            )
+            flags = appearance.flags
+            commands.append(
+                DrawCommand(
+                    "Creature",
+                    appearance.appearance_id,
+                    sprite_ids,
+                    int(flags.get("draw_offset_x", 0) or 0),
+                    int(flags.get("draw_offset_y", 0) or 0),
+                    int(flags.get("elevation", 0) or 0),
+                    int(getattr(appearance, "animation_frames", 1) or 1) > 1,
+                    int(frame),
+                )
+            )
+            return
+        if look.look_type <= 0:
+            return
+        appearance = self.appearance_resolver.resolve_category(look.look_type, 2)
+        if appearance is None:
+            return
+        direction = look.direction % max(1, int(appearance.pattern_x or 1))
+        frame = self.animation_resolver.frame_at(
+            appearance, context.elapsed_ms, seed=seed + appearance.appearance_id * 17
+        )
+        sprite_ids: list[int] = []
+        positions: list[int] = []
+        layers = max(1, int(appearance.layers or 1))
+        pattern_rows = [(0, range(layers))]
+        pattern_y = max(1, int(appearance.pattern_y or 1))
+        for row in range(1, pattern_y):
+            # RME addon rows: lookAddon bit (row-1) selects pattern_y row.
+            if look.addon & (1 << (row - 1)):
+                pattern_rows.append((row, range(layers)))
+        for row, row_layers in pattern_rows:
+            for layer in row_layers:
+                sprite_ids.extend(
+                    self.sprite_resolver.sprite_ids_for_appearance(
+                        appearance, frame, direction, row, 0, layer
+                    )
+                )
+                positions.append(
+                    self.sprite_resolver.sprite_position(
+                        appearance, frame, direction, row, 0, layer
+                    )
+                )
+        sprite_ids = list(self._outfit_command_sprites(appearance, sprite_ids, positions, look))
+        flags = appearance.flags
+        commands.append(
+            DrawCommand(
+                "Creature",
+                appearance.appearance_id,
+                tuple(sprite_ids),
+                int(flags.get("draw_offset_x", 0) or 0),
+                int(flags.get("draw_offset_y", 0) or 0),
+                int(flags.get("elevation", 0) or 0),
+                int(getattr(appearance, "animation_frames", 1) or 1) > 1,
+                int(frame),
+            )
+        )
+
+    def _outfit_command_sprites(
+        self,
+        appearance: Any,
+        sprite_ids: list[int],
+        positions: list[int],
+        look: Any,
+    ) -> tuple[int, ...]:
+        """Final sprite list for one outfit cell row (RME OutfitImage parity).
+
+        Multi-layer outfits pair base+mask per cell (template = next sprite
+        in the list, RME pairing rule); the mask is consumed by the combine
+        and never drawn standalone — drawing it raw leaks template colors
+        (green/blue fringes) over the sprite. Combining always (even with
+        default white colors, an identity multiply) keeps single-sprite
+        commands and drops the mask. Single-layer outfits (mounts l1) keep
+        the recolor-only path.
+        """
+        from .outfit_template import template_pair_index
+
+        layers = max(1, int(appearance.layers or 1))
+        sprite_list = appearance.sprite_ids
+        count = len(sprite_list)
+        if layers < 2 or count < 2:
+            self._recolor_outfit(appearance, sprite_ids, positions, look)
+            return tuple(sprite_ids)
+        combined: list[int] = []
+        for index in range(0, len(sprite_ids), layers):
+            base_id = sprite_ids[index]
+            base_pos = positions[index] if index < len(positions) else 0
+            if base_pos >= count:
+                base_pos = 0 if count == 1 else base_pos % count
+            mask_id = sprite_list[template_pair_index(base_pos, count)]
+            pixmap = self.sprite_resolver.resolve_outfit_pixmap(
+                base_id, mask_id, look.head, look.body, look.legs, look.feet
+            )
+            if pixmap is not None:
+                self._outfit_overrides[base_id] = pixmap
+            combined.append(base_id)
+        return tuple(combined)
+
+    def _recolor_outfit(
+        self,
+        appearance: Any,
+        sprite_ids: list[int],
+        positions: list[int],
+        look: Any,
+    ) -> None:
+        """Stage recolored outfit pixmaps for the in-flight render.
+
+        Pairing and math mirror OutfitImage::getRGBAData exactly; default
+        looks skip the pass (white multiplies to identity). Results land in
+        _outfit_overrides keyed by base sprite id for the placement walk.
+        """
+        from .outfit_template import needs_recolor, template_pair_index
+
+        if not needs_recolor(look.head, look.body, look.legs, look.feet):
+            return
+        sprite_list = appearance.sprite_ids
+        count = len(sprite_list)
+        for sprite_id, position in zip(sprite_ids, positions):
+            if position >= count:
+                position = 0 if count == 1 else position % count if count else 0
+            template_id = sprite_list[template_pair_index(position, count)]
+            pixmap = self.sprite_resolver.resolve_outfit_pixmap(
+                sprite_id, template_id, look.head, look.body, look.legs, look.feet
+            )
+            if pixmap is not None:
+                self._outfit_overrides[sprite_id] = pixmap
+
+    @staticmethod
+    def _item_id(item: Any) -> int | None:
+        if isinstance(item, dict):
+            value = item.get("id") or item.get("item_id")
+        else:
+            value = getattr(item, "id", None) or getattr(item, "item_id", None)
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return None
+
+
+def create_tile_renderer(asset_root: str | Path | None = None, tile_size: int = 32) -> TileRenderer:
+    # The setup dialog configures assets after workspace_core.rendering may
+    # already have been imported. Resolve preferences at construction time so
+    # appearances and sprite sheets always come from one client.
+    return TileRenderer(asset_root or _default_asset_root(), tile_size)
