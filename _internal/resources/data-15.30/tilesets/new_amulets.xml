@@ -1,0 +1,8 @@
+<materials>
+	<tileset name="New - Amulets">
+		<items>
+			<item fromid="53197" toid="53206"/>
+			<item fromid="54510" toid="54514"/>
+		</items>
+	</tileset>
+</materials>

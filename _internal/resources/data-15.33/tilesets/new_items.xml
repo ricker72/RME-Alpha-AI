@@ -1,0 +1,8 @@
+<materials>
+	<tileset name="New Items">
+		<raw>
+			<item id="55095"/>
+			<item id="55117"/>
+		</raw>
+	</tileset>
+</materials>

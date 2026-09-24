@@ -1,0 +1,7 @@
+<materials>
+	<tileset name="New - Helmets">
+		<items>
+			<item fromid="53229" toid="53233"/>
+		</items>
+	</tileset>
+</materials>

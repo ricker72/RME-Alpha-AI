@@ -1,0 +1,229 @@
+# RME Alpha AI — Release Notes
+
+**Product:** RME Alpha AI (`RME_Alpha_AI.exe`)
+**Version:** 1.0.0 Alpha
+**Date:** 2026-09-24
+**Build source:** clean `python build_release.py` → `dist_current/RME_Alpha_AI/`
+**User install path:** `RME Alpha AI/RME_Alpha_AI.exe`
+
+This is a clean user build: staging directories (`.rme_build_staging`,
+`.rme_dist_staging`), stale `build*/dist*` folders, and `__pycache__` trees
+were removed before promotion. `scripts/secret_guard.py --path .` reports
+`PASS` for this tree.
+
+> Note: the unpacked product is ~398 MiB. It is distributed as a local
+> folder (EXE + `_internal/`), not through Git. Do not commit it to Git;
+> the canonical 95 MiB GitHub size gate still applies to repositories.
+
+---
+
+## 1. New client-version support: 15.30 and 15.33
+
+- Added full support for **15.30 (Summer 2026)** and **15.33 (latest CipSoft)**,
+  alongside the existing **15.24 Targuna** base.
+- Client packs are identified by fingerprint, not by filename:
+  `resources/asset_versions.json` maps each `appearances-*.dat` SHA-256 to
+  `15.24.95dcf3`, `15.30`, or `15.33.6ef2e8`
+  (`workspace_core/asset_versions.py`).
+- Unknown packs are reported as `unidentified` with hash + content counts
+  instead of being guessed.
+- Per-version material resolution:
+  `material_root_for_version()` selects `resources/data-<tag>/` when it is a
+  complete tree, otherwise it falls back to the 15.24 base so brush coverage
+  is never lost.
+- Per-version item names/roles overlay:
+  `items_xml_for_version()` prefers `data-<tag>/items.xml`, then the vendored
+  Canary file `data-<tag>/items/items.xml`.
+- The `Supported versions` table reports each registered asset profile as
+  `active` / `registered` / `missing`, plus `unidentified` rows for new packs.
+- AI Studio proposals are prefixed with the active-client context
+  (`[Active client: <label> — N objects, M outfits. Use only item ids
+  present in this pack.]`).
+
+## 2. Material Synchronization System
+
+The new **Sync Materials** HUD (`panels/material_sync_hud.py`,
+`workspace_core/material_sync/`) updates the versioned trees from the active
+Tibia client folder for **15.30** and **15.33**.
+
+- Four sync targets (`TARGETS`):
+  - `items_xml` — item names and roles from appearances.
+  - `tilesets` — ~100 palette files under `tilesets/`.
+  - `brushs` — 16 brush files under `brushs/`.
+  - `borders` — editorial border groups under `borders/`.
+- Read-only-first workflow:
+  - **Scan** compares appearances against the expanded `<include/>` graph of
+    `resources/data-<tag>/` and reports `dead_refs` (IDs cited by XML but
+    missing from the pack) versus `new_ids` (pack IDs with no XML coverage).
+  - Nothing is written without a confirmed diff. Every write creates a `.bak`
+    backup and supports restore via `workspace_core/material_sync/writer.py`.
+- Safety rules (non-negotiable):
+  - Read-only over the client folder; writes stay inside `data-<tag>/`.
+  - `resources/materials` (15.24 base) is untouchable.
+  - Fluid-type OTB IDs 1–20 are excluded from "dead" reports
+    (`NON_APPEARANCE_IDS`).
+- AI-assisted curation (Zen, free models only):
+  - API key lives only in memory or `OPENCODE_ZEN_API_KEY`.
+  - Propose names for `items_xml` and placements/groups for
+    `tilesets` / `brushs` / `borders`, with valid/rejected accounting.
+  - Copy/paste plan support and a `Reload` action that refreshes materials
+    after a confirmed write (restart note shown in the diff view).
+- Default target tag is `15.30` (`DEFAULT_VERSION_TAG`); 15.33 uses the same
+  pipeline against `resources/data-15.33/`.
+
+## 3. Integrated `items.xml` for each version (find them in the palette)
+
+Both version trees ship as complete Canary-layout material trees:
+
+- `resources/data-15.30/`: `items.xml` (24,724 `<item>` entries),
+  `materials.xml`, `brushs.xml`, `tilesets.xml`, `borders.xml`,
+  plus `items/`, `tilesets/`, `brushs/`, `borders/` subtrees.
+- `resources/data-15.33/`: `items.xml` (24,726 `<item>` entries) with the same
+  layout.
+
+What you will see in the **Item Palette**:
+
+- `raw:new-items` (`tilesets/new_items.xml`):
+  - 15.30: 1,415 new IDs (`52977`–`54755`), 166 of them named.
+  - 15.33: 2 new IDs (`55095`, `55117`), preview + ID only (unnamed in
+    appearances).
+- 15.30 curated categories under `items`:
+  - `New - Helmets` (`items:new-helmets`, 5 IDs, e.g. 53229, 53233).
+  - `New - Amulets` (`items:new-amulets`, 15 IDs, e.g. 54510, 53197).
+  - `New - Weapons` (`items:new-weapons`, 23 IDs, e.g. 53211, 53855).
+  - `New - Soul Cores` (`items:new-soul-cores`, 21 IDs, e.g. 54587, 54632).
+  - `New - Creature Products` (`items:new-creature-products`, 16 IDs,
+    e.g. 53778, 54355).
+  - `New - Other Items` (`items:new-other-items`, 41 IDs, e.g. 53692, 54651).
+- Every palette New-Item ID resolves to real sprites in its own pack
+  (`test_new_items_have_sprites`); no black tiles.
+
+## 4. MCP Servers (Model Context Protocol)
+
+Local STDIO MCP bridge (`mcp_server.py`, `workspace_ipc.py`):
+
+- Exposes **semantic operations only**. Models never get a direct
+  tile/OTBM write primitive; the certified Workspace/Planner path resolves
+  assets and validates.
+- Tools:
+  - `rme_open_map`, `rme_planner_query`, `rme_create_proposal`,
+    `rme_get_status`.
+  - `rme_prepare_proposal_preview`,
+    `rme_prepare_proposal_preview_region` (bounded, requires certified
+    `materialize_ai_preview_region`, never falls back to full-map generation),
+    `rme_list_proposal_blocks`, `rme_preview_proposal_block`.
+  - `rme_approve_proposal`, `rme_reject_proposal`,
+    `rme_approve_proposal_block` (block approval requires `confirm=true` plus
+    `RME_MCP_ALLOW_APPROVAL=1`).
+  - `rme_cli_validate_request`, `rme_cli_generate_batch`,
+    `rme_cli_execute_request` (validated `.json` spec + safe `.bat`).
+- Resources: `rme://workspace/status`, `rme://workspace/audit`.
+- Prompt: `rme_safe_map_change`.
+- Multi-client safety: pending AI proposals carry an owner
+  (`_proposal_owner`); a second client (Claude, Codex, OpenCode, another
+  session) cannot overwrite, approve, or reject another client's proposal
+  (`RME-AI-PROPOSAL-OWNED`, fail-closed).
+- Transport: STDIO proxied to the running Qt process over authenticated local
+  IPC (`RME_IPC_HOST` / `RME_IPC_PORT` / `RME_IPC_TOKEN` or OS ephemeral
+  secret). If RME Alpha AI is not running, the server exits with code 2
+  instead of starting a standalone Core.
+- Observability: bounded stage metrics (`proposal`, `preview`, `opening`,
+  `sessions`) with before/after RAM/CPU samples, plus a read-only HUD summary
+  (`stage_summary()`, last 8 stages) and non-invasive MCP resource warnings
+  (`panels/mcp_control_dock.py`).
+
+## 5. Light System
+
+RME-parity lighting (`workspace_core/rendering/tile_renderer.py`,
+`render_context.py`, `viewport/map_scene.py`, `mainwindow.py`):
+
+- Light is a **single scene-level pass**, not baked per tile: per-tile
+  composites carry no glow squares.
+- Per-tile sources come from item flags (`light_brightness`, `light_color`).
+- View toggles under `View > Lights`:
+  - `Show lights` (`Shift+L`).
+  - `Show light strength` (`Shift+K`).
+- Palette parity test: rendering the same stack (e.g. item 2112) with
+  `show_lights=True/False` keeps geometry identical while the scene glow
+  differs (`test_light_not_baked_per_tile_anymore`).
+
+## 6. Animations
+
+Canary-faithful animation playback
+(`workspace_core/rendering/animation_resolver.py`, `tile_renderer.py`,
+`panels/sprite_grid.py`, `panels/animation_inspector_hud.py`):
+
+- `AnimationResolver` mirrors `appearances.proto` loop types
+  (`PINGPONG=-1`, `INFINITE=0`, `COUNTED=1`):
+  - Real per-phase `(duration_min, duration_max)` timing with deterministic
+    FNV-1a stable hash (LegacyX `AnimationPolicyEngine` parity), 500 ms
+    fallback for phaseless frames (RME `ITEM_FRAME_DURATION`).
+  - Synchronous phases share the global clock; `random_start_phase` /
+    non-synchronized appearances offset by `hash % cycle`.
+  - Counted loops freeze on the last frame; pingpong walks the triangle
+    without doubling endpoints.
+- Viewport:
+  - Animation preview toggle (`Show Preview`, `L`) and speed control
+    (`viewport/animation_speed`, persisted in settings).
+  - Only truly animated tiles bucket the render key by time
+    (`elapsed_ms // 50`); static tiles keep a stable key (FIFO churn fix).
+  - Static-base + animated-overlay fast path when all animated layers sit
+    above static layers (e.g. animated top item over static ground).
+- Palette:
+  - Animated item icons cycle frames (e.g. item 946 → 4 frames;
+    static e.g. 1082 → 1 frame; unknown → empty).
+  - `_SpriteCell.set_anim_frames()` / `show_anim_frame()` animate cells
+    in place.
+- Diagnostics:
+  - `Animation Appearance Inspector` window.
+  - `python inspect_animation_appearance.py --items 946 5064 5066`
+    (`--range`, `--fail-only`, `--output` supported).
+
+## 7. Other improvements in this build
+
+- Clean PyInstaller packaging (`rme_workspace.spec`, `build_release.py`):
+  versioned `resources/data-15.30/` + `resources/data-15.33/` trees,
+  `resources/creatures/`, `npc_maker/`, `script_creator/`,
+  `modern_brushes/`, `asset_versions.json`, icon, and version resource are
+  validated as prerequisites; foreign ICU DLLs are excluded so Qt6 resolves
+  the Windows ICU copy; `_internal/PySide6/lib/fonts/` is pre-created to
+  silence `QFontDatabase` deployment warnings.
+- Official client sprite sheets stay **external** and pass through the
+  first-run validation gate (`workspace_core.startup`); the package does not
+  bundle copyrighted assets.
+- Planner knowledge DB ships as a first-run-restored zip seed
+  (`RME_PLANNER_EXPERIENCE.sqlite3.zip`) to keep the download small.
+- Planner experience + knowledge paths (`exports/planner_knowledge/`),
+  agent `config/default.yaml`, and `data/rme_*.json` runtime tables are
+  bundled from the certified agent core.
+- Full i18n coverage for the new HUDs (`i18n.py`: `en` / `es` / `pt`),
+  including all `material_sync_*` strings.
+
+## 8. How to run
+
+1. Copy the whole `RME Alpha AI` folder (keep `RME_Alpha_AI.exe` next to
+   `_internal/`).
+2. Launch `RME_Alpha_AI.exe`.
+3. On first run, point **Preferences** to your Tibia asset folder
+   (`appearances-*.dat` + `catalog-content.json`); the version detector will
+   label it 15.24 / 15.30 / 15.33 or `unidentified`.
+4. Open the **Item Palette** and expand `New - …` tilesets for the active
+   version; use **Sync Materials** to scan a newer pack before editing.
+
+## 9. Evidence / source map
+
+- `workspace_core/material_sync/` (`__init__.py`, `compare.py`,
+  `items_sync.py`, `tilesets_sync.py`, `brushs_sync.py`, `borders_sync.py`,
+  `writer.py`, `refresh.py`, `source.py`) + `panels/material_sync_hud.py`.
+- `workspace_core/asset_versions.py`, `resources/asset_versions.json`.
+- `resources/data-15.30/items.xml`, `resources/data-15.33/items.xml`,
+  `resources/data-15.30/tilesets/`, `resources/data-15.33/tilesets/`.
+- `mcp_server.py`, `workspace_ipc.py`, `panels/mcp_control_dock.py`.
+- `workspace_core/rendering/animation_resolver.py`,
+  `workspace_core/rendering/tile_renderer.py`,
+  `workspace_core/rendering/render_context.py`,
+  `viewport/map_scene.py`, `panels/animation_inspector_hud.py`,
+  `inspect_animation_appearance.py`.
+- Tests: `test_version_materials.py`, `test_new_items_tileset.py`,
+  `test_palette_animation_lights.py`, `test_preview_fidelity_stage18.py`,
+  `test_material_sync_fase*.py`, `test_mcp_*.py`.

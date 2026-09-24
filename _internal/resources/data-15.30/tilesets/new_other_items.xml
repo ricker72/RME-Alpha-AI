@@ -1,0 +1,21 @@
+<materials>
+	<tileset name="New - Other Items">
+		<items>
+			<item fromid="53692" toid="53693"/>
+			<item fromid="53695" toid="53696"/>
+			<item fromid="53751" toid="53774"/>
+			<item id="53783"/>
+			<item id="54128"/>
+			<item id="54236"/>
+			<item id="54262"/>
+			<item id="54267"/>
+			<item id="54480"/>
+			<item id="54564"/>
+			<item id="54566"/>
+			<item fromid="54609" toid="54610"/>
+			<item id="54638"/>
+			<item id="54640"/>
+			<item id="54651"/>
+		</items>
+	</tileset>
+</materials>

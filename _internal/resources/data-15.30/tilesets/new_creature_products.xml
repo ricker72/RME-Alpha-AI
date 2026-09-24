@@ -1,0 +1,11 @@
+<materials>
+	<tileset name="New - Creature Products">
+		<items>
+			<item id="53778"/>
+			<item fromid="54268" toid="54270"/>
+			<item fromid="54355" toid="54364"/>
+			<item id="54611"/>
+			<item id="54639"/>
+		</items>
+	</tileset>
+</materials>

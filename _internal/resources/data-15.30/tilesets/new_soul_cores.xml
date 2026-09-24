@@ -1,0 +1,8 @@
+<materials>
+	<tileset name="New - Soul Cores">
+		<items>
+			<item fromid="54587" toid="54604"/>
+			<item fromid="54630" toid="54632"/>
+		</items>
+	</tileset>
+</materials>

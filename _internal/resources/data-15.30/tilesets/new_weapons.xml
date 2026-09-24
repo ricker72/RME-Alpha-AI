@@ -1,0 +1,8 @@
+<materials>
+	<tileset name="New - Weapons">
+		<items>
+			<item fromid="53207" toid="53228"/>
+			<item id="53855"/>
+		</items>
+	</tileset>
+</materials>
