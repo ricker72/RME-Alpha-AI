@@ -15,6 +15,19 @@ were removed before promotion. `scripts/secret_guard.py --path .` reports
 > folder (EXE + `_internal/`), not through Git. Do not commit it to Git;
 > the canonical 95 MiB GitHub size gate still applies to repositories.
 
+## Publication version policy
+
+Every user-facing build must use the next recommended GitHub Release tag
+printed by `python build_release.py` and stored in
+`RELEASE_VERSION_RECOMMENDATION.txt`. The enforced sequence is:
+
+```text
+v1.0.0-alpha.1 → v1.0.0-alpha.2 → v1.0.0 → v1.0.1
+```
+
+For later builds, set `RME_CURRENT_RELEASE_VERSION` to the last published tag;
+the build then prints the next valid tag. Do not invent a release tag manually.
+
 ---
 
 ## 0. Rev. 8 — cambios incluidos en esta versión
