@@ -2,7 +2,7 @@
 
 **Product:** RME Alpha AI (`RME_Alpha_AI.exe`)
 **Version:** 1.0.0 Alpha
-**Date:** 2026-09-24 (rev. 4 — 15.33.8f27df live pack, Captain's/Moon Guardian outfits)
+**Date:** 2026-09-26 (rev. 8 — clean user build: View/File parity, tools, animation and startup fixes)
 **Build source:** clean `python build_release.py` → `dist_current/RME_Alpha_AI/`
 **User install path:** `RME Alpha AI/RME_Alpha_AI.exe`
 
@@ -14,6 +14,41 @@ were removed before promotion. `scripts/secret_guard.py --path .` reports
 > Note: the unpacked product is ~398 MiB. It is distributed as a local
 > folder (EXE + `_internal/`), not through Git. Do not commit it to Git;
 > the canonical 95 MiB GitHub size gate still applies to repositories.
+
+---
+
+## 0. Rev. 8 — cambios incluidos en esta versión
+
+- **Menú File:** eliminado `Open Workspace Project...`; el flujo de usuario
+  queda centrado en `New`, `Open Map`, `Save`, `Import` y `Export`.
+- **Import/Export:** `Import Map` usa el importador OTBM certificado; `Export
+  OTBM` conserva metadata y valida la salida; `Export Lua` usa el exportador
+  certificado y reporta errores sin crear archivos parciales.
+- **Herramientas tipo Remere:** PZ, No-PVP, No-Logout y PvP escriben sus flags
+  reales y el borrador elimina solo el flag de la herramienta activa.
+  Casas, spawns, NPCs, monstruos y objetos existentes se preservan.
+- **View/Layers:** las casillas de `View` se sincronizan con el panel Layers,
+  incluyendo `Show special`; los toggles de monstruos, NPCs, spawns, casas,
+  pathing, luces, grid, tooltips, indicadores y pisos fantasma fuerzan la
+  actualización correcta del viewport.
+- **Spawns y NPCs:** anillos de spawn más grandes y diferenciados por color,
+  looktypes cargados desde los sidecars reales `-monster.xml`/`-npc.xml` y
+  burbujas/etiquetas de NPC cuando el registro contiene texto o nombre.
+- **Animaciones:** cambiar la velocidad ya no destruye el registro de frames;
+  la cola de deadlines se reprograme de forma segura. Cambiar de piso limpia
+  estados obsoletos y permite que todas las animaciones visibles se registren
+  nuevamente.
+- **Render y casas:** el tintado de house/PZ queda limitado a los píxeles del
+  ground/border y no invade las esquinas transparentes de paredes altas.
+- **Viewport y entrada:** render progresivo, cachés LRU y agenda de frames para
+  reducir lag al abrir/navegar mapas; limpieza de Ctrl/Shift, mouse y previews
+  al perder foco o cerrar la vista para evitar herramientas activas o estados
+  pegados en laptops.
+- **Validación:** se ejecutaron pruebas de interacción, IO, OTBM, render,
+  spawns, herramientas y paridad; la última batería relacionada pasó 47/47.
+
+`Only show colors` continúa deshabilitado intencionalmente: Remere documentó
+que esa opción rompía el editor en versiones anteriores.
 
 ---
 
@@ -283,8 +318,43 @@ Canary-faithful animation playback
   Guardian (M/F) per the TibiaWiki Outfit IDs table (Name/male/female
   columns, cross-validated) — replacing the OTServ file's uncertain names,
   per its own warning. 1944 (full outfit structure) and the remaining
-  unnamed 15.30 lookTypes stay out: no invented names (1942 does not exist
-  in any pack).
+   unnamed 15.30 lookTypes stay out: no invented names (1942 does not exist
+   in any pack).
+
+## 7.3 Rev. 5 — Live menu fix, outfit colors, animation inheritance
+
+- **Live menu placement + HUD crash fix:** `Live` now survives the menubar
+  rebuild and sits right before `About` (`… Creator, Live, Extras, About`);
+  fixed a method/attribute name collision (`_live_hud` → `_get_live_hud`)
+  that crashed every Live action on first use. Verified in the real window:
+  order, HUD, connect, cursor share, chat, menu status, disconnect.
+- **NPC Maker outfit colors corrected** (`colors.json` hue-18 column):
+  18/37/56/75/94/113 now match the real client (OTClient `Outfit::getColor`
+  HSI + RME `TemplateOutfitLookupTable`, e.g. 94 is pure red `#ff0000`).
+- **Animation zero-phase inheritance:** `(0,0)` phases take the first
+  non-zero sibling duration (OTClient `Animator::unserializeAppearance`
+  parity); 1ms only when all phases are zero. Stateless deterministic
+  resolver unchanged otherwise.
+
+## 7.4 Rev. 6 — creature catalog fallback, shade overlay + instant toggles
+
+- **Monster/NPC palettes no longer empty:** the creature catalog now falls
+  back to the bundled official registry (1834 monsters + 1080 NPCs) when no
+  `RME_*_ROOT` is configured — the renderer already did; the palettes did
+  not. Server/env data keeps precedence.
+- **Show shade fixed (two bugs):** shade is now a black `(0,0,0,128)`
+  overlay over above-floor tiles (exact `DrawShade` parity) instead of a
+  ghostly opacity, and shade/ghost toggles apply instantly in place — the
+  old full chunk re-render blocked the GUI for 30+ minutes on large maps,
+  reading as "stuck on". Scene-only flags left the pixmap cache keys.
+
+## 7.5 Rev. 7 — house/PZ tints with upstream math
+
+- **Show houses / Show special render like RME:** the previous flat
+  translucent wash is replaced by multiply blends with the exact upstream
+  factors (`r/=2,g/=2` houses → `128,128,255`; `r/=2,b/=2` PZ →
+  `128,255,128`), aligned to the tile footprint. Verified pixel-by-pixel
+  on a real map (13.6% washed pixels → 1.7% genuine map purples).
 
 ## 8. How to run
 

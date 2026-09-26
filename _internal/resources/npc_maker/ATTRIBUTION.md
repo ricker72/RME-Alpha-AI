@@ -31,3 +31,14 @@ in neither the 15.24 nor the 15.30 pack.
 
 The HUD filters outfits/mounts against the loaded appearances-*.dat
 (category 2), so only lookTypes with real client art are offered.
+
+colors.json hue-18 fix: ids 18/37/56/75/94/113 carried visibly wrong hexes
+(e.g. 94 was #a4244f instead of the iconic pure red #ff0000). Corrected to
+the values where three independent sources agree: OTClient
+Outfit::getColor HSI math (src/client/outfit.cpp, HSI_H_STEPS=19), RME's
+TemplateOutfitLookupTable (workspace_core/rendering/outfit_template.py) and
+the real-client red-94. Remaining ±1/255 dust across ~50 entries is float
+rounding noise between ports — invisible, left untouched. Known suspect
+(not touched, single-source conflict): renderer table id 40 reads #BFAF8F
+while the HSI formula and colors.json agree on #BF9F5F; needs visual proof
+before changing render output.
