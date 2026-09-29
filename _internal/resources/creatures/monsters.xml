@@ -1662,6 +1662,7 @@
 	<monster name="True Dawnfire Asura" looktype="1068" lookaddons="1" lookhead="114" lookbody="94" looklegs="79" lookfeet="121" />
 	<monster name="True Frost Flower Asura" looktype="1068" lookhead="9" looklegs="86" lookfeet="9" />
 	<monster name="True Midnight Asura" looktype="1068" lookaddons="1" lookbody="76" looklegs="53" />
+	<monster name="True Feverbloom Asura" looktype="1068" />
 	<monster name="Truffle" looktype="1750" />
 	<monster name="Truffle Cook" looktype="1751" />
 	<monster name="Tunnel Tyrant" looktype="1035" />

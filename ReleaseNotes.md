@@ -1,10 +1,19 @@
-# RME Alpha AI — Release Notes
+# 🗺️ RME Alpha AI — Release Notes
 
-**Product:** RME Alpha AI (`RME_Alpha_AI.exe`)
-**Version:** 1.0.0 Alpha
-**Date:** 2026-09-26 (rev. 8 — clean user build: View/File parity, tools, animation and startup fixes)
-**Build source:** clean `python build_release.py` → `dist_current/RME_Alpha_AI/`
-**User install path:** `RME Alpha AI/RME_Alpha_AI.exe`
+![version](https://img.shields.io/badge/version-1.0.0%20Alpha%20rev.9-gold?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2Zz48L3N2Zz4=)
+![build](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
+![tests](https://img.shields.io/badge/tests-33%2F33%20passing-brightgreen?style=for-the-badge)
+![python](https://img.shields.io/badge/python-3.14-blue?style=for-the-badge&logo=python)
+![qt](https://img.shields.io/badge/Qt-PySide6-41cd52?style=for-the-badge)
+![platform](https://img.shields.io/badge/platform-Windows-blue?style=for-the-badge&logo=windows)
+
+| Campo | Valor |
+|---|---|
+| **Product** | RME Alpha AI (`RME_Alpha_AI.exe`) |
+| **Version** | 1.0.0 Alpha — **rev. 9** ⚡ Render & Diagnostics TOTEM |
+| **Date** | 2026-09-26 |
+| **Build source** | clean `python build_release.py` → `dist_current/RME_Alpha_AI/` |
+| **User install path** | `RME Alpha AI/RME_Alpha_AI.exe` |
 
 This is a clean user build: staging directories (`.rme_build_staging`,
 `.rme_dist_staging`), stale `build*/dist*` folders, and `__pycache__` trees
@@ -368,6 +377,92 @@ Canary-faithful animation playback
   factors (`r/=2,g/=2` houses → `128,128,255`; `r/=2,b/=2` PZ →
   `128,255,128`), aligned to the tile footprint. Verified pixel-by-pixel
   on a real map (13.6% washed pixels → 1.7% genuine map purples).
+
+## 7.6 Rev. 9 — ⚡ Render & Diagnostics TOTEM (startup, Matrix audit, criaturas, animaciones)
+
+> **TL;DR:** arranque instrumentado con HUD propio · sandbox **Matrix Render Audit** que filtra todo el código y genera reporte · 4 gaps de render de monstruos/NPCs cerrados · animaciones camino a fluidez Remere con telemetría en vivo · panel de sidecars + conversor clásico→split (caso real Naxedmap11: 160 monstruos recuperados) · Minimap/Export ya no poppean al inicio · bundle limpio.
+
+### ⏱️ 1. Startup Timing + HUD flotante propio
+
+El arranque ahora se **mide, no se adivina**:
+
+| Métrica | Dónde sale | Ejemplo real |
+|---|---|---|
+| `CORE_LOAD_MS` | `main.py` — carga del Core certificado | 23 ms |
+| `MAINWINDOW_INIT_MS` | `main.py` — construcción de la ventana | 25155 ms |
+| `STARTUP_TOTAL_MS` | `main.py` — main() hasta ventana visible | 28146 ms |
+| `STARTUP_MS_DOCKS/MENUS/TOOLBARS/LAYOUT_CONSTRAINTS/RESTORE_LAYOUT/SHELL_STATE_LIGHT` | `mainwindow.py` — cada etapa del `__init__` | MENUS: 14471 ms ⚠️ |
+| `MAP_OPEN_OK total_ms / viewport_update_ms` | `mainwindow.py` — apertura de mapa (total vs hilo principal; la diferencia ≈ parseo OTBM en background) | — |
+
+* Logs con milisegundos (`workspace_core/logging_setup.py`: `%(asctime)s.%(msecs)03d`).
+* 📊 **Startup Timing HUD** (`panels/startup_timing_hud.py`, estilo dorado como los otros HUDs): **flotante, no-modal**, aparece solo cuando el Core queda `ready` y trae **[Copiar reporte]** para pegar directo en el ticket. Reabrible en `View > Startup Timing…`. Colector en memoria: `workspace_core/startup_timing.py`.
+* 🔎 Hallazgo del propio instrumento: `MENUS ≈ 14.4 s` domina el arranque — próximo objetivo de optimización.
+
+### 🟢 2. Matrix Render Audit — sandbox estilo Matrix
+
+`Help > Matrix Render Audit…` (`workspace_core/matrix_audit.py` + `panels/matrix_audit_hud.py`): terminal negro/verde lima, monoespaciado, que **filtra todo el código del render-path** (`viewport/`, `workspace_core/rendering/`, `workspace_core/editor/`, `panels/`, `widgets/` + `mainwindow.py`/`main.py`) con **14 reglas** que apuntan a mecanismos reales (sort por tick, budget 8–16 ms, timer 33 ms, clears de caché, evicción FIFO, QPixmap/QPainter por tile, `rglob` en catálogos…). Cada hit cita `archivo:línea + por qué`.
+
+* Escaneo real medido: **122 archivos, 83 hits en ~243 ms** (acotado: máx. 600 archivos / 512 KiB, `.bak/dist/cachés` excluidos).
+* Sección **LIVE**: tamaño del registry de animación, ticks/refreshed/errors, telemetría del tick, hit-ratios de ambas cachés.
+* **[Benchmark render]** cold-vs-cached ms/tile con tiles reales de tu escena (no grounds sintéticos que tu pack no trae).
+* **[Copiar reporte] / [Guardar…]** (`.md`/`.txt`) para tickets.
+* En el `.exe` congelado usa un **snapshot embarcado** (`workspace_core/matrix_snapshot.json`, 33 KB, generado por `scripts/gen_matrix_snapshot.py` en cada build) con fecha visible — el live scan manda si hay fuentes.
+* Top medido: `viewport/map_scene.py` (risk 110) > `tile_renderer.py` (63) > `mainwindow.py` (53).
+
+### 🐉 3. Monstruos/NPCs invisibles en tiles sin suelo — 4 gaps cerrados
+
+Reproducción empírica: `draw_commands` generaba `['Creature']` pero el tile nunca pintaba.
+
+| # | Gap | Fix |
+|---|---|---|
+| 1 | `MapScene._render_cell` y el prefetch de overlays saltaban tiles sin ground/items (criatura en vacío = invisible) | `tile_has_paintable_content()` (ground/items/creature/spawn) en ambos gates — `viewport/map_scene.py` |
+| 2 | Tiles solo-spawn retornaban `pixmap=None` antes del post-pass del anillo | el early-return respeta spawns visibles — `tile_renderer.py` |
+| 3 | El path `dict` reconstruía el `TileStack` sin creature/spawn/items | passthrough completo — `tile_renderer.py` |
+| 4 | Anillo NPC indistinguible (siempre blanco) | ⬜ monstruo / 🟦 NPC (celeste `120,200,255`) |
+
+* Cobertura: `tests/test_creature_only_tiles.py` (5 tests: gate, pixmap, toggles por kind, anillo solo-spawn, path dict).
+* Descartado con evidencia: fallback a outfit **197** funciona; toggles por kind y cache-keys correctos; NPC Maker solo exporta Lua/JSON (no coloca en el mapa).
+
+### ⚡ 4. Animaciones hacia fluidez Remere (con números, no promesas)
+
+Mediciones base: composite warm 0.067 ms, frío 0.76 ms, frame-caché hit 0.998 en agua uniforme, sort despreciable — el composite **no** era el cuello.
+
+La causa real (reporte Matrix de Naxedmap11 floor 7): registry de **4906 tiles** contra ~819 visibles (se registraba el chunk 64×64 inicial y la poda solo corría al panear con margen 64) → ~30 visitados/tick → cada tile refrescaba cada **~5 s**.
+
+| Cambio | Detalle |
+|---|---|
+| ✂️ Poda a lo visible | `_prune_animated_tiles` tras **cada** `render_visible_chunks` + margen 64 → **4** (lo podado se re-registra solo) |
+| ⏲️ `Qt.PreciseTimer` | el `CoarseTimer` enganchaba al tick de Windows (~15.6 ms) y disparaba con judder 31/47 ms |
+| 🗄️ Cachés 8192 → `_frame_cache` **16384** | el working set diverso de floor 7 no cabía (hit 0.73 con la caché llena) |
+| 📡 Telemetría por tick | `anim_tick_ema_ms / anim_tick_max_ms / anim_over_budget_ticks / anim_probe_skipped / anim_reblit_ok / anim_cell_fallback` en `_render_stats`, interpretada por el veredicto Matrix |
+| 🧪 Tests | `tests/test_animation_fluidity.py` (PreciseTimer, capacidades, telemetría, veredicto) |
+
+* Nota honesta: reloj y fases ya eran wall-clock correctos (`frame_at` stateless) — lo "lento" era inanición del tick, no fases mal calculadas. Queda instrumentado para iterar con datos.
+
+### 🗺️ 5. Sidecars: panel propio + conversor clásico → split
+
+* 🔬 **Help > Diagnose Map Sidecars…** (`workspace_core/sidecar_diagnostics.py` + `panels/sidecar_diagnostics_panel.py`): HUD flotante con ruta + Examinar, análisis del header del `.otbm` (a prueba de forks), `.xml` hermanos, **veredicto** (split OK / combinado clásico / parcial) y **[Copiar reporte]**. Lógica compartida con `scripts/diagnose_creature_sidecars.py` (CLI).
+* 🔄 **`scripts/merge_classic_spawns.py`**: fusiona `-spawn.xml` clásico al split `-monster.xml` **sin sobrescribir** (genera `.merged.xml`; omite vacíos y centros duplicados con reporte).
+* 📁 **Caso real Naxedmap11** (medido): `-monster.xml` 2153 centros/113 nombres + `-npc.xml` 57 vs `-spawn.xml` clásico 2712 nodos/202 nombres → **160 nombres solo en el clásico** (demon, behemoth, dragon, amazon…) invisibles para el Core. Merge validado con `parse_spawn_sidecars`: **4459 spawns / 269 nombres**, demon/behemoth/dragon presentes.
+
+### 🪟 6. Minimap y Exportar selección ya no abren solos
+
+Ambos docks flotantes opt-in quedaban visibles desde la construcción (y layouts viejos los restauraban visibles) → ventanas sueltas sobre el splash. Ahora `hide()` al crear + `hide()` tras `restoreState` (`mainwindow.py`); se reabren con `Shift+E` / menú. Test: `tests/test_startup_dock_visibility.py` (ventana real, 2/2).
+
+### 🧹 7. Bundle limpio + baterías verdes
+
+* Eliminados 8 `.bak-*` huérfanos (~500 KB) que viajaban muertos en `_internal/` (ningún `.py` los referenciaba). `_internal/workspace_core/` ahora trae solo `data/` + `matrix_snapshot.json`.
+* Última batería completa: **33/33 passed** (matrix, fluidity, startup-docks, creature-only, spawn-visibility). `secret_guard` PASS. `compileall` OK.
+
+<details>
+<summary>📦 Archivos nuevos de esta rev (click para ver)</summary>
+
+* `workspace_core/startup_timing.py` · `panels/startup_timing_hud.py`
+* `workspace_core/matrix_audit.py` · `panels/matrix_audit_hud.py` · `scripts/gen_matrix_snapshot.py` · `workspace_core/matrix_snapshot.json`
+* `workspace_core/sidecar_diagnostics.py` · `panels/sidecar_diagnostics_panel.py` · `scripts/diagnose_creature_sidecars.py` · `scripts/merge_classic_spawns.py`
+* `tests/test_animation_fluidity.py` · `tests/test_creature_only_tiles.py` · `tests/test_matrix_audit.py` · `tests/test_startup_dock_visibility.py`
+
+</details>
 
 ## 8. How to run
 
