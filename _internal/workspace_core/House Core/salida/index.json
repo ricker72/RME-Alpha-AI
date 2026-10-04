@@ -1,0 +1,11942 @@
+[
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 101,
+  "origin": [
+   31962,
+   31907,
+   6
+  ],
+  "tiles_with_items": 162,
+  "width": 12
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 102,
+  "origin": [
+   31936,
+   31880,
+   6
+  ],
+  "tiles_with_items": 128,
+  "width": 8
+ },
+ {
+  "floors": 5,
+  "height": 15,
+  "id": 10001,
+  "origin": [
+   32257,
+   32307,
+   5
+  ],
+  "tiles_with_items": 761,
+  "width": 17
+ },
+ {
+  "floors": 7,
+  "height": 13,
+  "id": 10002,
+  "origin": [
+   32424,
+   32358,
+   3
+  ],
+  "tiles_with_items": 1063,
+  "width": 21
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 10003,
+  "origin": [
+   32390,
+   32032,
+   6
+  ],
+  "tiles_with_items": 512,
+  "width": 14
+ },
+ {
+  "floors": 4,
+  "height": 14,
+  "id": 10004,
+  "origin": [
+   32390,
+   32145,
+   6
+  ],
+  "tiles_with_items": 597,
+  "width": 15
+ },
+ {
+  "floors": 6,
+  "height": 12,
+  "id": 10005,
+  "origin": [
+   32464,
+   32170,
+   3
+  ],
+  "tiles_with_items": 566,
+  "width": 11
+ },
+ {
+  "floors": 7,
+  "height": 8,
+  "id": 10006,
+  "origin": [
+   32596,
+   32111,
+   2
+  ],
+  "tiles_with_items": 193,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10007,
+  "origin": [
+   32254,
+   32233,
+   7
+  ],
+  "tiles_with_items": 111,
+  "width": 17
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10101,
+  "origin": [
+   32328,
+   32229,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10102,
+  "origin": [
+   32328,
+   32234,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10103,
+  "origin": [
+   32329,
+   32241,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10104,
+  "origin": [
+   32328,
+   32229,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10112,
+  "origin": [
+   32328,
+   32234,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10113,
+  "origin": [
+   32329,
+   32239,
+   6
+  ],
+  "tiles_with_items": 40,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10114,
+  "origin": [
+   32329,
+   32246,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10121,
+  "origin": [
+   32328,
+   32229,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10122,
+  "origin": [
+   32328,
+   32234,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10123,
+  "origin": [
+   32329,
+   32239,
+   5
+  ],
+  "tiles_with_items": 40,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10124,
+  "origin": [
+   32329,
+   32246,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10201,
+  "origin": [
+   32314,
+   32241,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10202,
+  "origin": [
+   32314,
+   32236,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10203,
+  "origin": [
+   32315,
+   32229,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10204,
+  "origin": [
+   32311,
+   32229,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10205,
+  "origin": [
+   32307,
+   32229,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10206,
+  "origin": [
+   32304,
+   32239,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10211,
+  "origin": [
+   32314,
+   32239,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10212,
+  "origin": [
+   32314,
+   32233,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10213,
+  "origin": [
+   32313,
+   32229,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10214,
+  "origin": [
+   32310,
+   32229,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10215,
+  "origin": [
+   32307,
+   32229,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10216,
+  "origin": [
+   32303,
+   32239,
+   6
+  ],
+  "tiles_with_items": 40,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10301,
+  "origin": [
+   32375,
+   32256,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10302,
+  "origin": [
+   32380,
+   32256,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10303,
+  "origin": [
+   32374,
+   32262,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10304,
+  "origin": [
+   32386,
+   32257,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10305,
+  "origin": [
+   32386,
+   32262,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10306,
+  "origin": [
+   32385,
+   32268,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10307,
+  "origin": [
+   32380,
+   32268,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10308,
+  "origin": [
+   32375,
+   32268,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10311,
+  "origin": [
+   32380,
+   32256,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10312,
+  "origin": [
+   32375,
+   32256,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10313,
+  "origin": [
+   32375,
+   32262,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10314,
+  "origin": [
+   32386,
+   32257,
+   6
+  ],
+  "tiles_with_items": 44,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10315,
+  "origin": [
+   32386,
+   32262,
+   6
+  ],
+  "tiles_with_items": 60,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 10316,
+  "origin": [
+   32385,
+   32268,
+   6
+  ],
+  "tiles_with_items": 60,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 10317,
+  "origin": [
+   32380,
+   32268,
+   6
+  ],
+  "tiles_with_items": 44,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 10318,
+  "origin": [
+   32375,
+   32268,
+   6
+  ],
+  "tiles_with_items": 44,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10319,
+  "origin": [
+   32375,
+   32256,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10320,
+  "origin": [
+   32380,
+   32256,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10321,
+  "origin": [
+   32375,
+   32262,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10322,
+  "origin": [
+   32386,
+   32257,
+   5
+  ],
+  "tiles_with_items": 44,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10323,
+  "origin": [
+   32386,
+   32262,
+   5
+  ],
+  "tiles_with_items": 60,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 10324,
+  "origin": [
+   32385,
+   32268,
+   5
+  ],
+  "tiles_with_items": 60,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 10325,
+  "origin": [
+   32380,
+   32268,
+   5
+  ],
+  "tiles_with_items": 44,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 10326,
+  "origin": [
+   32375,
+   32268,
+   5
+  ],
+  "tiles_with_items": 44,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 10401,
+  "origin": [
+   32341,
+   32252,
+   6
+  ],
+  "tiles_with_items": 156,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 10402,
+  "origin": [
+   32353,
+   32252,
+   6
+  ],
+  "tiles_with_items": 156,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 10403,
+  "origin": [
+   32349,
+   32262,
+   6
+  ],
+  "tiles_with_items": 156,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 10404,
+  "origin": [
+   32361,
+   32262,
+   6
+  ],
+  "tiles_with_items": 156,
+  "width": 11
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 10405,
+  "origin": [
+   32393,
+   32256,
+   5
+  ],
+  "tiles_with_items": 247,
+  "width": 14
+ },
+ {
+  "floors": 4,
+  "height": 12,
+  "id": 10406,
+  "origin": [
+   32391,
+   32244,
+   6
+  ],
+  "tiles_with_items": 634,
+  "width": 20
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 10407,
+  "origin": [
+   32407,
+   32256,
+   6
+  ],
+  "tiles_with_items": 70,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 13,
+  "id": 10408,
+  "origin": [
+   32415,
+   32256,
+   6
+  ],
+  "tiles_with_items": 130,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10501,
+  "origin": [
+   32294,
+   32249,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10502,
+  "origin": [
+   32294,
+   32250,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10503,
+  "origin": [
+   32294,
+   32244,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 10504,
+  "origin": [
+   32278,
+   32250,
+   6
+  ],
+  "tiles_with_items": 95,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10505,
+  "origin": [
+   32290,
+   32267,
+   8
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10508,
+  "origin": [
+   32298,
+   32274,
+   8
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10510,
+  "origin": [
+   32290,
+   32274,
+   8
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 5,
+  "height": 8,
+  "id": 10601,
+  "origin": [
+   32315,
+   32266,
+   4
+  ],
+  "tiles_with_items": 380,
+  "width": 15
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10602,
+  "origin": [
+   32326,
+   32253,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 10603,
+  "origin": [
+   32326,
+   32253,
+   6
+  ],
+  "tiles_with_items": 171,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10701,
+  "origin": [
+   32376,
+   32229,
+   8
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10702,
+  "origin": [
+   32376,
+   32229,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10703,
+  "origin": [
+   32376,
+   32229,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 21,
+  "id": 10801,
+  "origin": [
+   32342,
+   32193,
+   6
+  ],
+  "tiles_with_items": 544,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10802,
+  "origin": [
+   32375,
+   32222,
+   7
+  ],
+  "tiles_with_items": 63,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 10803,
+  "origin": [
+   32377,
+   32218,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10804,
+  "origin": [
+   32375,
+   32223,
+   6
+  ],
+  "tiles_with_items": 57,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10901,
+  "origin": [
+   32392,
+   32175,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 10902,
+  "origin": [
+   32402,
+   32171,
+   6
+  ],
+  "tiles_with_items": 100,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 10903,
+  "origin": [
+   32406,
+   32184,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 10904,
+  "origin": [
+   32406,
+   32185,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 10905,
+  "origin": [
+   32416,
+   32168,
+   6
+  ],
+  "tiles_with_items": 127,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 11001,
+  "origin": [
+   32410,
+   32217,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 11002,
+  "origin": [
+   32410,
+   32217,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 11003,
+  "origin": [
+   32410,
+   32221,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 11004,
+  "origin": [
+   32410,
+   32221,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 11005,
+  "origin": [
+   32410,
+   32225,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 11006,
+  "origin": [
+   32410,
+   32225,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11007,
+  "origin": [
+   32417,
+   32231,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11008,
+  "origin": [
+   32417,
+   32231,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11009,
+  "origin": [
+   32411,
+   32231,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11010,
+  "origin": [
+   32411,
+   32231,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11011,
+  "origin": [
+   32411,
+   32238,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11012,
+  "origin": [
+   32411,
+   32238,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11013,
+  "origin": [
+   32417,
+   32238,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11014,
+  "origin": [
+   32417,
+   32238,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 11015,
+  "origin": [
+   32417,
+   32247,
+   6
+  ],
+  "tiles_with_items": 50,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 11016,
+  "origin": [
+   32416,
+   32205,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 11017,
+  "origin": [
+   32416,
+   32200,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 11018,
+  "origin": [
+   32416,
+   32195,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 11019,
+  "origin": [
+   32416,
+   32205,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 11020,
+  "origin": [
+   32416,
+   32200,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 11021,
+  "origin": [
+   32416,
+   32195,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11022,
+  "origin": [
+   32415,
+   32185,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 11023,
+  "origin": [
+   32415,
+   32185,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 14,
+  "id": 11024,
+  "origin": [
+   32418,
+   32259,
+   9
+  ],
+  "tiles_with_items": 351,
+  "width": 18
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 11401,
+  "origin": [
+   32336,
+   32204,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 11402,
+  "origin": [
+   32324,
+   32204,
+   6
+  ],
+  "tiles_with_items": 163,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 11404,
+  "origin": [
+   32328,
+   32220,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 6,
+  "height": 27,
+  "id": 12001,
+  "origin": [
+   32201,
+   32414,
+   3
+  ],
+  "tiles_with_items": 1013,
+  "width": 21
+ },
+ {
+  "floors": 3,
+  "height": 26,
+  "id": 12002,
+  "origin": [
+   32173,
+   32405,
+   6
+  ],
+  "tiles_with_items": 610,
+  "width": 19
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 12003,
+  "origin": [
+   32173,
+   32428,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 12004,
+  "origin": [
+   32181,
+   32428,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 12005,
+  "origin": [
+   32194,
+   32438,
+   6
+  ],
+  "tiles_with_items": 109,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 12006,
+  "origin": [
+   32173,
+   32440,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 12007,
+  "origin": [
+   32167,
+   32440,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 4,
+  "height": 8,
+  "id": 12008,
+  "origin": [
+   32156,
+   32439,
+   4
+  ],
+  "tiles_with_items": 165,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 12009,
+  "origin": [
+   32141,
+   32388,
+   7
+  ],
+  "tiles_with_items": 137,
+  "width": 17
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 12010,
+  "origin": [
+   32167,
+   32368,
+   6
+  ],
+  "tiles_with_items": 305,
+  "width": 12
+ },
+ {
+  "floors": 5,
+  "height": 14,
+  "id": 12100,
+  "origin": [
+   32129,
+   32362,
+   4
+  ],
+  "tiles_with_items": 432,
+  "width": 12
+ },
+ {
+  "floors": 4,
+  "height": 11,
+  "id": 14001,
+  "origin": [
+   32257,
+   32008,
+   5
+  ],
+  "tiles_with_items": 833,
+  "width": 27
+ },
+ {
+  "floors": 5,
+  "height": 11,
+  "id": 14002,
+  "origin": [
+   32282,
+   32061,
+   4
+  ],
+  "tiles_with_items": 580,
+  "width": 16
+ },
+ {
+  "floors": 2,
+  "height": 17,
+  "id": 14003,
+  "origin": [
+   32274,
+   32029,
+   6
+  ],
+  "tiles_with_items": 285,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 14004,
+  "origin": [
+   32278,
+   32046,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 14005,
+  "origin": [
+   32266,
+   32058,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 14006,
+  "origin": [
+   32256,
+   32042,
+   7
+  ],
+  "tiles_with_items": 55,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 14008,
+  "origin": [
+   32256,
+   32036,
+   7
+  ],
+  "tiles_with_items": 55,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 14010,
+  "origin": [
+   32256,
+   32036,
+   6
+  ],
+  "tiles_with_items": 126,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 14011,
+  "origin": [
+   32259,
+   32029,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 14012,
+  "origin": [
+   32266,
+   32066,
+   6
+  ],
+  "tiles_with_items": 312,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 15001,
+  "origin": [
+   33002,
+   31417,
+   5
+  ],
+  "tiles_with_items": 154,
+  "width": 12
+ },
+ {
+  "floors": 2,
+  "height": 15,
+  "id": 15002,
+  "origin": [
+   33380,
+   31443,
+   3
+  ],
+  "tiles_with_items": 455,
+  "width": 20
+ },
+ {
+  "floors": 2,
+  "height": 30,
+  "id": 17001,
+  "origin": [
+   33465,
+   31281,
+   9
+  ],
+  "tiles_with_items": 822,
+  "width": 19
+ },
+ {
+  "floors": 3,
+  "height": 12,
+  "id": 19001,
+  "origin": [
+   33652,
+   31921,
+   5
+  ],
+  "tiles_with_items": 264,
+  "width": 12
+ },
+ {
+  "floors": 4,
+  "height": 19,
+  "id": 19002,
+  "origin": [
+   33658,
+   31900,
+   3
+  ],
+  "tiles_with_items": 712,
+  "width": 16
+ },
+ {
+  "floors": 3,
+  "height": 12,
+  "id": 19003,
+  "origin": [
+   33647,
+   31899,
+   4
+  ],
+  "tiles_with_items": 252,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 19004,
+  "origin": [
+   33632,
+   31905,
+   5
+  ],
+  "tiles_with_items": 120,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 19005,
+  "origin": [
+   33622,
+   31905,
+   5
+  ],
+  "tiles_with_items": 112,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 19006,
+  "origin": [
+   33610,
+   31905,
+   4
+  ],
+  "tiles_with_items": 224,
+  "width": 10
+ },
+ {
+  "floors": 5,
+  "height": 18,
+  "id": 19007,
+  "origin": [
+   33588,
+   31916,
+   3
+  ],
+  "tiles_with_items": 1198,
+  "width": 21
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 19008,
+  "origin": [
+   33580,
+   31923,
+   4
+  ],
+  "tiles_with_items": 163,
+  "width": 9
+ },
+ {
+  "floors": 4,
+  "height": 11,
+  "id": 19009,
+  "origin": [
+   33586,
+   31905,
+   3
+  ],
+  "tiles_with_items": 442,
+  "width": 14
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 19010,
+  "origin": [
+   33639,
+   31923,
+   4
+  ],
+  "tiles_with_items": 286,
+  "width": 12
+ },
+ {
+  "floors": 3,
+  "height": 17,
+  "id": 19011,
+  "origin": [
+   33628,
+   31923,
+   4
+  ],
+  "tiles_with_items": 314,
+  "width": 10
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 19012,
+  "origin": [
+   33617,
+   31924,
+   4
+  ],
+  "tiles_with_items": 276,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 19013,
+  "origin": [
+   33610,
+   31924,
+   4
+  ],
+  "tiles_with_items": 276,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 19014,
+  "origin": [
+   33643,
+   31912,
+   4
+  ],
+  "tiles_with_items": 265,
+  "width": 14
+ },
+ {
+  "floors": 4,
+  "height": 8,
+  "id": 19015,
+  "origin": [
+   33634,
+   31914,
+   4
+  ],
+  "tiles_with_items": 196,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 19016,
+  "origin": [
+   33622,
+   31914,
+   5
+  ],
+  "tiles_with_items": 140,
+  "width": 10
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 19017,
+  "origin": [
+   33610,
+   31910,
+   5
+  ],
+  "tiles_with_items": 215,
+  "width": 12
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 19018,
+  "origin": [
+   33600,
+   31905,
+   4
+  ],
+  "tiles_with_items": 203,
+  "width": 9
+ },
+ {
+  "floors": 4,
+  "height": 14,
+  "id": 20001,
+  "origin": [
+   32419,
+   31758,
+   5
+  ],
+  "tiles_with_items": 507,
+  "width": 14
+ },
+ {
+  "floors": 5,
+  "height": 13,
+  "id": 20002,
+  "origin": [
+   32272,
+   31822,
+   4
+  ],
+  "tiles_with_items": 707,
+  "width": 15
+ },
+ {
+  "floors": 4,
+  "height": 14,
+  "id": 20003,
+  "origin": [
+   32288,
+   31662,
+   5
+  ],
+  "tiles_with_items": 751,
+  "width": 20
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 20004,
+  "origin": [
+   32273,
+   31722,
+   7
+  ],
+  "tiles_with_items": 60,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 20005,
+  "origin": [
+   32267,
+   31760,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 20006,
+  "origin": [
+   32278,
+   31762,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 20007,
+  "origin": [
+   32324,
+   31720,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 20008,
+  "origin": [
+   32262,
+   31701,
+   6
+  ],
+  "tiles_with_items": 60,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 20009,
+  "origin": [
+   32259,
+   31693,
+   6
+  ],
+  "tiles_with_items": 60,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 20010,
+  "origin": [
+   32270,
+   31693,
+   6
+  ],
+  "tiles_with_items": 70,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 15,
+  "id": 20011,
+  "origin": [
+   32477,
+   31811,
+   6
+  ],
+  "tiles_with_items": 297,
+  "width": 13
+ },
+ {
+  "floors": 5,
+  "height": 27,
+  "id": 20012,
+  "origin": [
+   32403,
+   31759,
+   4
+  ],
+  "tiles_with_items": 413,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20102,
+  "origin": [
+   32343,
+   31797,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20103,
+  "origin": [
+   32343,
+   31803,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20104,
+  "origin": [
+   32343,
+   31809,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20201,
+  "origin": [
+   32329,
+   31761,
+   7
+  ],
+  "tiles_with_items": 53,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20202,
+  "origin": [
+   32329,
+   31761,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20203,
+  "origin": [
+   32319,
+   31761,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20204,
+  "origin": [
+   32319,
+   31761,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20205,
+  "origin": [
+   32323,
+   31768,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20206,
+  "origin": [
+   32330,
+   31768,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 20301,
+  "origin": [
+   32386,
+   31787,
+   5
+  ],
+  "tiles_with_items": 144,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20304,
+  "origin": [
+   32376,
+   31792,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20305,
+  "origin": [
+   32376,
+   31792,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20306,
+  "origin": [
+   32374,
+   31794,
+   7
+  ],
+  "tiles_with_items": 16,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20307,
+  "origin": [
+   32374,
+   31794,
+   6
+  ],
+  "tiles_with_items": 16,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20308,
+  "origin": [
+   32370,
+   31792,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20309,
+  "origin": [
+   32370,
+   31792,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 20310,
+  "origin": [
+   32356,
+   31777,
+   5
+  ],
+  "tiles_with_items": 154,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20314,
+  "origin": [
+   32350,
+   31791,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20315,
+  "origin": [
+   32350,
+   31791,
+   5
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 20316,
+  "origin": [
+   32349,
+   31784,
+   7
+  ],
+  "tiles_with_items": 20,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20317,
+  "origin": [
+   32350,
+   31779,
+   7
+  ],
+  "tiles_with_items": 24,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20318,
+  "origin": [
+   32349,
+   31776,
+   7
+  ],
+  "tiles_with_items": 24,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20319,
+  "origin": [
+   32343,
+   31776,
+   7
+  ],
+  "tiles_with_items": 28,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20320,
+  "origin": [
+   32343,
+   31779,
+   7
+  ],
+  "tiles_with_items": 24,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 20321,
+  "origin": [
+   32343,
+   31784,
+   7
+  ],
+  "tiles_with_items": 20,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20322,
+  "origin": [
+   32348,
+   31783,
+   6
+  ],
+  "tiles_with_items": 28,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20323,
+  "origin": [
+   32350,
+   31779,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20324,
+  "origin": [
+   32349,
+   31776,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20325,
+  "origin": [
+   32343,
+   31776,
+   6
+  ],
+  "tiles_with_items": 28,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20326,
+  "origin": [
+   32343,
+   31779,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20327,
+  "origin": [
+   32343,
+   31783,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 20401,
+  "origin": [
+   32312,
+   31791,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20402,
+  "origin": [
+   32305,
+   31791,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 11,
+  "id": 20403,
+  "origin": [
+   32293,
+   31791,
+   7
+  ],
+  "tiles_with_items": 83,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 20404,
+  "origin": [
+   32314,
+   31779,
+   5
+  ],
+  "tiles_with_items": 54,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20405,
+  "origin": [
+   32307,
+   31781,
+   5
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20501,
+  "origin": [
+   32305,
+   31796,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20502,
+  "origin": [
+   32305,
+   31796,
+   6
+  ],
+  "tiles_with_items": 29,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20503,
+  "origin": [
+   32305,
+   31792,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20504,
+  "origin": [
+   32311,
+   31792,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20505,
+  "origin": [
+   32311,
+   31796,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20508,
+  "origin": [
+   32322,
+   31799,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20509,
+  "origin": [
+   32322,
+   31799,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20510,
+  "origin": [
+   32321,
+   31804,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20512,
+  "origin": [
+   32322,
+   31804,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 20513,
+  "origin": [
+   32315,
+   31820,
+   6
+  ],
+  "tiles_with_items": 96,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 20514,
+  "origin": [
+   32327,
+   31819,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 14,
+  "id": 20515,
+  "origin": [
+   32291,
+   31818,
+   6
+  ],
+  "tiles_with_items": 398,
+  "width": 18
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20601,
+  "origin": [
+   32350,
+   31762,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20602,
+  "origin": [
+   32350,
+   31762,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20603,
+  "origin": [
+   32355,
+   31762,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20604,
+  "origin": [
+   32365,
+   31762,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20605,
+  "origin": [
+   32370,
+   31766,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 20606,
+  "origin": [
+   32378,
+   31767,
+   6
+  ],
+  "tiles_with_items": 94,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 20607,
+  "origin": [
+   32387,
+   31769,
+   6
+  ],
+  "tiles_with_items": 83,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 20701,
+  "origin": [
+   32360,
+   31793,
+   6
+  ],
+  "tiles_with_items": 54,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 20702,
+  "origin": [
+   32358,
+   31823,
+   6
+  ],
+  "tiles_with_items": 145,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 20703,
+  "origin": [
+   32377,
+   31801,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 20704,
+  "origin": [
+   32381,
+   31801,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20705,
+  "origin": [
+   32376,
+   31830,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20706,
+  "origin": [
+   32374,
+   31840,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20707,
+  "origin": [
+   32380,
+   31830,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 20709,
+  "origin": [
+   32384,
+   31830,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20710,
+  "origin": [
+   32382,
+   31840,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20713,
+  "origin": [
+   32376,
+   31830,
+   5
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 20714,
+  "origin": [
+   32383,
+   31830,
+   5
+  ],
+  "tiles_with_items": 45,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 20715,
+  "origin": [
+   32385,
+   31841,
+   5
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 20801,
+  "origin": [
+   32387,
+   31796,
+   6
+  ],
+  "tiles_with_items": 103,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 20802,
+  "origin": [
+   32391,
+   31797,
+   5
+  ],
+  "tiles_with_items": 83,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 20803,
+  "origin": [
+   32399,
+   31796,
+   6
+  ],
+  "tiles_with_items": 189,
+  "width": 14
+ },
+ {
+  "floors": 5,
+  "height": 13,
+  "id": 20901,
+  "origin": [
+   32333,
+   31843,
+   4
+  ],
+  "tiles_with_items": 451,
+  "width": 15
+ },
+ {
+  "floors": 3,
+  "height": 14,
+  "id": 20902,
+  "origin": [
+   32304,
+   31836,
+   5
+  ],
+  "tiles_with_items": 481,
+  "width": 19
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 22001,
+  "origin": [
+   32474,
+   31611,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 22002,
+  "origin": [
+   32474,
+   31606,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 22003,
+  "origin": [
+   32474,
+   31606,
+   5
+  ],
+  "tiles_with_items": 168,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 22004,
+  "origin": [
+   32490,
+   31598,
+   7
+  ],
+  "tiles_with_items": 92,
+  "width": 9
+ },
+ {
+  "floors": 4,
+  "height": 17,
+  "id": 22005,
+  "origin": [
+   32520,
+   31587,
+   5
+  ],
+  "tiles_with_items": 726,
+  "width": 15
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 22006,
+  "origin": [
+   32499,
+   31598,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 22007,
+  "origin": [
+   32498,
+   31606,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 22008,
+  "origin": [
+   32462,
+   31605,
+   6
+  ],
+  "tiles_with_items": 306,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 24001,
+  "origin": [
+   32157,
+   31657,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 24002,
+  "origin": [
+   32152,
+   31657,
+   6
+  ],
+  "tiles_with_items": 66,
+  "width": 12
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 24004,
+  "origin": [
+   32151,
+   31657,
+   7
+  ],
+  "tiles_with_items": 78,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 24005,
+  "origin": [
+   32153,
+   31664,
+   7
+  ],
+  "tiles_with_items": 66,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 24006,
+  "origin": [
+   32144,
+   31654,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 24007,
+  "origin": [
+   32151,
+   31652,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 24008,
+  "origin": [
+   32152,
+   31652,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 24009,
+  "origin": [
+   32126,
+   31657,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 24010,
+  "origin": [
+   32133,
+   31664,
+   6
+  ],
+  "tiles_with_items": 76,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 24011,
+  "origin": [
+   32128,
+   31670,
+   7
+  ],
+  "tiles_with_items": 112,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 24012,
+  "origin": [
+   32144,
+   31671,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 24013,
+  "origin": [
+   32133,
+   31675,
+   7
+  ],
+  "tiles_with_items": 96,
+  "width": 12
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 24014,
+  "origin": [
+   32168,
+   31657,
+   6
+  ],
+  "tiles_with_items": 395,
+  "width": 13
+ },
+ {
+  "floors": 7,
+  "height": 16,
+  "id": 30001,
+  "origin": [
+   32641,
+   32021,
+   2
+  ],
+  "tiles_with_items": 710,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 15,
+  "id": 30002,
+  "origin": [
+   32575,
+   31814,
+   9
+  ],
+  "tiles_with_items": 399,
+  "width": 19
+ },
+ {
+  "floors": 5,
+  "height": 13,
+  "id": 30003,
+  "origin": [
+   32751,
+   32128,
+   4
+  ],
+  "tiles_with_items": 632,
+  "width": 17
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30101,
+  "origin": [
+   32617,
+   31921,
+   2
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30102,
+  "origin": [
+   32641,
+   31915,
+   2
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30103,
+  "origin": [
+   32645,
+   31906,
+   2
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30104,
+  "origin": [
+   32648,
+   31897,
+   2
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30105,
+  "origin": [
+   32650,
+   31888,
+   2
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 30106,
+  "origin": [
+   32629,
+   31885,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 14,
+  "id": 30107,
+  "origin": [
+   32643,
+   31924,
+   2
+  ],
+  "tiles_with_items": 395,
+  "width": 22
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 30201,
+  "origin": [
+   32587,
+   31920,
+   4
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 30202,
+  "origin": [
+   32594,
+   31915,
+   4
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 30203,
+  "origin": [
+   32594,
+   31908,
+   4
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30204,
+  "origin": [
+   32605,
+   31921,
+   4
+  ],
+  "tiles_with_items": 66,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 13,
+  "id": 30206,
+  "origin": [
+   32605,
+   31908,
+   4
+  ],
+  "tiles_with_items": 132,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30301,
+  "origin": [
+   32600,
+   31918,
+   5
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30304,
+  "origin": [
+   32600,
+   31912,
+   5
+  ],
+  "tiles_with_items": 59,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 30307,
+  "origin": [
+   32606,
+   31915,
+   5
+  ],
+  "tiles_with_items": 35,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 30308,
+  "origin": [
+   32610,
+   31918,
+   5
+  ],
+  "tiles_with_items": 35,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30312,
+  "origin": [
+   32610,
+   31912,
+   5
+  ],
+  "tiles_with_items": 59,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30313,
+  "origin": [
+   32615,
+   31920,
+   5
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30401,
+  "origin": [
+   32629,
+   31922,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 30402,
+  "origin": [
+   32629,
+   31928,
+   8
+  ],
+  "tiles_with_items": 45,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 30403,
+  "origin": [
+   32635,
+   31924,
+   8
+  ],
+  "tiles_with_items": 54,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 30404,
+  "origin": [
+   32635,
+   31930,
+   8
+  ],
+  "tiles_with_items": 63,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 24,
+  "id": 30405,
+  "origin": [
+   32642,
+   31866,
+   8
+  ],
+  "tiles_with_items": 516,
+  "width": 25
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30501,
+  "origin": [
+   32619,
+   31905,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 30502,
+  "origin": [
+   32625,
+   31905,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30504,
+  "origin": [
+   32625,
+   31910,
+   9
+  ],
+  "tiles_with_items": 100,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30507,
+  "origin": [
+   32619,
+   31915,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30510,
+  "origin": [
+   32625,
+   31920,
+   9
+  ],
+  "tiles_with_items": 100,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30511,
+  "origin": [
+   32619,
+   31925,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 30512,
+  "origin": [
+   32625,
+   31930,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30513,
+  "origin": [
+   32637,
+   31925,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30517,
+  "origin": [
+   32637,
+   31915,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 30523,
+  "origin": [
+   32637,
+   31905,
+   9
+  ],
+  "tiles_with_items": 50,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 30601,
+  "origin": [
+   32601,
+   31901,
+   11
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 30602,
+  "origin": [
+   32601,
+   31909,
+   11
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 30603,
+  "origin": [
+   32601,
+   31902,
+   11
+  ],
+  "tiles_with_items": 65,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 30604,
+  "origin": [
+   32601,
+   31909,
+   11
+  ],
+  "tiles_with_items": 65,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 30605,
+  "origin": [
+   32587,
+   31903,
+   11
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 30606,
+  "origin": [
+   32587,
+   31908,
+   11
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 30607,
+  "origin": [
+   32587,
+   31903,
+   12
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 30608,
+  "origin": [
+   32587,
+   31908,
+   12
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 30610,
+  "origin": [
+   32600,
+   31919,
+   11
+  ],
+  "tiles_with_items": 162,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 12,
+  "id": 30701,
+  "origin": [
+   32601,
+   31954,
+   8
+  ],
+  "tiles_with_items": 592,
+  "width": 27
+ },
+ {
+  "floors": 3,
+  "height": 15,
+  "id": 30702,
+  "origin": [
+   32589,
+   31884,
+   9
+  ],
+  "tiles_with_items": 522,
+  "width": 19
+ },
+ {
+  "floors": 3,
+  "height": 17,
+  "id": 30703,
+  "origin": [
+   32578,
+   31945,
+   4
+  ],
+  "tiles_with_items": 617,
+  "width": 27
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 32001,
+  "origin": [
+   32642,
+   32200,
+   5
+  ],
+  "tiles_with_items": 91,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 5,
+  "id": 32002,
+  "origin": [
+   32649,
+   32210,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 32003,
+  "origin": [
+   32642,
+   32210,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 32004,
+  "origin": [
+   32656,
+   32209,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 32007,
+  "origin": [
+   32642,
+   32210,
+   8
+  ],
+  "tiles_with_items": 38,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 32009,
+  "origin": [
+   32656,
+   32209,
+   8
+  ],
+  "tiles_with_items": 40,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 32013,
+  "origin": [
+   32659,
+   32200,
+   8
+  ],
+  "tiles_with_items": 40,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 32014,
+  "origin": [
+   32662,
+   32194,
+   8
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 6,
+  "height": 12,
+  "id": 32015,
+  "origin": [
+   32653,
+   32232,
+   4
+  ],
+  "tiles_with_items": 397,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 28,
+  "id": 32016,
+  "origin": [
+   32681,
+   32166,
+   10
+  ],
+  "tiles_with_items": 320,
+  "width": 13
+ },
+ {
+  "floors": 3,
+  "height": 62,
+  "id": 33001,
+  "origin": [
+   32487,
+   31795,
+   7
+  ],
+  "tiles_with_items": 779,
+  "width": 74
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35001,
+  "origin": [
+   32903,
+   32124,
+   5
+  ],
+  "tiles_with_items": 297,
+  "width": 11
+ },
+ {
+  "floors": 3,
+  "height": 12,
+  "id": 35002,
+  "origin": [
+   32919,
+   32116,
+   5
+  ],
+  "tiles_with_items": 462,
+  "width": 19
+ },
+ {
+  "floors": 5,
+  "height": 11,
+  "id": 35003,
+  "origin": [
+   32953,
+   32117,
+   3
+  ],
+  "tiles_with_items": 420,
+  "width": 12
+ },
+ {
+  "floors": 3,
+  "height": 12,
+  "id": 35004,
+  "origin": [
+   32978,
+   32107,
+   5
+  ],
+  "tiles_with_items": 390,
+  "width": 13
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 35005,
+  "origin": [
+   32979,
+   32093,
+   5
+  ],
+  "tiles_with_items": 507,
+  "width": 14
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 35006,
+  "origin": [
+   32919,
+   32129,
+   5
+  ],
+  "tiles_with_items": 126,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 35007,
+  "origin": [
+   32940,
+   32124,
+   5
+  ],
+  "tiles_with_items": 144,
+  "width": 6
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 35008,
+  "origin": [
+   32945,
+   32124,
+   5
+  ],
+  "tiles_with_items": 144,
+  "width": 6
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 35009,
+  "origin": [
+   32890,
+   32102,
+   5
+  ],
+  "tiles_with_items": 192,
+  "width": 10
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 35010,
+  "origin": [
+   32896,
+   32071,
+   5
+  ],
+  "tiles_with_items": 153,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 6,
+  "id": 35011,
+  "origin": [
+   32891,
+   32066,
+   5
+  ],
+  "tiles_with_items": 126,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 35012,
+  "origin": [
+   32896,
+   32038,
+   5
+  ],
+  "tiles_with_items": 166,
+  "width": 10
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 35013,
+  "origin": [
+   32891,
+   32054,
+   5
+  ],
+  "tiles_with_items": 126,
+  "width": 6
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 35014,
+  "origin": [
+   32891,
+   32049,
+   5
+  ],
+  "tiles_with_items": 125,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 35015,
+  "origin": [
+   32896,
+   32056,
+   5
+  ],
+  "tiles_with_items": 124,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 35016,
+  "origin": [
+   32899,
+   32049,
+   5
+  ],
+  "tiles_with_items": 124,
+  "width": 6
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 35017,
+  "origin": [
+   32911,
+   32047,
+   5
+  ],
+  "tiles_with_items": 220,
+  "width": 11
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 35018,
+  "origin": [
+   32912,
+   32035,
+   5
+  ],
+  "tiles_with_items": 132,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 35019,
+  "origin": [
+   32934,
+   32084,
+   5
+  ],
+  "tiles_with_items": 270,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 35020,
+  "origin": [
+   32914,
+   32090,
+   7
+  ],
+  "tiles_with_items": 24,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35021,
+  "origin": [
+   32912,
+   32094,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 35022,
+  "origin": [
+   32907,
+   32096,
+   7
+  ],
+  "tiles_with_items": 24,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 35023,
+  "origin": [
+   32901,
+   32097,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 35024,
+  "origin": [
+   32901,
+   32094,
+   7
+  ],
+  "tiles_with_items": 20,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 35025,
+  "origin": [
+   32901,
+   32090,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35026,
+  "origin": [
+   32907,
+   32091,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35027,
+  "origin": [
+   32901,
+   32090,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35028,
+  "origin": [
+   32901,
+   32096,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35029,
+  "origin": [
+   32904,
+   32090,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35030,
+  "origin": [
+   32906,
+   32096,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35031,
+  "origin": [
+   32908,
+   32090,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35032,
+  "origin": [
+   32911,
+   32096,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35033,
+  "origin": [
+   32912,
+   32090,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35034,
+  "origin": [
+   32916,
+   32090,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35035,
+  "origin": [
+   32916,
+   32090,
+   5
+  ],
+  "tiles_with_items": 20,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35036,
+  "origin": [
+   32912,
+   32090,
+   5
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35037,
+  "origin": [
+   32911,
+   32096,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35038,
+  "origin": [
+   32908,
+   32090,
+   5
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35039,
+  "origin": [
+   32906,
+   32096,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35040,
+  "origin": [
+   32904,
+   32090,
+   5
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35041,
+  "origin": [
+   32901,
+   32096,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35042,
+  "origin": [
+   32901,
+   32090,
+   5
+  ],
+  "tiles_with_items": 20,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35043,
+  "origin": [
+   32912,
+   32090,
+   4
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35044,
+  "origin": [
+   32907,
+   32096,
+   4
+  ],
+  "tiles_with_items": 50,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 35045,
+  "origin": [
+   32905,
+   32090,
+   4
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 35046,
+  "origin": [
+   32901,
+   32090,
+   4
+  ],
+  "tiles_with_items": 70,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35047,
+  "origin": [
+   32927,
+   32094,
+   5
+  ],
+  "tiles_with_items": 249,
+  "width": 11
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35048,
+  "origin": [
+   32964,
+   32094,
+   5
+  ],
+  "tiles_with_items": 162,
+  "width": 6
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35049,
+  "origin": [
+   32969,
+   32094,
+   5
+  ],
+  "tiles_with_items": 162,
+  "width": 6
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35050,
+  "origin": [
+   32973,
+   32064,
+   5
+  ],
+  "tiles_with_items": 139,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35051,
+  "origin": [
+   32976,
+   32064,
+   5
+  ],
+  "tiles_with_items": 139,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 35052,
+  "origin": [
+   32996,
+   32107,
+   5
+  ],
+  "tiles_with_items": 129,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 5,
+  "id": 35053,
+  "origin": [
+   32996,
+   32086,
+   5
+  ],
+  "tiles_with_items": 105,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 5,
+  "id": 35054,
+  "origin": [
+   32996,
+   32082,
+   5
+  ],
+  "tiles_with_items": 105,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 35055,
+  "origin": [
+   32991,
+   32071,
+   5
+  ],
+  "tiles_with_items": 153,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 35056,
+  "origin": [
+   32974,
+   32051,
+   5
+  ],
+  "tiles_with_items": 198,
+  "width": 10
+ },
+ {
+  "floors": 6,
+  "height": 8,
+  "id": 35057,
+  "origin": [
+   32922,
+   32031,
+   2
+  ],
+  "tiles_with_items": 177,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35058,
+  "origin": [
+   32924,
+   32044,
+   5
+  ],
+  "tiles_with_items": 258,
+  "width": 12
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 35059,
+  "origin": [
+   32942,
+   32052,
+   5
+  ],
+  "tiles_with_items": 208,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 35060,
+  "origin": [
+   32946,
+   32045,
+   5
+  ],
+  "tiles_with_items": 154,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35061,
+  "origin": [
+   32958,
+   32044,
+   5
+  ],
+  "tiles_with_items": 216,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 35062,
+  "origin": [
+   32959,
+   32053,
+   5
+  ],
+  "tiles_with_items": 243,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 11,
+  "id": 35063,
+  "origin": [
+   32989,
+   32044,
+   5
+  ],
+  "tiles_with_items": 216,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 35064,
+  "origin": [
+   33001,
+   32047,
+   5
+  ],
+  "tiles_with_items": 114,
+  "width": 8
+ },
+ {
+  "floors": 4,
+  "height": 16,
+  "id": 35065,
+  "origin": [
+   32981,
+   32152,
+   5
+  ],
+  "tiles_with_items": 331,
+  "width": 21
+ },
+ {
+  "floors": 6,
+  "height": 6,
+  "id": 35066,
+  "origin": [
+   33008,
+   32070,
+   2
+  ],
+  "tiles_with_items": 252,
+  "width": 8
+ },
+ {
+  "floors": 6,
+  "height": 7,
+  "id": 35067,
+  "origin": [
+   32929,
+   32150,
+   2
+  ],
+  "tiles_with_items": 252,
+  "width": 7
+ },
+ {
+  "floors": 6,
+  "height": 7,
+  "id": 35068,
+  "origin": [
+   32936,
+   32150,
+   2
+  ],
+  "tiles_with_items": 252,
+  "width": 7
+ },
+ {
+  "floors": 6,
+  "height": 7,
+  "id": 35069,
+  "origin": [
+   32865,
+   32119,
+   2
+  ],
+  "tiles_with_items": 252,
+  "width": 7
+ },
+ {
+  "floors": 6,
+  "height": 7,
+  "id": 35070,
+  "origin": [
+   32865,
+   32126,
+   2
+  ],
+  "tiles_with_items": 252,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 37001,
+  "origin": [
+   32764,
+   31172,
+   5
+  ],
+  "tiles_with_items": 261,
+  "width": 12
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 37002,
+  "origin": [
+   32768,
+   31182,
+   5
+  ],
+  "tiles_with_items": 204,
+  "width": 11
+ },
+ {
+  "floors": 3,
+  "height": 10,
+  "id": 37003,
+  "origin": [
+   32759,
+   31185,
+   5
+  ],
+  "tiles_with_items": 206,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 37004,
+  "origin": [
+   32751,
+   31177,
+   6
+  ],
+  "tiles_with_items": 188,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 18,
+  "id": 37005,
+  "origin": [
+   32820,
+   31171,
+   6
+  ],
+  "tiles_with_items": 407,
+  "width": 25
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 37006,
+  "origin": [
+   32809,
+   31175,
+   5
+  ],
+  "tiles_with_items": 258,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 14,
+  "id": 37007,
+  "origin": [
+   32806,
+   31161,
+   6
+  ],
+  "tiles_with_items": 258,
+  "width": 17
+ },
+ {
+  "floors": 4,
+  "height": 15,
+  "id": 37008,
+  "origin": [
+   32821,
+   31158,
+   4
+  ],
+  "tiles_with_items": 296,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 12,
+  "id": 37009,
+  "origin": [
+   32841,
+   31218,
+   5
+  ],
+  "tiles_with_items": 324,
+  "width": 15
+ },
+ {
+  "floors": 4,
+  "height": 10,
+  "id": 37010,
+  "origin": [
+   32839,
+   31208,
+   4
+  ],
+  "tiles_with_items": 288,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 17,
+  "id": 37011,
+  "origin": [
+   32828,
+   31205,
+   6
+  ],
+  "tiles_with_items": 248,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 21,
+  "id": 37012,
+  "origin": [
+   32830,
+   31224,
+   6
+  ],
+  "tiles_with_items": 340,
+  "width": 15
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 37013,
+  "origin": [
+   32771,
+   31222,
+   5
+  ],
+  "tiles_with_items": 262,
+  "width": 13
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 37014,
+  "origin": [
+   32769,
+   31215,
+   5
+  ],
+  "tiles_with_items": 178,
+  "width": 10
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 37015,
+  "origin": [
+   32753,
+   31221,
+   5
+  ],
+  "tiles_with_items": 245,
+  "width": 14
+ },
+ {
+  "floors": 5,
+  "height": 9,
+  "id": 37016,
+  "origin": [
+   32760,
+   31229,
+   3
+  ],
+  "tiles_with_items": 355,
+  "width": 10
+ },
+ {
+  "floors": 4,
+  "height": 10,
+  "id": 37017,
+  "origin": [
+   32772,
+   31256,
+   4
+  ],
+  "tiles_with_items": 253,
+  "width": 12
+ },
+ {
+  "floors": 4,
+  "height": 8,
+  "id": 37018,
+  "origin": [
+   32851,
+   31196,
+   4
+  ],
+  "tiles_with_items": 220,
+  "width": 8
+ },
+ {
+  "floors": 4,
+  "height": 9,
+  "id": 37019,
+  "origin": [
+   32770,
+   31192,
+   4
+  ],
+  "tiles_with_items": 257,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 27,
+  "id": 37020,
+  "origin": [
+   32741,
+   31244,
+   7
+  ],
+  "tiles_with_items": 295,
+  "width": 20
+ },
+ {
+  "floors": 5,
+  "height": 21,
+  "id": 38001,
+  "origin": [
+   32767,
+   31156,
+   4
+  ],
+  "tiles_with_items": 1057,
+  "width": 22
+ },
+ {
+  "floors": 4,
+  "height": 22,
+  "id": 38002,
+  "origin": [
+   32829,
+   31183,
+   4
+  ],
+  "tiles_with_items": 805,
+  "width": 21
+ },
+ {
+  "floors": 3,
+  "height": 22,
+  "id": 38003,
+  "origin": [
+   32748,
+   31198,
+   5
+  ],
+  "tiles_with_items": 932,
+  "width": 23
+ },
+ {
+  "floors": 5,
+  "height": 15,
+  "id": 40001,
+  "origin": [
+   32693,
+   31759,
+   3
+  ],
+  "tiles_with_items": 728,
+  "width": 17
+ },
+ {
+  "floors": 4,
+  "height": 17,
+  "id": 40002,
+  "origin": [
+   32540,
+   31650,
+   5
+  ],
+  "tiles_with_items": 628,
+  "width": 15
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40101,
+  "origin": [
+   32635,
+   31689,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40102,
+  "origin": [
+   32639,
+   31671,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 40103,
+  "origin": [
+   32636,
+   31654,
+   7
+  ],
+  "tiles_with_items": 60,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 40104,
+  "origin": [
+   32622,
+   31648,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40105,
+  "origin": [
+   32650,
+   31661,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40106,
+  "origin": [
+   32650,
+   31649,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40107,
+  "origin": [
+   32675,
+   31671,
+   7
+  ],
+  "tiles_with_items": 53,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40108,
+  "origin": [
+   32688,
+   31641,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40109,
+  "origin": [
+   32711,
+   31659,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 40110,
+  "origin": [
+   32624,
+   31657,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 4,
+  "height": 18,
+  "id": 40111,
+  "origin": [
+   32708,
+   31643,
+   5
+  ],
+  "tiles_with_items": 521,
+  "width": 16
+ },
+ {
+  "floors": 5,
+  "height": 13,
+  "id": 40112,
+  "origin": [
+   32645,
+   31571,
+   4
+  ],
+  "tiles_with_items": 863,
+  "width": 20
+ },
+ {
+  "floors": 4,
+  "height": 6,
+  "id": 40211,
+  "origin": [
+   32654,
+   31638,
+   4
+  ],
+  "tiles_with_items": 121,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 40212,
+  "origin": [
+   32663,
+   31634,
+   7
+  ],
+  "tiles_with_items": 55,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 40222,
+  "origin": [
+   32662,
+   31638,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 40224,
+  "origin": [
+   32662,
+   31633,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 40234,
+  "origin": [
+   32662,
+   31633,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40242,
+  "origin": [
+   32658,
+   31633,
+   4
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40243,
+  "origin": [
+   32663,
+   31633,
+   4
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 40244,
+  "origin": [
+   32662,
+   31638,
+   4
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40301,
+  "origin": [
+   32641,
+   31597,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40302,
+  "origin": [
+   32675,
+   31586,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40303,
+  "origin": [
+   32690,
+   31599,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40304,
+  "origin": [
+   32716,
+   31615,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40401,
+  "origin": [
+   32634,
+   31689,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40402,
+  "origin": [
+   32638,
+   31689,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 2,
+  "height": 5,
+  "id": 40403,
+  "origin": [
+   32638,
+   31674,
+   5
+  ],
+  "tiles_with_items": 60,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 5,
+  "id": 40404,
+  "origin": [
+   32638,
+   31670,
+   5
+  ],
+  "tiles_with_items": 60,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40405,
+  "origin": [
+   32649,
+   31648,
+   6
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 40406,
+  "origin": [
+   32636,
+   31659,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 40407,
+  "origin": [
+   32635,
+   31655,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40408,
+  "origin": [
+   32626,
+   31647,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40409,
+  "origin": [
+   32621,
+   31647,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40410,
+  "origin": [
+   32623,
+   31656,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40411,
+  "origin": [
+   32688,
+   31640,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40412,
+  "origin": [
+   32674,
+   31670,
+   6
+  ],
+  "tiles_with_items": 55,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40413,
+  "origin": [
+   32710,
+   31658,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 4,
+  "height": 8,
+  "id": 40414,
+  "origin": [
+   32687,
+   31682,
+   4
+  ],
+  "tiles_with_items": 327,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 40501,
+  "origin": [
+   32640,
+   31600,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 40502,
+  "origin": [
+   32640,
+   31596,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 40503,
+  "origin": [
+   32664,
+   31604,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 40504,
+  "origin": [
+   32669,
+   31604,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40505,
+  "origin": [
+   32674,
+   31585,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40506,
+  "origin": [
+   32685,
+   31585,
+   6
+  ],
+  "tiles_with_items": 58,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40507,
+  "origin": [
+   32693,
+   31586,
+   6
+  ],
+  "tiles_with_items": 29,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40508,
+  "origin": [
+   32690,
+   31598,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 40509,
+  "origin": [
+   32684,
+   31608,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 40510,
+  "origin": [
+   32715,
+   31614,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 40611,
+  "origin": [
+   32649,
+   31670,
+   8
+  ],
+  "tiles_with_items": 45,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 40614,
+  "origin": [
+   32656,
+   31670,
+   8
+  ],
+  "tiles_with_items": 45,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 40621,
+  "origin": [
+   32649,
+   31662,
+   9
+  ],
+  "tiles_with_items": 90,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 40622,
+  "origin": [
+   32656,
+   31662,
+   9
+  ],
+  "tiles_with_items": 90,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 40625,
+  "origin": [
+   32649,
+   31670,
+   9
+  ],
+  "tiles_with_items": 90,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 40638,
+  "origin": [
+   32656,
+   31670,
+   9
+  ],
+  "tiles_with_items": 90,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 45001,
+  "origin": [
+   32586,
+   32755,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 45002,
+  "origin": [
+   32597,
+   32754,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 4,
+  "height": 8,
+  "id": 45003,
+  "origin": [
+   32604,
+   32735,
+   4
+  ],
+  "tiles_with_items": 256,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 45004,
+  "origin": [
+   32608,
+   32747,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 45005,
+  "origin": [
+   32608,
+   32754,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 45006,
+  "origin": [
+   32630,
+   32755,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 13,
+  "id": 45007,
+  "origin": [
+   32638,
+   32740,
+   6
+  ],
+  "tiles_with_items": 208,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 45008,
+  "origin": [
+   32602,
+   32723,
+   6
+  ],
+  "tiles_with_items": 240,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 45009,
+  "origin": [
+   32620,
+   32721,
+   6
+  ],
+  "tiles_with_items": 280,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46001,
+  "origin": [
+   32551,
+   32794,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46002,
+  "origin": [
+   32544,
+   32800,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 46003,
+  "origin": [
+   32556,
+   32803,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 46004,
+  "origin": [
+   32551,
+   32812,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46005,
+  "origin": [
+   32565,
+   32791,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46006,
+  "origin": [
+   32565,
+   32784,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 46007,
+  "origin": [
+   32575,
+   32781,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 46008,
+  "origin": [
+   32588,
+   32781,
+   5
+  ],
+  "tiles_with_items": 176,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 46009,
+  "origin": [
+   32600,
+   32786,
+   5
+  ],
+  "tiles_with_items": 154,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46010,
+  "origin": [
+   32615,
+   32781,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46011,
+  "origin": [
+   32624,
+   32781,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46012,
+  "origin": [
+   32633,
+   32779,
+   6
+  ],
+  "tiles_with_items": 65,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 46013,
+  "origin": [
+   32650,
+   32778,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46014,
+  "origin": [
+   32659,
+   32770,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46015,
+  "origin": [
+   32669,
+   32768,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46016,
+  "origin": [
+   32678,
+   32765,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46017,
+  "origin": [
+   32671,
+   32777,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 46018,
+  "origin": [
+   32661,
+   32780,
+   5
+  ],
+  "tiles_with_items": 84,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46019,
+  "origin": [
+   32574,
+   32792,
+   7
+  ],
+  "tiles_with_items": 63,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46020,
+  "origin": [
+   32616,
+   32792,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 46021,
+  "origin": [
+   32645,
+   32786,
+   7
+  ],
+  "tiles_with_items": 63,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 46022,
+  "origin": [
+   32560,
+   32771,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46023,
+  "origin": [
+   32570,
+   32762,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 46024,
+  "origin": [
+   32581,
+   32766,
+   6
+  ],
+  "tiles_with_items": 70,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 46025,
+  "origin": [
+   32594,
+   32765,
+   6
+  ],
+  "tiles_with_items": 72,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 46026,
+  "origin": [
+   32610,
+   32767,
+   5
+  ],
+  "tiles_with_items": 128,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 46027,
+  "origin": [
+   32624,
+   32766,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 46028,
+  "origin": [
+   32630,
+   32766,
+   6
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 46029,
+  "origin": [
+   32643,
+   32758,
+   5
+  ],
+  "tiles_with_items": 176,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 46030,
+  "origin": [
+   32655,
+   32750,
+   5
+  ],
+  "tiles_with_items": 98,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 46031,
+  "origin": [
+   32665,
+   32741,
+   5
+  ],
+  "tiles_with_items": 128,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46032,
+  "origin": [
+   32677,
+   32739,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46033,
+  "origin": [
+   32668,
+   32754,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 46034,
+  "origin": [
+   32677,
+   32750,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 46035,
+  "origin": [
+   32688,
+   32752,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 46040,
+  "origin": [
+   32543,
+   32762,
+   5
+  ],
+  "tiles_with_items": 286,
+  "width": 14
+ },
+ {
+  "floors": 5,
+  "height": 13,
+  "id": 46041,
+  "origin": [
+   32657,
+   32791,
+   3
+  ],
+  "tiles_with_items": 852,
+  "width": 16
+ },
+ {
+  "floors": 4,
+  "height": 20,
+  "id": 47001,
+  "origin": [
+   32725,
+   32683,
+   4
+  ],
+  "tiles_with_items": 917,
+  "width": 23
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 48001,
+  "origin": [
+   33934,
+   31497,
+   5
+  ],
+  "tiles_with_items": 154,
+  "width": 7
+ },
+ {
+  "floors": 3,
+  "height": 7,
+  "id": 48002,
+  "origin": [
+   33940,
+   31497,
+   5
+  ],
+  "tiles_with_items": 169,
+  "width": 12
+ },
+ {
+  "floors": 5,
+  "height": 8,
+  "id": 48003,
+  "origin": [
+   33890,
+   31544,
+   4
+  ],
+  "tiles_with_items": 245,
+  "width": 9
+ },
+ {
+  "floors": 4,
+  "height": 7,
+  "id": 48004,
+  "origin": [
+   33885,
+   31548,
+   4
+  ],
+  "tiles_with_items": 168,
+  "width": 7
+ },
+ {
+  "floors": 4,
+  "height": 14,
+  "id": 48005,
+  "origin": [
+   33879,
+   31521,
+   4
+  ],
+  "tiles_with_items": 330,
+  "width": 13
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 48006,
+  "origin": [
+   33862,
+   31508,
+   5
+  ],
+  "tiles_with_items": 203,
+  "width": 9
+ },
+ {
+  "floors": 7,
+  "height": 13,
+  "id": 48007,
+  "origin": [
+   33898,
+   31535,
+   2
+  ],
+  "tiles_with_items": 669,
+  "width": 16
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 48008,
+  "origin": [
+   33952,
+   31510,
+   5
+  ],
+  "tiles_with_items": 229,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 48009,
+  "origin": [
+   33927,
+   31470,
+   4
+  ],
+  "tiles_with_items": 291,
+  "width": 23
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 49001,
+  "origin": [
+   33745,
+   32845,
+   6
+  ],
+  "tiles_with_items": 161,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 49002,
+  "origin": [
+   33734,
+   32845,
+   6
+  ],
+  "tiles_with_items": 179,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50101,
+  "origin": [
+   33205,
+   31790,
+   7
+  ],
+  "tiles_with_items": 78,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50102,
+  "origin": [
+   33205,
+   31797,
+   7
+  ],
+  "tiles_with_items": 78,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50103,
+  "origin": [
+   33205,
+   31804,
+   7
+  ],
+  "tiles_with_items": 78,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 50104,
+  "origin": [
+   33170,
+   31815,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50105,
+  "origin": [
+   33170,
+   31810,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50106,
+  "origin": [
+   33164,
+   31810,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50107,
+  "origin": [
+   33164,
+   31805,
+   5
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50108,
+  "origin": [
+   33170,
+   31805,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50109,
+  "origin": [
+   33170,
+   31799,
+   5
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50110,
+  "origin": [
+   33164,
+   31799,
+   5
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 50111,
+  "origin": [
+   33170,
+   31815,
+   4
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50112,
+  "origin": [
+   33170,
+   31810,
+   4
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50113,
+  "origin": [
+   33164,
+   31810,
+   4
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50114,
+  "origin": [
+   33164,
+   31805,
+   4
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50115,
+  "origin": [
+   33170,
+   31805,
+   4
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50116,
+  "origin": [
+   33170,
+   31799,
+   4
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50117,
+  "origin": [
+   33164,
+   31799,
+   4
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50118,
+  "origin": [
+   33166,
+   31791,
+   4
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 50119,
+  "origin": [
+   33166,
+   31787,
+   4
+  ],
+  "tiles_with_items": 35,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50120,
+  "origin": [
+   33202,
+   31784,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50121,
+  "origin": [
+   33202,
+   31791,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50122,
+  "origin": [
+   33206,
+   31791,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50123,
+  "origin": [
+   33210,
+   31791,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50124,
+  "origin": [
+   33210,
+   31784,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50125,
+  "origin": [
+   33214,
+   31784,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50126,
+  "origin": [
+   33214,
+   31791,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50127,
+  "origin": [
+   33218,
+   31791,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50128,
+  "origin": [
+   33218,
+   31784,
+   8
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 2,
+  "height": 14,
+  "id": 50129,
+  "origin": [
+   33164,
+   31787,
+   5
+  ],
+  "tiles_with_items": 190,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 50201,
+  "origin": [
+   33159,
+   31833,
+   6
+  ],
+  "tiles_with_items": 111,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50202,
+  "origin": [
+   33154,
+   31795,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50203,
+  "origin": [
+   33142,
+   31793,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50204,
+  "origin": [
+   33151,
+   31783,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50205,
+  "origin": [
+   33146,
+   31776,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50301,
+  "origin": [
+   33187,
+   31839,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50302,
+  "origin": [
+   33184,
+   31845,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50303,
+  "origin": [
+   33180,
+   31845,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50304,
+  "origin": [
+   33180,
+   31839,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50305,
+  "origin": [
+   33176,
+   31839,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50306,
+  "origin": [
+   33176,
+   31845,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50307,
+  "origin": [
+   33172,
+   31845,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50308,
+  "origin": [
+   33172,
+   31839,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 50309,
+  "origin": [
+   33186,
+   31839,
+   6
+  ],
+  "tiles_with_items": 60,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50311,
+  "origin": [
+   33176,
+   31845,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50312,
+  "origin": [
+   33176,
+   31839,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 50315,
+  "origin": [
+   33172,
+   31839,
+   6
+  ],
+  "tiles_with_items": 60,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50317,
+  "origin": [
+   33184,
+   31839,
+   5
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50318,
+  "origin": [
+   33187,
+   31845,
+   5
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50319,
+  "origin": [
+   33176,
+   31845,
+   5
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 50321,
+  "origin": [
+   33176,
+   31839,
+   5
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 50323,
+  "origin": [
+   33172,
+   31839,
+   5
+  ],
+  "tiles_with_items": 60,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 50325,
+  "origin": [
+   33185,
+   31841,
+   8
+  ],
+  "tiles_with_items": 63,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 50326,
+  "origin": [
+   33179,
+   31841,
+   8
+  ],
+  "tiles_with_items": 63,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 50401,
+  "origin": [
+   33200,
+   31833,
+   6
+  ],
+  "tiles_with_items": 136,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 50402,
+  "origin": [
+   33207,
+   31833,
+   6
+  ],
+  "tiles_with_items": 145,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 50403,
+  "origin": [
+   33195,
+   31848,
+   6
+  ],
+  "tiles_with_items": 191,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 50404,
+  "origin": [
+   33202,
+   31848,
+   6
+  ],
+  "tiles_with_items": 191,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 50405,
+  "origin": [
+   33209,
+   31848,
+   6
+  ],
+  "tiles_with_items": 191,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 50406,
+  "origin": [
+   33209,
+   31856,
+   6
+  ],
+  "tiles_with_items": 192,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 50407,
+  "origin": [
+   33202,
+   31856,
+   6
+  ],
+  "tiles_with_items": 192,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 9,
+  "id": 50408,
+  "origin": [
+   33195,
+   31856,
+   6
+  ],
+  "tiles_with_items": 192,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50409,
+  "origin": [
+   33185,
+   31862,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50410,
+  "origin": [
+   33185,
+   31862,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50501,
+  "origin": [
+   33226,
+   31793,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50502,
+  "origin": [
+   33228,
+   31806,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50503,
+  "origin": [
+   33225,
+   31813,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50504,
+  "origin": [
+   33233,
+   31813,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50505,
+  "origin": [
+   33238,
+   31827,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50506,
+  "origin": [
+   33220,
+   31841,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50507,
+  "origin": [
+   33220,
+   31842,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 50508,
+  "origin": [
+   33231,
+   31844,
+   6
+  ],
+  "tiles_with_items": 240,
+  "width": 15
+ },
+ {
+  "floors": 3,
+  "height": 8,
+  "id": 50509,
+  "origin": [
+   33231,
+   31851,
+   6
+  ],
+  "tiles_with_items": 240,
+  "width": 15
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50510,
+  "origin": [
+   33220,
+   31849,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50511,
+  "origin": [
+   33220,
+   31849,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50512,
+  "origin": [
+   33220,
+   31856,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50513,
+  "origin": [
+   33220,
+   31856,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 50514,
+  "origin": [
+   33231,
+   31858,
+   6
+  ],
+  "tiles_with_items": 263,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50515,
+  "origin": [
+   33226,
+   31813,
+   6
+  ],
+  "tiles_with_items": 56,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50516,
+  "origin": [
+   33234,
+   31813,
+   6
+  ],
+  "tiles_with_items": 56,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 50517,
+  "origin": [
+   33229,
+   31806,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 6,
+  "height": 16,
+  "id": 50518,
+  "origin": [
+   33245,
+   31855,
+   2
+  ],
+  "tiles_with_items": 442,
+  "width": 23
+ },
+ {
+  "floors": 5,
+  "height": 12,
+  "id": 50601,
+  "origin": [
+   33209,
+   31867,
+   4
+  ],
+  "tiles_with_items": 684,
+  "width": 13
+ },
+ {
+  "floors": 5,
+  "height": 12,
+  "id": 50602,
+  "origin": [
+   33226,
+   31873,
+   4
+  ],
+  "tiles_with_items": 676,
+  "width": 13
+ },
+ {
+  "floors": 4,
+  "height": 13,
+  "id": 50603,
+  "origin": [
+   33224,
+   31889,
+   4
+  ],
+  "tiles_with_items": 576,
+  "width": 12
+ },
+ {
+  "floors": 4,
+  "height": 8,
+  "id": 50604,
+  "origin": [
+   33242,
+   31883,
+   4
+  ],
+  "tiles_with_items": 196,
+  "width": 7
+ },
+ {
+  "floors": 6,
+  "height": 9,
+  "id": 50701,
+  "origin": [
+   33271,
+   31820,
+   3
+  ],
+  "tiles_with_items": 407,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 50702,
+  "origin": [
+   33254,
+   31836,
+   8
+  ],
+  "tiles_with_items": 57,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50703,
+  "origin": [
+   33278,
+   31832,
+   8
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50704,
+  "origin": [
+   33278,
+   31832,
+   7
+  ],
+  "tiles_with_items": 55,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50705,
+  "origin": [
+   33278,
+   31832,
+   5
+  ],
+  "tiles_with_items": 55,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50706,
+  "origin": [
+   33278,
+   31832,
+   4
+  ],
+  "tiles_with_items": 55,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 50707,
+  "origin": [
+   33278,
+   31832,
+   3
+  ],
+  "tiles_with_items": 55,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 52001,
+  "origin": [
+   33287,
+   31762,
+   7
+  ],
+  "tiles_with_items": 77,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52002,
+  "origin": [
+   33309,
+   31769,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52003,
+  "origin": [
+   33299,
+   31765,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 52004,
+  "origin": [
+   33296,
+   31755,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 52005,
+  "origin": [
+   33322,
+   31771,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 52006,
+  "origin": [
+   33322,
+   31758,
+   6
+  ],
+  "tiles_with_items": 55,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 52007,
+  "origin": [
+   33306,
+   31748,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 52008,
+  "origin": [
+   33315,
+   31747,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 52009,
+  "origin": [
+   33322,
+   31749,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52010,
+  "origin": [
+   33297,
+   31776,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52011,
+  "origin": [
+   33295,
+   31782,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52012,
+  "origin": [
+   33287,
+   31782,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52013,
+  "origin": [
+   33287,
+   31776,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52016,
+  "origin": [
+   33295,
+   31776,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52017,
+  "origin": [
+   33295,
+   31782,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52020,
+  "origin": [
+   33287,
+   31776,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 52021,
+  "origin": [
+   33287,
+   31782,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 12,
+  "id": 52022,
+  "origin": [
+   33330,
+   31760,
+   6
+  ],
+  "tiles_with_items": 364,
+  "width": 12
+ },
+ {
+  "floors": 4,
+  "height": 11,
+  "id": 53001,
+  "origin": [
+   33761,
+   32798,
+   1
+  ],
+  "tiles_with_items": 316,
+  "width": 14
+ },
+ {
+  "floors": 5,
+  "height": 17,
+  "id": 53002,
+  "origin": [
+   33802,
+   32796,
+   3
+  ],
+  "tiles_with_items": 464,
+  "width": 16
+ },
+ {
+  "floors": 4,
+  "height": 10,
+  "id": 53501,
+  "origin": [
+   33408,
+   32109,
+   4
+  ],
+  "tiles_with_items": 223,
+  "width": 8
+ },
+ {
+  "floors": 4,
+  "height": 8,
+  "id": 53502,
+  "origin": [
+   33400,
+   32160,
+   4
+  ],
+  "tiles_with_items": 216,
+  "width": 12
+ },
+ {
+  "floors": 5,
+  "height": 17,
+  "id": 53503,
+  "origin": [
+   33440,
+   32093,
+   3
+  ],
+  "tiles_with_items": 352,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54001,
+  "origin": [
+   33308,
+   31960,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54002,
+  "origin": [
+   33312,
+   31960,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54003,
+  "origin": [
+   33316,
+   31960,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54004,
+  "origin": [
+   33316,
+   31966,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54005,
+  "origin": [
+   33312,
+   31966,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54006,
+  "origin": [
+   33308,
+   31966,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54007,
+  "origin": [
+   33308,
+   31960,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54009,
+  "origin": [
+   33316,
+   31960,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54010,
+  "origin": [
+   33316,
+   31966,
+   6
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 54012,
+  "origin": [
+   33308,
+   31966,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 54013,
+  "origin": [
+   33299,
+   31956,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 54014,
+  "origin": [
+   33288,
+   31964,
+   6
+  ],
+  "tiles_with_items": 144,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 54015,
+  "origin": [
+   33304,
+   31974,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 54016,
+  "origin": [
+   33288,
+   31973,
+   7
+  ],
+  "tiles_with_items": 63,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 14,
+  "id": 54017,
+  "origin": [
+   33264,
+   31970,
+   6
+  ],
+  "tiles_with_items": 201,
+  "width": 15
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 54018,
+  "origin": [
+   33280,
+   31986,
+   6
+  ],
+  "tiles_with_items": 98,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 54019,
+  "origin": [
+   33280,
+   31992,
+   6
+  ],
+  "tiles_with_items": 98,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 54020,
+  "origin": [
+   33277,
+   31998,
+   6
+  ],
+  "tiles_with_items": 113,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 54021,
+  "origin": [
+   33285,
+   32013,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 54022,
+  "origin": [
+   33278,
+   32010,
+   7
+  ],
+  "tiles_with_items": 96,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 54023,
+  "origin": [
+   33285,
+   32013,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 54024,
+  "origin": [
+   33278,
+   32010,
+   6
+  ],
+  "tiles_with_items": 96,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 54025,
+  "origin": [
+   33291,
+   32005,
+   6
+  ],
+  "tiles_with_items": 144,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 54026,
+  "origin": [
+   33301,
+   32005,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 9
+ },
+ {
+  "floors": 5,
+  "height": 16,
+  "id": 54027,
+  "origin": [
+   33290,
+   31986,
+   4
+  ],
+  "tiles_with_items": 891,
+  "width": 15
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 55001,
+  "origin": [
+   32188,
+   31143,
+   5
+  ],
+  "tiles_with_items": 175,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 55002,
+  "origin": [
+   32196,
+   31120,
+   7
+  ],
+  "tiles_with_items": 65,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 55003,
+  "origin": [
+   32192,
+   31129,
+   6
+  ],
+  "tiles_with_items": 165,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 55004,
+  "origin": [
+   32196,
+   31138,
+   7
+  ],
+  "tiles_with_items": 75,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 55005,
+  "origin": [
+   32196,
+   31138,
+   6
+  ],
+  "tiles_with_items": 75,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 55006,
+  "origin": [
+   32208,
+   31116,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 55007,
+  "origin": [
+   32215,
+   31116,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 55008,
+  "origin": [
+   32208,
+   31116,
+   6
+  ],
+  "tiles_with_items": 142,
+  "width": 17
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 55009,
+  "origin": [
+   32220,
+   31126,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 55010,
+  "origin": [
+   32221,
+   31135,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 55011,
+  "origin": [
+   32230,
+   31130,
+   6
+  ],
+  "tiles_with_items": 126,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55012,
+  "origin": [
+   32230,
+   31123,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 55013,
+  "origin": [
+   32226,
+   31115,
+   6
+  ],
+  "tiles_with_items": 126,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 13,
+  "id": 55014,
+  "origin": [
+   32226,
+   31216,
+   6
+  ],
+  "tiles_with_items": 313,
+  "width": 17
+ },
+ {
+  "floors": 4,
+  "height": 18,
+  "id": 55015,
+  "origin": [
+   32322,
+   31142,
+   4
+  ],
+  "tiles_with_items": 286,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55101,
+  "origin": [
+   32252,
+   31129,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 55102,
+  "origin": [
+   32241,
+   31131,
+   6
+  ],
+  "tiles_with_items": 108,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 55103,
+  "origin": [
+   32245,
+   31146,
+   7
+  ],
+  "tiles_with_items": 82,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 55104,
+  "origin": [
+   32254,
+   31149,
+   6
+  ],
+  "tiles_with_items": 203,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 55105,
+  "origin": [
+   32268,
+   31148,
+   7
+  ],
+  "tiles_with_items": 81,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55106,
+  "origin": [
+   32232,
+   31149,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 14,
+  "id": 55107,
+  "origin": [
+   32228,
+   31149,
+   7
+  ],
+  "tiles_with_items": 70,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55108,
+  "origin": [
+   32232,
+   31157,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 55109,
+  "origin": [
+   32240,
+   31184,
+   7
+  ],
+  "tiles_with_items": 70,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 55110,
+  "origin": [
+   32257,
+   31184,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 55111,
+  "origin": [
+   32248,
+   31161,
+   6
+  ],
+  "tiles_with_items": 112,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 55112,
+  "origin": [
+   32258,
+   31161,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55113,
+  "origin": [
+   32255,
+   31171,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55114,
+  "origin": [
+   32255,
+   31175,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 55115,
+  "origin": [
+   32268,
+   31167,
+   6
+  ],
+  "tiles_with_items": 157,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55116,
+  "origin": [
+   32280,
+   31162,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55117,
+  "origin": [
+   32280,
+   31158,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55118,
+  "origin": [
+   32280,
+   31154,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55119,
+  "origin": [
+   32280,
+   31150,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55120,
+  "origin": [
+   32280,
+   31146,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55121,
+  "origin": [
+   32281,
+   31162,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55122,
+  "origin": [
+   32281,
+   31158,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55123,
+  "origin": [
+   32281,
+   31154,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55124,
+  "origin": [
+   32281,
+   31150,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55125,
+  "origin": [
+   32281,
+   31146,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 55126,
+  "origin": [
+   32257,
+   31104,
+   6
+  ],
+  "tiles_with_items": 143,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 11,
+  "id": 55127,
+  "origin": [
+   32259,
+   31114,
+   7
+  ],
+  "tiles_with_items": 77,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 55128,
+  "origin": [
+   32270,
+   31112,
+   6
+  ],
+  "tiles_with_items": 165,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 55129,
+  "origin": [
+   32279,
+   31112,
+   6
+  ],
+  "tiles_with_items": 119,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 55130,
+  "origin": [
+   32288,
+   31115,
+   7
+  ],
+  "tiles_with_items": 110,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 55131,
+  "origin": [
+   32304,
+   31136,
+   6
+  ],
+  "tiles_with_items": 96,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55201,
+  "origin": [
+   32300,
+   31121,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55202,
+  "origin": [
+   32301,
+   31114,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 55203,
+  "origin": [
+   32308,
+   31108,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 55204,
+  "origin": [
+   32307,
+   31103,
+   7
+  ],
+  "tiles_with_items": 24,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55205,
+  "origin": [
+   32316,
+   31103,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 55206,
+  "origin": [
+   32308,
+   31097,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55207,
+  "origin": [
+   32196,
+   31166,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 55208,
+  "origin": [
+   32206,
+   31167,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 55209,
+  "origin": [
+   32207,
+   31177,
+   7
+  ],
+  "tiles_with_items": 66,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 55210,
+  "origin": [
+   32211,
+   31185,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 55211,
+  "origin": [
+   32216,
+   31167,
+   7
+  ],
+  "tiles_with_items": 84,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 55212,
+  "origin": [
+   32220,
+   31177,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 55213,
+  "origin": [
+   32223,
+   31188,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 10
+ },
+ {
+  "floors": 3,
+  "height": 17,
+  "id": 55301,
+  "origin": [
+   32234,
+   31166,
+   5
+  ],
+  "tiles_with_items": 642,
+  "width": 14
+ },
+ {
+  "floors": 5,
+  "height": 15,
+  "id": 55302,
+  "origin": [
+   32243,
+   31113,
+   4
+  ],
+  "tiles_with_items": 569,
+  "width": 12
+ },
+ {
+  "floors": 6,
+  "height": 12,
+  "id": 55303,
+  "origin": [
+   32287,
+   31098,
+   0
+  ],
+  "tiles_with_items": 827,
+  "width": 19
+ },
+ {
+  "floors": 2,
+  "height": 24,
+  "id": 57001,
+  "origin": [
+   33326,
+   32744,
+   5
+  ],
+  "tiles_with_items": 740,
+  "width": 19
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58000,
+  "origin": [
+   33093,
+   32854,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58001,
+  "origin": [
+   33115,
+   32858,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 58002,
+  "origin": [
+   33106,
+   32816,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 58003,
+  "origin": [
+   33104,
+   32814,
+   6
+  ],
+  "tiles_with_items": 100,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58004,
+  "origin": [
+   33102,
+   32811,
+   7
+  ],
+  "tiles_with_items": 112,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58005,
+  "origin": [
+   33102,
+   32819,
+   7
+  ],
+  "tiles_with_items": 98,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58006,
+  "origin": [
+   33101,
+   32837,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58007,
+  "origin": [
+   33099,
+   32835,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58008,
+  "origin": [
+   33104,
+   32835,
+   6
+  ],
+  "tiles_with_items": 24,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 58009,
+  "origin": [
+   33099,
+   32840,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 58010,
+  "origin": [
+   33104,
+   32840,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58011,
+  "origin": [
+   33097,
+   32833,
+   7
+  ],
+  "tiles_with_items": 98,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58012,
+  "origin": [
+   33097,
+   32839,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58013,
+  "origin": [
+   33103,
+   32839,
+   7
+  ],
+  "tiles_with_items": 55,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58014,
+  "origin": [
+   33124,
+   32806,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58015,
+  "origin": [
+   33132,
+   32806,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58016,
+  "origin": [
+   33124,
+   32816,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58017,
+  "origin": [
+   33132,
+   32816,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58018,
+  "origin": [
+   33192,
+   32828,
+   5
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 11,
+  "id": 58019,
+  "origin": [
+   33190,
+   32826,
+   6
+  ],
+  "tiles_with_items": 100,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58020,
+  "origin": [
+   33187,
+   32824,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 15,
+  "id": 58021,
+  "origin": [
+   33195,
+   32824,
+   7
+  ],
+  "tiles_with_items": 98,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58022,
+  "origin": [
+   33188,
+   32831,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58023,
+  "origin": [
+   33213,
+   32850,
+   5
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58024,
+  "origin": [
+   33212,
+   32848,
+   6
+  ],
+  "tiles_with_items": 60,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58025,
+  "origin": [
+   33212,
+   32853,
+   6
+  ],
+  "tiles_with_items": 50,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58026,
+  "origin": [
+   33209,
+   32846,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58027,
+  "origin": [
+   33217,
+   32845,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58028,
+  "origin": [
+   33210,
+   32853,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58029,
+  "origin": [
+   33217,
+   32853,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 58030,
+  "origin": [
+   33193,
+   32868,
+   5
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 58031,
+  "origin": [
+   33192,
+   32865,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 58032,
+  "origin": [
+   33197,
+   32866,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 58034,
+  "origin": [
+   33192,
+   32871,
+   6
+  ],
+  "tiles_with_items": 66,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58035,
+  "origin": [
+   33189,
+   32864,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58036,
+  "origin": [
+   33198,
+   32863,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58037,
+  "origin": [
+   33189,
+   32871,
+   7
+  ],
+  "tiles_with_items": 120,
+  "width": 16
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58038,
+  "origin": [
+   33172,
+   32853,
+   5
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 58042,
+  "origin": [
+   33169,
+   32852,
+   6
+  ],
+  "tiles_with_items": 121,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58043,
+  "origin": [
+   33168,
+   32849,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58044,
+  "origin": [
+   33175,
+   32849,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 58045,
+  "origin": [
+   33167,
+   32857,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 58046,
+  "origin": [
+   33175,
+   32857,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 58047,
+  "origin": [
+   33168,
+   32831,
+   5
+  ],
+  "tiles_with_items": 227,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 59000,
+  "origin": [
+   33071,
+   32814,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59001,
+  "origin": [
+   33069,
+   32812,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59002,
+  "origin": [
+   33065,
+   32827,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59003,
+  "origin": [
+   33066,
+   32840,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59004,
+  "origin": [
+   33087,
+   32800,
+   5
+  ],
+  "tiles_with_items": 20,
+  "width": 4
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59005,
+  "origin": [
+   33085,
+   32797,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59006,
+  "origin": [
+   33083,
+   32796,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59007,
+  "origin": [
+   33083,
+   32801,
+   7
+  ],
+  "tiles_with_items": 84,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 59008,
+  "origin": [
+   33106,
+   32795,
+   5
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 59009,
+  "origin": [
+   33104,
+   32793,
+   6
+  ],
+  "tiles_with_items": 81,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59010,
+  "origin": [
+   33101,
+   32791,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59011,
+  "origin": [
+   33108,
+   32791,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59012,
+  "origin": [
+   33102,
+   32796,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59013,
+  "origin": [
+   33108,
+   32796,
+   7
+  ],
+  "tiles_with_items": 56,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 59014,
+  "origin": [
+   33126,
+   32791,
+   5
+  ],
+  "tiles_with_items": 20,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59015,
+  "origin": [
+   33123,
+   32789,
+   6
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59016,
+  "origin": [
+   33121,
+   32787,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59017,
+  "origin": [
+   33127,
+   32786,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59018,
+  "origin": [
+   33122,
+   32793,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59019,
+  "origin": [
+   33128,
+   32793,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 59020,
+  "origin": [
+   33083,
+   32815,
+   5
+  ],
+  "tiles_with_items": 231,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 59021,
+  "origin": [
+   33079,
+   32836,
+   7
+  ],
+  "tiles_with_items": 51,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59022,
+  "origin": [
+   33084,
+   32836,
+   7
+  ],
+  "tiles_with_items": 28,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 59023,
+  "origin": [
+   33082,
+   32841,
+   7
+  ],
+  "tiles_with_items": 28,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59025,
+  "origin": [
+   33073,
+   32857,
+   5
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59026,
+  "origin": [
+   33070,
+   32855,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59027,
+  "origin": [
+   33077,
+   32855,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59028,
+  "origin": [
+   33070,
+   32860,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59029,
+  "origin": [
+   33077,
+   32860,
+   6
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59030,
+  "origin": [
+   33069,
+   32863,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59031,
+  "origin": [
+   33069,
+   32857,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59032,
+  "origin": [
+   33069,
+   32853,
+   7
+  ],
+  "tiles_with_items": 80,
+  "width": 16
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59033,
+  "origin": [
+   33078,
+   32857,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59034,
+  "origin": [
+   33078,
+   32863,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59035,
+  "origin": [
+   33109,
+   32778,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59036,
+  "origin": [
+   33129,
+   32774,
+   7
+  ],
+  "tiles_with_items": 53,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59037,
+  "origin": [
+   33143,
+   32771,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59038,
+  "origin": [
+   33156,
+   32771,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59039,
+  "origin": [
+   33169,
+   32775,
+   7
+  ],
+  "tiles_with_items": 53,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59040,
+  "origin": [
+   33146,
+   32788,
+   5
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59041,
+  "origin": [
+   33144,
+   32785,
+   6
+  ],
+  "tiles_with_items": 66,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59042,
+  "origin": [
+   33143,
+   32791,
+   6
+  ],
+  "tiles_with_items": 66,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59043,
+  "origin": [
+   33141,
+   32784,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59044,
+  "origin": [
+   33149,
+   32784,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59045,
+  "origin": [
+   33142,
+   32791,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59046,
+  "origin": [
+   33149,
+   32791,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59047,
+  "origin": [
+   33167,
+   32789,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59048,
+  "origin": [
+   33164,
+   32788,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59049,
+  "origin": [
+   33170,
+   32788,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59050,
+  "origin": [
+   33165,
+   32793,
+   7
+  ],
+  "tiles_with_items": 66,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59051,
+  "origin": [
+   33184,
+   32785,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59052,
+  "origin": [
+   33181,
+   32784,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59053,
+  "origin": [
+   33187,
+   32784,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59054,
+  "origin": [
+   33182,
+   32789,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59055,
+  "origin": [
+   33187,
+   32789,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59056,
+  "origin": [
+   33203,
+   32789,
+   6
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59057,
+  "origin": [
+   33200,
+   32787,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59058,
+  "origin": [
+   33206,
+   32787,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 59059,
+  "origin": [
+   33201,
+   32792,
+   7
+  ],
+  "tiles_with_items": 66,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59060,
+  "origin": [
+   33186,
+   32807,
+   5
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59061,
+  "origin": [
+   33183,
+   32805,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59062,
+  "origin": [
+   33188,
+   32805,
+   6
+  ],
+  "tiles_with_items": 45,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59063,
+  "origin": [
+   33181,
+   32803,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59064,
+  "origin": [
+   33188,
+   32803,
+   7
+  ],
+  "tiles_with_items": 42,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59065,
+  "origin": [
+   33182,
+   32808,
+   7
+  ],
+  "tiles_with_items": 104,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 59066,
+  "origin": [
+   33203,
+   32805,
+   6
+  ],
+  "tiles_with_items": 170,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59067,
+  "origin": [
+   33219,
+   32797,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 59068,
+  "origin": [
+   33222,
+   32811,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 59069,
+  "origin": [
+   33220,
+   32809,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 4,
+  "id": 59070,
+  "origin": [
+   33236,
+   32818,
+   6
+  ],
+  "tiles_with_items": 20,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 59071,
+  "origin": [
+   33233,
+   32816,
+   7
+  ],
+  "tiles_with_items": 64,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59072,
+  "origin": [
+   33232,
+   32831,
+   6
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 59074,
+  "origin": [
+   33229,
+   32830,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 59075,
+  "origin": [
+   33230,
+   32834,
+   7
+  ],
+  "tiles_with_items": 45,
+  "width": 9
+ },
+ {
+  "floors": 3,
+  "height": 14,
+  "id": 59076,
+  "origin": [
+   33210,
+   32824,
+   5
+  ],
+  "tiles_with_items": 332,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61000,
+  "origin": [
+   33207,
+   32405,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61001,
+  "origin": [
+   33200,
+   32405,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 61002,
+  "origin": [
+   33195,
+   32405,
+   7
+  ],
+  "tiles_with_items": 108,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61003,
+  "origin": [
+   33200,
+   32416,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61004,
+  "origin": [
+   33207,
+   32414,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61005,
+  "origin": [
+   33200,
+   32405,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 13,
+  "id": 61006,
+  "origin": [
+   33195,
+   32405,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61007,
+  "origin": [
+   33195,
+   32416,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 61008,
+  "origin": [
+   33206,
+   32405,
+   6
+  ],
+  "tiles_with_items": 108,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61009,
+  "origin": [
+   33210,
+   32428,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61010,
+  "origin": [
+   33203,
+   32428,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61011,
+  "origin": [
+   33198,
+   32428,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 61012,
+  "origin": [
+   33198,
+   32436,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61013,
+  "origin": [
+   33198,
+   32439,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61014,
+  "origin": [
+   33206,
+   32439,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61015,
+  "origin": [
+   33210,
+   32437,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 61016,
+  "origin": [
+   33209,
+   32428,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61017,
+  "origin": [
+   33206,
+   32428,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61018,
+  "origin": [
+   33198,
+   32428,
+   6
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 61019,
+  "origin": [
+   33198,
+   32433,
+   6
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61020,
+  "origin": [
+   33198,
+   32437,
+   6
+  ],
+  "tiles_with_items": 54,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61021,
+  "origin": [
+   33203,
+   32439,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61022,
+  "origin": [
+   33208,
+   32439,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 61023,
+  "origin": [
+   33209,
+   32435,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 61024,
+  "origin": [
+   33221,
+   32439,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 61025,
+  "origin": [
+   33221,
+   32444,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61026,
+  "origin": [
+   33226,
+   32449,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 61027,
+  "origin": [
+   33232,
+   32444,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 61028,
+  "origin": [
+   33230,
+   32439,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61029,
+  "origin": [
+   33226,
+   32439,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 17,
+  "id": 61030,
+  "origin": [
+   33221,
+   32439,
+   6
+  ],
+  "tiles_with_items": 102,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61031,
+  "origin": [
+   33226,
+   32449,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 17,
+  "id": 61032,
+  "origin": [
+   33232,
+   32439,
+   6
+  ],
+  "tiles_with_items": 102,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61033,
+  "origin": [
+   33247,
+   32416,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61034,
+  "origin": [
+   33235,
+   32416,
+   7
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 61035,
+  "origin": [
+   33235,
+   32421,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61036,
+  "origin": [
+   33235,
+   32427,
+   7
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 61037,
+  "origin": [
+   33247,
+   32425,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61038,
+  "origin": [
+   33240,
+   32416,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 61039,
+  "origin": [
+   33235,
+   32416,
+   6
+  ],
+  "tiles_with_items": 108,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61040,
+  "origin": [
+   33240,
+   32427,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 13,
+  "id": 61041,
+  "origin": [
+   33246,
+   32416,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 61042,
+  "origin": [
+   33248,
+   32406,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 61043,
+  "origin": [
+   33248,
+   32395,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61044,
+  "origin": [
+   33253,
+   32395,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 61045,
+  "origin": [
+   33259,
+   32395,
+   7
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 61046,
+  "origin": [
+   33257,
+   32406,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61047,
+  "origin": [
+   33248,
+   32395,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 61048,
+  "origin": [
+   33248,
+   32400,
+   6
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 61049,
+  "origin": [
+   33253,
+   32405,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 61050,
+  "origin": [
+   33259,
+   32395,
+   6
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 62000,
+  "origin": [
+   33271,
+   32400,
+   6
+  ],
+  "tiles_with_items": 133,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 62001,
+  "origin": [
+   33271,
+   32405,
+   6
+  ],
+  "tiles_with_items": 139,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 62002,
+  "origin": [
+   33256,
+   32416,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 62003,
+  "origin": [
+   33261,
+   32416,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 62004,
+  "origin": [
+   33267,
+   32416,
+   7
+  ],
+  "tiles_with_items": 108,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 62005,
+  "origin": [
+   33261,
+   32427,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 62006,
+  "origin": [
+   33256,
+   32425,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 62007,
+  "origin": [
+   33261,
+   32416,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 62008,
+  "origin": [
+   33256,
+   32416,
+   6
+  ],
+  "tiles_with_items": 108,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 62009,
+  "origin": [
+   33261,
+   32427,
+   6
+  ],
+  "tiles_with_items": 48,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 62010,
+  "origin": [
+   33267,
+   32416,
+   6
+  ],
+  "tiles_with_items": 108,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 62011,
+  "origin": [
+   33243,
+   32439,
+   7
+  ],
+  "tiles_with_items": 102,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 12,
+  "id": 62012,
+  "origin": [
+   33243,
+   32444,
+   7
+  ],
+  "tiles_with_items": 135,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 62013,
+  "origin": [
+   33243,
+   32449,
+   7
+  ],
+  "tiles_with_items": 186,
+  "width": 18
+ },
+ {
+  "floors": 2,
+  "height": 7,
+  "id": 62014,
+  "origin": [
+   33251,
+   32444,
+   7
+  ],
+  "tiles_with_items": 112,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 6,
+  "id": 62015,
+  "origin": [
+   33251,
+   32439,
+   7
+  ],
+  "tiles_with_items": 108,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 62016,
+  "origin": [
+   33266,
+   32448,
+   6
+  ],
+  "tiles_with_items": 233,
+  "width": 12
+ },
+ {
+  "floors": 2,
+  "height": 14,
+  "id": 62017,
+  "origin": [
+   33214,
+   32463,
+   6
+  ],
+  "tiles_with_items": 376,
+  "width": 15
+ },
+ {
+  "floors": 3,
+  "height": 14,
+  "id": 62018,
+  "origin": [
+   33232,
+   32463,
+   6
+  ],
+  "tiles_with_items": 456,
+  "width": 15
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 62019,
+  "origin": [
+   33243,
+   32439,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 62020,
+  "origin": [
+   33243,
+   32444,
+   6
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 62021,
+  "origin": [
+   33248,
+   32449,
+   6
+  ],
+  "tiles_with_items": 78,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 62022,
+  "origin": [
+   33254,
+   32439,
+   6
+  ],
+  "tiles_with_items": 72,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 14,
+  "id": 62023,
+  "origin": [
+   33278,
+   32414,
+   6
+  ],
+  "tiles_with_items": 253,
+  "width": 13
+ },
+ {
+  "floors": 4,
+  "height": 9,
+  "id": 62024,
+  "origin": [
+   33281,
+   32426,
+   4
+  ],
+  "tiles_with_items": 314,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 11,
+  "id": 63001,
+  "origin": [
+   32292,
+   32762,
+   6
+  ],
+  "tiles_with_items": 320,
+  "width": 16
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 63002,
+  "origin": [
+   32288,
+   32777,
+   6
+  ],
+  "tiles_with_items": 199,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 15,
+  "id": 63003,
+  "origin": [
+   32301,
+   32779,
+   6
+  ],
+  "tiles_with_items": 240,
+  "width": 9
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 63004,
+  "origin": [
+   32286,
+   32788,
+   6
+  ],
+  "tiles_with_items": 192,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 63005,
+  "origin": [
+   32301,
+   32797,
+   6
+  ],
+  "tiles_with_items": 176,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 63006,
+  "origin": [
+   32317,
+   32797,
+   6
+  ],
+  "tiles_with_items": 183,
+  "width": 11
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 63007,
+  "origin": [
+   32332,
+   32797,
+   6
+  ],
+  "tiles_with_items": 143,
+  "width": 8
+ },
+ {
+  "floors": 2,
+  "height": 9,
+  "id": 63008,
+  "origin": [
+   32342,
+   32791,
+   6
+  ],
+  "tiles_with_items": 160,
+  "width": 10
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 63009,
+  "origin": [
+   32358,
+   32818,
+   6
+  ],
+  "tiles_with_items": 216,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 14,
+  "id": 63010,
+  "origin": [
+   32377,
+   32571,
+   7
+  ],
+  "tiles_with_items": 211,
+  "width": 19
+ },
+ {
+  "floors": 4,
+  "height": 11,
+  "id": 63011,
+  "origin": [
+   32289,
+   32548,
+   4
+  ],
+  "tiles_with_items": 216,
+  "width": 10
+ },
+ {
+  "floors": 3,
+  "height": 13,
+  "id": 63012,
+  "origin": [
+   32345,
+   32839,
+   5
+  ],
+  "tiles_with_items": 452,
+  "width": 19
+ },
+ {
+  "floors": 4,
+  "height": 15,
+  "id": 63013,
+  "origin": [
+   32349,
+   32498,
+   5
+  ],
+  "tiles_with_items": 295,
+  "width": 17
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 64001,
+  "origin": [
+   32311,
+   32808,
+   7
+  ],
+  "tiles_with_items": 84,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 8,
+  "id": 64002,
+  "origin": [
+   32325,
+   32808,
+   6
+  ],
+  "tiles_with_items": 208,
+  "width": 14
+ },
+ {
+  "floors": 1,
+  "height": 12,
+  "id": 64003,
+  "origin": [
+   32303,
+   32815,
+   7
+  ],
+  "tiles_with_items": 77,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 64004,
+  "origin": [
+   32326,
+   32817,
+   6
+  ],
+  "tiles_with_items": 198,
+  "width": 13
+ },
+ {
+  "floors": 2,
+  "height": 10,
+  "id": 64005,
+  "origin": [
+   32341,
+   32817,
+   6
+  ],
+  "tiles_with_items": 198,
+  "width": 12
+ },
+ {
+  "floors": 1,
+  "height": 13,
+  "id": 64006,
+  "origin": [
+   32252,
+   32803,
+   7
+  ],
+  "tiles_with_items": 96,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 13,
+  "id": 64007,
+  "origin": [
+   32259,
+   32803,
+   7
+  ],
+  "tiles_with_items": 84,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 64008,
+  "origin": [
+   32268,
+   32804,
+   7
+  ],
+  "tiles_with_items": 54,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 64009,
+  "origin": [
+   32268,
+   32798,
+   7
+  ],
+  "tiles_with_items": 66,
+  "width": 11
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 64010,
+  "origin": [
+   32276,
+   32807,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64011,
+  "origin": [
+   32281,
+   32807,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 64012,
+  "origin": [
+   32281,
+   32803,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 64013,
+  "origin": [
+   32281,
+   32799,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64014,
+  "origin": [
+   32268,
+   32789,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64015,
+  "origin": [
+   32276,
+   32789,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64016,
+  "origin": [
+   32268,
+   32784,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64017,
+  "origin": [
+   32276,
+   32784,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64018,
+  "origin": [
+   32268,
+   32779,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64019,
+  "origin": [
+   32276,
+   32779,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64020,
+  "origin": [
+   32268,
+   32779,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64021,
+  "origin": [
+   32276,
+   32779,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64022,
+  "origin": [
+   32268,
+   32784,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64023,
+  "origin": [
+   32276,
+   32784,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64024,
+  "origin": [
+   32268,
+   32789,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64025,
+  "origin": [
+   32276,
+   32789,
+   6
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 4,
+  "height": 21,
+  "id": 64026,
+  "origin": [
+   32269,
+   32755,
+   5
+  ],
+  "tiles_with_items": 876,
+  "width": 16
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 64027,
+  "origin": [
+   32301,
+   32808,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 9
+ },
+ {
+  "floors": 6,
+  "height": 12,
+  "id": 64028,
+  "origin": [
+   32387,
+   32705,
+   3
+  ],
+  "tiles_with_items": 509,
+  "width": 13
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 64029,
+  "origin": [
+   32287,
+   32829,
+   6
+  ],
+  "tiles_with_items": 80,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 64030,
+  "origin": [
+   32294,
+   32829,
+   6
+  ],
+  "tiles_with_items": 63,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 18,
+  "id": 64031,
+  "origin": [
+   32299,
+   32829,
+   6
+  ],
+  "tiles_with_items": 135,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 64032,
+  "origin": [
+   32295,
+   32840,
+   6
+  ],
+  "tiles_with_items": 54,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 10,
+  "id": 64033,
+  "origin": [
+   32287,
+   32829,
+   5
+  ],
+  "tiles_with_items": 168,
+  "width": 22
+ },
+ {
+  "floors": 1,
+  "height": 13,
+  "id": 64034,
+  "origin": [
+   32303,
+   32834,
+   5
+  ],
+  "tiles_with_items": 65,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 64035,
+  "origin": [
+   32300,
+   32838,
+   5
+  ],
+  "tiles_with_items": 40,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 9,
+  "id": 64036,
+  "origin": [
+   32295,
+   32838,
+   5
+  ],
+  "tiles_with_items": 48,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 65001,
+  "origin": [
+   32256,
+   32820,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 9
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 65002,
+  "origin": [
+   32256,
+   32825,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 65003,
+  "origin": [
+   32260,
+   32832,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 65004,
+  "origin": [
+   32263,
+   32827,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 65005,
+  "origin": [
+   32266,
+   32820,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 65006,
+  "origin": [
+   32277,
+   32830,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 65007,
+  "origin": [
+   32269,
+   32827,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 65008,
+  "origin": [
+   32269,
+   32833,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 65009,
+  "origin": [
+   32254,
+   32833,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 65010,
+  "origin": [
+   32258,
+   32841,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 65011,
+  "origin": [
+   32270,
+   32848,
+   7
+  ],
+  "tiles_with_items": 28,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 65012,
+  "origin": [
+   32275,
+   32841,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 65013,
+  "origin": [
+   32284,
+   32841,
+   7
+  ],
+  "tiles_with_items": 49,
+  "width": 8
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 65015,
+  "origin": [
+   32284,
+   32848,
+   7
+  ],
+  "tiles_with_items": 40,
+  "width": 10
+ },
+ {
+  "floors": 1,
+  "height": 8,
+  "id": 65016,
+  "origin": [
+   32275,
+   32848,
+   7
+  ],
+  "tiles_with_items": 48,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 5,
+  "id": 65017,
+  "origin": [
+   32276,
+   32856,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 65018,
+  "origin": [
+   32269,
+   32862,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 65019,
+  "origin": [
+   32274,
+   32861,
+   7
+  ],
+  "tiles_with_items": 25,
+  "width": 5
+ },
+ {
+  "floors": 1,
+  "height": 7,
+  "id": 65020,
+  "origin": [
+   32280,
+   32862,
+   7
+  ],
+  "tiles_with_items": 36,
+  "width": 7
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 65021,
+  "origin": [
+   32288,
+   32862,
+   7
+  ],
+  "tiles_with_items": 30,
+  "width": 6
+ },
+ {
+  "floors": 1,
+  "height": 6,
+  "id": 65022,
+  "origin": [
+   32287,
+   32854,
+   7
+  ],
+  "tiles_with_items": 35,
+  "width": 7
+ },
+ {
+  "floors": 2,
+  "height": 20,
+  "id": 65023,
+  "origin": [
+   32250,
+   32850,
+   6
+  ],
+  "tiles_with_items": 560,
+  "width": 18
+ }
+]
