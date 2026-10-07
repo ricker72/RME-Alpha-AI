@@ -17,8 +17,8 @@
 - [Publication version policy](#publication-version-policy)
 
 **Product:** RME Alpha AI (`RME_Alpha_AI.exe`)
-**Version:** 1.0.2 Alpha (`v1.0.2-alpha`)
-**Date:** 2026-10-04 (rev. 11 — RME parity: Jump/Search/Replace y Map Properties estilo Remere; galeria de casas por nombre oficial con preview real y mini-viewport; minimap floor fix)
+**Version:** 1.0.3 Alpha (`v1.0.3-alpha`)
+**Date:** 2026-10-06 (rev. 12 — fix cuadros negros criaturas, nombres NPC, spawns bajo criatura, Select/Properties, pack 15.33.b21348, HUD Privacidad)
 **Build source:** clean `python build_release.py` → `dist_current/RME_Alpha_AI/`
 **User install path:** `RME Alpha AI/RME_Alpha_AI.exe`
 
@@ -82,6 +82,37 @@ v1.0.0-alpha.1 → v1.0.0-alpha.2 → v1.0.1-alpha → v1.0.2-alpha → …
 > `--deploy-user` deja `RME.Alpha.AI.zip` + `RME.Alpha.AI.zip.sha256` en el
 > Escritorio (comprimido de la instalación "RME Alpha AI") para subirlos
 > como assets al GitHub Release.
+
+---
+
+## 0. Rev. 12 — cambios incluidos en esta versión
+
+- ⬛ **Fix cuadros negros en NPC/monstruos:** los tiles con spawn crasheaban
+  el render (`QPointF` sin importar en el anillo de spawn) y quedaban en
+  negro; además el `sprite_id 0` (sprite vacío RME) podía pintar un sprite
+  ajeno. Ahora todo tile con criatura visible siempre compone pixmap, con
+  marcador naranja/azul explícito si el outfit falta
+  (`workspace_core/rendering/tile_renderer.py`,
+  `workspace_core/rendering/sprite_resolver.py`).
+- 🏷️ **Nombres de NPC legibles:** Arial 13 Bold azul OTClient con placa
+  oscura leve y contorno fino (el contorno grueso tapaba el relleno).
+- 👁️ **Iconos de spawn bajo la criatura:** `Spawn_Npc.png` /
+  `Spawn_Monster.png` propios a 16px semitransparentes en la nueva capa
+  `SpawnIndicator` (antes que `Creature` en `DRAW_ORDER`), con fallback
+  dibujado por código si faltan los PNG.
+- 🖱️ **Clic derecho en criaturas:** `Select Npc` / `Select Monster` arma el
+  brush de entidad; `Properties` abre el diálogo `Npc Properties` /
+  `Monster Properties` (nombre, intervalo de spawn 1–3600, dirección) con
+  persistencia transaccional (`viewport/map_view.py`,
+  `viewport/map_scene.py`).
+- 📦 **Nuevo pack de cliente `15.33.b21348`:** fingerprint en
+  `resources/asset_versions.json` (versión leída del `package.json.version`
+  del propio cliente), con árbol `data-15.33` activo.
+- 🛡️ **About › Privacidad:** HUD flotante animado (fade + titular rotativo
+  con acentos de color) con las garantías: 100% local sin registro de
+  usuarios, cero terceros/telemetría, IA sin memoria persistente, claves
+  solo en memoria/entorno/secret store (auditado con `secret_guard`) y
+  binarios solo por GitHub Releases (`mainwindow.py: PrivacyHud`).
 
 ---
 
