@@ -35,6 +35,8 @@
 			<item fromid="4556" toid="4558"/>
 			<item fromid="4569" toid="4583"/>
 			<item fromid="4585" toid="4596"/>
+			<!-- Shallow water inner borders (sand>sea edges, see brushs/grounds.xml sand border) -->
+			<item fromid="4621" toid="4632"/>
 			<item fromid="4633" toid="4652"/>
 			<item fromid="4656" toid="4679"/>
 			<item fromid="4702" toid="4737"/>

@@ -17,8 +17,8 @@
 - [Publication version policy](#publication-version-policy)
 
 **Product:** RME Alpha AI (`RME_Alpha_AI.exe`)
-**Version:** 1.0.3 Alpha (`v1.0.3-alpha`)
-**Date:** 2026-10-06 (rev. 12 — fix cuadros negros criaturas, nombres NPC, spawns bajo criatura, Select/Properties, pack 15.33.b21348, HUD Privacidad)
+**Version:** 1.0.4 Alpha (`v1.0.4-alpha`)
+**Date:** 2026-10-07 (rev. 13 — RAW universal y borders, menu RME completo, Properties con Door ID, Import/Export, cleanup tools, Reload y Find Monster, New Palette e inspector, subcore Lua, paneo fluido, tinte Multiply)
 **Build source:** clean `python build_release.py` → `dist_current/RME_Alpha_AI/`
 **User install path:** `RME Alpha AI/RME_Alpha_AI.exe`
 
@@ -82,6 +82,43 @@ v1.0.0-alpha.1 → v1.0.0-alpha.2 → v1.0.1-alpha → v1.0.2-alpha → …
 > `--deploy-user` deja `RME.Alpha.AI.zip` + `RME.Alpha.AI.zip.sha256` en el
 > Escritorio (comprimido de la instalación "RME Alpha AI") para subirlos
 > como assets al GitHub Release.
+
+---
+
+## 0. Rev. 13 — cambios incluidos en esta versión
+
+- 🧱 **RAW universal + borders 4621–4632:** los bordes shallow-water ya
+  listan en `tilesets/borders.xml` (15.30 + 15.33); cualquier ID del pack
+  activo sin entrada de catálogo obtiene RAW sintético validado (como la
+  RAW Palette de RME); la paleta RAW arranca en vista lista "id - nombre".
+- 🖱️ **Menú paridad RME:** `Rotate item` (rotateto de items.xml),
+  `Open/Close door` (pares del mismo wall/type), `Select House` (arma el
+  brush con el house_id); gating de Doorbrush/Wallbrush verificado.
+- 🚪 **Properties:** campo Door ID (0–255, solo en house tiles) +
+  corrección del crash de `get_item_type_info` (el Core no expone
+  writeable): readable/writeable/allowDistRead/maxTextLen desde el
+  `items.xml` versionado — signs editan descripción, parchments texto.
+- 📥📤 **Import Monsters/NPCs + Export Minimap/Tilesets:** importa
+  definiciones de tipos a la sesión (looks + paleta, mapa intacto);
+  minimapa PNG/BMP por pisos no vacíos; tilesets a XML re-importable
+  (OTMM listado pero deshabilitado: sin feed certificado de speeds).
+- 🧹 **Tools de limpieza:** Map Cleanup, Remove Corpses (tileset Corpses,
+  respeta complejos), Unreachable (caja RME 21×17), Invalid Houses
+  (town huérfano + unassign), Modified State — todos con confirm y undo.
+- 🔍 **Reload (F5) + Find Monster:** recarga materiales/criaturas/cachés;
+  búsqueda de monstruos por nombre con filtro, tope 2000, selección+salto.
+- 🪟 **New Palette + SQLite Inspector:** segundo dock flotante;
+  inspector read-only de materials.db schema v6 (Summary/Brushes/Tilesets).
+- 🌙 **Subcore Lua + Lua Studio:** runtime lupa sandboxed, API
+  app/Map/Tile/Brushes/Selection/Position, escritura atómica con undo,
+  menú Lua antes de About, HUD flotante (editor con highlight, run,
+  consola, referencia API, autocomplete, lint, formateo, brackets
+  arcoíris, navegador ƒx, botón limpiar).
+- ⚡ **Paneo fluido:** índice espacial de áreas + extracción de chunks en
+  worker (adopción idéntica al path sync), prefetch sin bloqueo,
+  overlay de luz cuantizado a rejilla de 8.
+- 🏠 **Tinte casa/PZ Multiply por píxel:** adiós al wash plano que se
+  leía como cuadrados sobre muros; modulación de textura paridad RME.
 
 ---
 

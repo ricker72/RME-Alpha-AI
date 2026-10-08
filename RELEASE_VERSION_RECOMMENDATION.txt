@@ -1,0 +1,6 @@
+RME Alpha AI release version recommendation
+Current/base version: v1.0.3-alpha
+Recommended next publication: v1.0.4-alpha
+
+Valid sequence: v1.0.0-alpha.1 -> v1.0.0-alpha.2 -> v1.0.1-alpha -> v1.0.2-alpha -> ...
+Publish the recommended version as the GitHub Release tag.
