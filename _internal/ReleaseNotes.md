@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![version](https://img.shields.io/badge/version-v1.0.2--alpha-blue?style=for-the-badge)
+![version](https://img.shields.io/badge/version-v1.0.5--alpha-blue?style=for-the-badge)
 ![platform](https://img.shields.io/badge/platform-Windows-0078D4?style=for-the-badge)
 ![status](https://img.shields.io/badge/status-prerelease-orange?style=for-the-badge)
 
@@ -17,8 +17,8 @@
 - [Publication version policy](#publication-version-policy)
 
 **Product:** RME Alpha AI (`RME_Alpha_AI.exe`)
-**Version:** 1.0.4 Alpha (`v1.0.4-alpha`)
-**Date:** 2026-10-07 (rev. 13 — RAW universal y borders, menu RME completo, Properties con Door ID, Import/Export, cleanup tools, Reload y Find Monster, New Palette e inspector, subcore Lua, paneo fluido, tinte Multiply)
+**Version:** 1.0.5 Alpha (`v1.0.5-alpha`)
+**Date:** 2026-11-20 (rev. 14 — turtle compuesto, RAW perezoso y pack 15.33.4b397e)
 **Build source:** clean `python build_release.py` → `dist_current/RME_Alpha_AI/`
 **User install path:** `RME Alpha AI/RME_Alpha_AI.exe`
 
@@ -82,6 +82,25 @@ v1.0.0-alpha.1 → v1.0.0-alpha.2 → v1.0.1-alpha → v1.0.2-alpha → …
 > `--deploy-user` deja `RME.Alpha.AI.zip` + `RME.Alpha.AI.zip.sha256` en el
 > Escritorio (comprimido de la instalación "RME Alpha AI") para subirlos
 > como assets al GitHub Release.
+
+---
+
+## 0. Rev. 14 — cambios incluidos en esta versión
+
+- 🐢 **Doodad `turtle` vuelve a pintar:** `thickness="1/500"` se trata como
+  conteo de objetos con piso 1 (`gui.cpp:1752-1753,1851-1875`), no como
+  probabilidad por tile. El `<composite chance="10">` emite las 7 piezas
+  `5755–5761` en un solo grupo y `apply_doodad_brush` las confirma en el mapa.
+- 🔎 **Select RAW abre su paleta:** la revelación materializa primero
+  `RAW Palette` antes de buscar el combo, equivalente a `SelectPage(TILESET_RAW)`
+  (`map_display.cpp:2350-2362`, `palette_window.cpp:371-374,412-415`).
+- 📦 **Pack Tibia `15.33.4b397e`:** huella `fedd9126…` registrada desde
+  `package.json.version` y validada contra `catalog-content.json`; Preferencias
+  deja de mostrar `unidentified` y carga 43 518 objetos + 5 084 hojas.
+- ✅ **Verificación:** regresiones dirigidas 80 passed / 2 skipped; suite
+  completa 617 passed / 3 skipped, con 2 fallos preexistentes de
+  `panels.matrix_audit_hud` (módulo ausente), sin regresiones nuevas.
+  `secret_guard` PASS y build canónico `EXIT=0`.
 
 ---
 
