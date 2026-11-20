@@ -2,12 +2,12 @@
 
 # 🗺️ RME Alpha AI
 
-[![Version](https://img.shields.io/badge/version-v1.0.3--alpha-blue?style=for-the-badge&logo=github)](ReleaseNotes.md)
+[![Version](https://img.shields.io/badge/version-v1.0.5--alpha-blue?style=for-the-badge&logo=github)](ReleaseNotes.md)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![PySide6](https://img.shields.io/badge/PySide6-6.5+-orange?style=for-the-badge&logo=qt&logoColor=white)](https://doc.qt.io/qtforpython/)
 [![Status](https://img.shields.io/badge/status-active_development-brightgreen?style=for-the-badge)](ReleaseNotes.md)
-[![Client](https://img.shields.io/badge/client-15.33.b21348-6a5cff?style=for-the-badge)](ReleaseNotes.md)
+[![Client](https://img.shields.io/badge/client-15.33.4b397e-6a5cff?style=for-the-badge)](ReleaseNotes.md)
 [![Privacy](https://img.shields.io/badge/privacy-100%25_local-brightgreen?style=for-the-badge&logo=shield)](ReleaseNotes.md)
 
 **An AI-powered map editor and assistant for OpenTibia.**
@@ -126,7 +126,8 @@ Client packs are **fingerprinted by their `appearances-*.dat` hash** — the edi
 | **15.24 Targuna** | ✅ Base materials, fallback for every version |
 | **15.30 (Summer 2026)** | ✅ Dedicated `data-15.30` tree + items overlay |
 | **15.33 (CipSoft)** | ✅ Dedicated `data-15.33` tree + items overlay |
-| **15.33.b21348 (live)** | ✅ Fingerprinted live build, full `data-15.33` inheritance |
+| **15.33.b21348** | ✅ Fingerprinted previous live build, full `data-15.33` inheritance |
+| **15.33.4b397e (live)** | ✅ Fingerprint `fedd9126…`, `data-15.33`, 43 518 objects and 5 084 sheets |
 | **Dudantas OTClient 13.20–15.25** | ✅ Hybrid filter (10 tags, no hashes invented) |
 
 > [!NOTE]
@@ -214,6 +215,19 @@ Your existing houses and maps are 100% safe. The extension will be announced her
 
 ---
 
+## 🆕 What's new in v1.0.5-alpha
+
+- 🐢 **Doodad `turtle` paints again** — `thickness="1/500"` is an object-count
+  buffer with floor one, so the seven-piece composite `5755–5761` is emitted
+  and committed instead of being filtered as a 0.2 % chance.
+- 🔎 **Select RAW opens the RAW palette** — the lazy page is materialized
+  before revealing the id, matching RME's `SelectPage(TILESET_RAW)`.
+- 📦 **Client `15.33.4b397e`** — declared version from `package.json.version`
+  and validated against `catalog-content.json`; Preferences no longer reports
+  `unidentified`.
+
+📜 Full history lives in [`ReleaseNotes.md`](ReleaseNotes.md) (rev. 1 → rev. 14).
+
 ## 🆕 What's new in v1.0.3-alpha
 
 - ⬛ **Black squares on NPCs/monsters fixed** — spawn tiles crashed rendering; every visible creature now composes (explicit marker if its outfit is missing).
@@ -224,7 +238,7 @@ Your existing houses and maps are 100% safe. The extension will be announced her
 - 🛡️ **Privacy HUD** — animated floating panel under `About`.
 - 🗑️ **Removed:** legacy spawn rings (superseded by icons) · in-product House Creator (→ extension, above).
 
-📜 Full history lives in [`ReleaseNotes.md`](ReleaseNotes.md) (rev. 1 → rev. 12).
+📜 Full history lives in [`ReleaseNotes.md`](ReleaseNotes.md) (rev. 1 → rev. 14).
 
 <img width="1919" height="1024" alt="Screenshot_2" src="https://github.com/user-attachments/assets/acce6923-3ab9-4996-a912-299e23dd12b0" />
 
